@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c3bbb9b-72d3-4142-b6b1-98e82134c6da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/ModifyTree.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeView.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/TreeEvent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeWdiget.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeWdiget.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/child1.png" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/img/child1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/child2.png" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/img/child2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/gChild.png" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/img/gChild.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/root.png" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/img/root.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,15 +12,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/list/QListView.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="42">
               <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding>
-                <element signature="e#28#77#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -37,9 +27,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="63">
               <caret line="3" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="e#28#114#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -47,11 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeWdiget.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
-              <folding>
-                <element signature="e#47#130#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="924">
+              <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -59,11 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/tree/TreeEvent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="54" column="68" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="54" selection-end-column="68" />
-              <folding>
-                <element signature="e#46#129#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1092">
+              <caret line="54" column="68" selection-start-line="52" selection-start-column="8" selection-end-line="54" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -72,16 +53,28 @@
         <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/tree/ModifyTree.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
-              <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeView.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeView.py">
+        <entry file="file://$PROJECT_DIR$/PyQt5Learn/style/style.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="231">
+              <caret line="44" column="51" lean-forward="true" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
+              <folding>
+                <element signature="e#46#129#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,6 +109,7 @@
         <option value="$PROJECT_DIR$/PyQt5Learn/widgets/tree/TreeEvent.py" />
         <option value="$PROJECT_DIR$/PyQt5Learn/widgets/tree/ModifyTree.py" />
         <option value="$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeView.py" />
+        <option value="$PROJECT_DIR$/PyQt5Learn/style/style.py" />
       </list>
     </option>
   </component>
@@ -133,6 +127,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,20 +144,12 @@
               <item name="learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="learning" type="462c0819:PsiDirectoryNode" />
               <item name="PyQt5Learn" type="462c0819:PsiDirectoryNode" />
-              <item name="widgets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learning" type="462c0819:PsiDirectoryNode" />
-              <item name="PyQt5Learn" type="462c0819:PsiDirectoryNode" />
-              <item name="widgets" type="462c0819:PsiDirectoryNode" />
-              <item name="tree" type="462c0819:PsiDirectoryNode" />
+              <item name="style" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -170,15 +157,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyGithub\learning\PyQt5Learn\style" />
+      <recent name="D:\MyGithub\learning\PyQt5Learn\widgets\tree" />
+      <recent name="D:\MyGithub\learning\PyQtLearn\widgets\tree" />
+      <recent name="D:\MyGithub\learning\PyQtLearn\widgets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\MyGithub\learning\PyQt5Learn\widgets\tree\img" />
       <recent name="D:\MyGithub\learning" />
       <recent name="D:\MyGithub\learning\PyQtLearn\widgets\list" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\MyGithub\learning\PyQt5Learn\widgets\tree" />
-      <recent name="D:\MyGithub\learning\PyQtLearn\widgets\tree" />
-      <recent name="D:\MyGithub\learning\PyQtLearn\widgets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -193,7 +181,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.QTreeView">
+  <component name="RunManager" selected="Python.style">
     <configuration name="ModifyTree" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -207,27 +195,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt5Learn/widgets/tree/ModifyTree.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="QListWidget" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="learning" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQtLearn/widgets" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\MyGithub\learning\PyQtLearn\widgets\list\QListWidget.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -299,13 +266,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="style" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt5Learn/style" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt5Learn/style/style.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.style" />
         <item itemvalue="Python.QTreeView" />
         <item itemvalue="Python.ModifyTree" />
         <item itemvalue="Python.TreeEvent" />
         <item itemvalue="Python.QTreeWdiget" />
-        <item itemvalue="Python.QListWidget" />
       </list>
     </recent_temporary>
   </component>
@@ -341,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555840602778</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added QTreeView demo">
+      <created>1555843945036</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555843945036</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -357,12 +352,12 @@
     <frame x="-9" y="-9" width="1618" height="870" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33569404" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33569404" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -380,7 +375,8 @@
     <MESSAGE value="some changes" />
     <MESSAGE value="some changes2" />
     <MESSAGE value="added QList,QTree demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="added QList,QTree demo" />
+    <MESSAGE value="added QTreeView demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="added QTreeView demo" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/WebService/demo/getWeather.py">
@@ -489,9 +485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding>
-            <element signature="e#28#77#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -499,43 +492,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#28#114#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeWdiget.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
-          <folding>
-            <element signature="e#47#130#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="924">
+          <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/tree/TreeEvent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="54" column="68" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="54" selection-end-column="68" />
-          <folding>
-            <element signature="e#46#129#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1092">
+          <caret line="54" column="68" selection-start-line="52" selection-start-column="8" selection-end-line="54" selection-end-column="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/tree/ModifyTree.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeView.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="353">
+          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyQt5Learn/style/style.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="44" column="51" lean-forward="true" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
+          <folding>
+            <element signature="e#46#129#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
