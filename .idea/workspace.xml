@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c3bbb9b-72d3-4142-b6b1-98e82134c6da" name="Default Changelist" comment="some changes2">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/learning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/learning.iml" afterDir="false" />
+    <list default="true" id="1c3bbb9b-72d3-4142-b6b1-98e82134c6da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/ModifyTree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeView.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/TreeEvent.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQtLearn/.idea/PyQtLearn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/.idea/PyQtLearn.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQtLearn/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQtLearn/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQtLearn/demo/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/demo/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQtLearn/designer/excel.png" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/designer/excel.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQtLearn/designer/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/designer/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQtLearn/designer/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/designer/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQtLearn/designer/test.ui" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/designer/test.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQtLearn/designer/unselected.png" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/designer/unselected.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQtLearn/mengwen/MengWen.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQtLearn/mengwen/MengWen.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQtLearn/mengwen/calc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQtLearn/mengwen/runMengWen.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeWdiget.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeWdiget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/child1.png" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/img/child1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/child2.png" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/img/child2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/gChild.png" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/img/gChild.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/root.png" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt5Learn/widgets/tree/img/root.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,14 +44,44 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeWdiget.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
-              <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+              <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
               <folding>
                 <element signature="e#47#130#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/tree/TreeEvent.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="54" column="68" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="54" selection-end-column="68" />
+              <folding>
+                <element signature="e#46#129#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/tree/ModifyTree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeView.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="74">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -90,6 +113,9 @@
         <option value="$PROJECT_DIR$/PyQtLearn/widgets/list/QListView.py" />
         <option value="$PROJECT_DIR$/PyQtLearn/widgets/list/QListWidget.py" />
         <option value="$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeWdiget.py" />
+        <option value="$PROJECT_DIR$/PyQt5Learn/widgets/tree/TreeEvent.py" />
+        <option value="$PROJECT_DIR$/PyQt5Learn/widgets/tree/ModifyTree.py" />
+        <option value="$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeView.py" />
       </list>
     </option>
   </component>
@@ -145,6 +171,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MyGithub\learning\PyQt5Learn\widgets\tree\img" />
       <recent name="D:\MyGithub\learning" />
       <recent name="D:\MyGithub\learning\PyQtLearn\widgets\list" />
     </key>
@@ -166,8 +193,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.QTreeWdiget">
-    <configuration name="QListView" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.QTreeView">
+    <configuration name="ModifyTree" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -175,11 +202,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQtLearn/widgets" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt5Learn/widgets/tree" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\MyGithub\learning\PyQtLearn\widgets\list\QListView.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt5Learn/widgets/tree/ModifyTree.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -209,6 +236,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="QTreeView" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt5Learn/widgets/tree" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeView.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="QTreeWdiget" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -230,7 +278,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="getPackageName" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="TreeEvent" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -238,32 +286,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/zxw_appium_test/toolbox" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt5Learn/widgets/tree" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zxw_appium_test/toolbox/getPackageName.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="getWeather" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="learning" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WebService/demo" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WebService/demo/getWeather.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt5Learn/widgets/tree/TreeEvent.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -274,11 +301,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.QTreeView" />
+        <item itemvalue="Python.ModifyTree" />
+        <item itemvalue="Python.TreeEvent" />
         <item itemvalue="Python.QTreeWdiget" />
         <item itemvalue="Python.QListWidget" />
-        <item itemvalue="Python.QListView" />
-        <item itemvalue="Python.getPackageName" />
-        <item itemvalue="Python.getWeather" />
       </list>
     </recent_temporary>
   </component>
@@ -307,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555819541708</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added QList,QTree demo">
+      <created>1555840602778</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1555840602778</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -323,12 +357,12 @@
     <frame x="-9" y="-9" width="1618" height="870" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33569404" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33569404" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -345,7 +379,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="some changes" />
     <MESSAGE value="some changes2" />
-    <option name="LAST_COMMIT_MESSAGE" value="some changes2" />
+    <MESSAGE value="added QList,QTree demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="added QList,QTree demo" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/WebService/demo/getWeather.py">
@@ -473,10 +508,34 @@
     <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeWdiget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+          <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
           <folding>
             <element signature="e#47#130#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/tree/TreeEvent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="54" column="68" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="54" selection-end-column="68" />
+          <folding>
+            <element signature="e#46#129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/tree/ModifyTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/tree/QTreeView.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>

@@ -1,6 +1,6 @@
 """
-显示列表数据（QListView控件）
-2019-4-21 17:24:01
+树控件（QTreeWidget控件）
+2019-4-21 17:58:54
 """
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTreeWidget, QTreeWidgetItem
 from PyQt5.QtGui import QIcon
@@ -31,31 +31,30 @@ class BasicTreeWidgetDemo(QMainWindow):
         # 根节点
         root = QTreeWidgetItem(self.tree)
         root.setText(0, '根')    # 设置文本
-        root.setIcon(0, QIcon('root.png'))  # 设置图标
+        root.setIcon(0, QIcon('./img/root.png'))  # 设置图标
         self.tree.setColumnWidth(0, 220)    # 设置列宽
 
         # 添加子节点
         child1 = QTreeWidgetItem(root)
         child1.setText(0, '子节点1')
         child1.setText(1, '这是子节点1')
-        child1.setIcon(0, QIcon('child1.png'))
+        child1.setIcon(0, QIcon('./img/child1.png'))
         child1.setCheckState(0, Qt.Checked)     # 设置复选框
 
         # 添加子节点
         child2 = QTreeWidgetItem(root)
         child2.setText(0, '子节点2')
         child2.setText(1, '这是子节点2')
-        child2.setIcon(0, QIcon('child2.png'))
+        child2.setIcon(0, QIcon('./img/child2.png'))
 
         # 添加孙节点
         g_child = QTreeWidgetItem(child2)
         g_child.setText(0, '孙节点1')
         g_child.setText(1, '孙节点1的值')
-        g_child.setIcon(0, QIcon('gChild.png'))
+        g_child.setIcon(0, QIcon('./img/gChild.png'))
 
         # 展开所有节点
         self.tree.expandAll()
-
         self.setCentralWidget(self.tree)
 
     def clicked(self, item):
