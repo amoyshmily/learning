@@ -1,0 +1,19 @@
+platformName: Android
+
+#模拟器
+platformVersion: 5.1.1
+deviceName: 127.0.0.1:21503
+
+#真机
+#platformVersio: 5.1
+#udid:
+#deviceName: MX4
+
+appName: 51zxw_1.6.6.apk
+noReset: False
+unicodeKeyboard: True
+resetKeyboard: True
+
+appPackage: com.fzisen.app51zxw
+appActivity: .android.activity.LanchurActivity
+ip: 127.0.0.1
