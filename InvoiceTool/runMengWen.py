@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QApplication, QMainWindow
 import sys
-from mengwen import MengWen
+from InvoiceTool import MengWen
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
