@@ -1,0 +1,351 @@
+2019-03-01 23:02:20,615 myunit.py[line:10] INFO ======SET UP======
+2019-03-01 23:02:53,768 testRegister.py[line:10] INFO test_user_register
+2019-03-01 23:02:53,769 registerView.py[line:111] INFO ...generating random user info
+2019-03-01 23:02:53,769 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-01 23:03:01,919 common_fn.py[line:22] INFO no cancelBtn
+2019-03-01 23:03:01,920 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-01 23:03:02,637 registerView.py[line:45] INFO ======register_action======
+2019-03-01 23:03:03,891 registerView.py[line:48] INFO ...setting user icon
+2019-03-01 23:03:10,139 registerView.py[line:54] INFO ...typing username: zxw2018FLY7784
+2019-03-01 23:03:16,332 registerView.py[line:57] INFO ...typing password: zxw20183378
+2019-03-01 23:03:21,769 registerView.py[line:60] INFO ...typing username: 51zxw7266@163.com
+2019-03-01 23:03:36,305 registerView.py[line:68] ERROR register failed!
+2019-03-01 23:03:36,306 common_fn.py[line:56] INFO get register_action screenshot
+2019-03-01 23:03:37,353 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-01 23:05:43,536 myunit.py[line:10] INFO ======SET UP======
+2019-03-01 23:06:06,872 testRegister.py[line:10] INFO test_user_register
+2019-03-01 23:06:06,872 registerView.py[line:111] INFO ...generating random user info
+2019-03-01 23:06:06,873 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-01 23:06:15,130 common_fn.py[line:22] INFO no cancelBtn
+2019-03-01 23:06:15,130 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-01 23:06:15,584 registerView.py[line:45] INFO ======register_action======
+2019-03-01 23:06:16,735 registerView.py[line:48] INFO ...setting user icon
+2019-03-01 23:06:21,133 registerView.py[line:54] INFO ...typing username: zxww2018FLY3483
+2019-03-01 23:06:27,961 registerView.py[line:57] INFO ...typing password: zxww20181571
+2019-03-01 23:06:33,403 registerView.py[line:60] INFO ...typing username: 51zxww1322@163.com
+2019-03-01 23:06:43,216 registerView.py[line:75] INFO ======add_register_info======
+2019-03-01 23:06:43,216 registerView.py[line:77] INFO ...choosing year
+2019-03-01 23:06:47,693 registerView.py[line:81] INFO ...choosing major
+2019-03-01 23:06:54,887 registerView.py[line:87] INFO ...choosing school
+2019-03-01 23:06:58,100 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-01 23:08:23,735 myunit.py[line:10] INFO ======SET UP======
+2019-03-01 23:08:47,187 testRegister.py[line:10] INFO test_user_register
+2019-03-01 23:08:47,187 registerView.py[line:111] INFO ...generating random user info
+2019-03-01 23:08:47,187 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-01 23:08:55,215 common_fn.py[line:22] INFO no cancelBtn
+2019-03-01 23:08:55,216 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-01 23:08:55,614 registerView.py[line:45] INFO ======register_action======
+2019-03-01 23:08:56,652 registerView.py[line:48] INFO ...setting user icon
+2019-03-01 23:09:03,110 registerView.py[line:54] INFO ...typing username: zxww2018FLY5616
+2019-03-01 23:09:09,375 registerView.py[line:57] INFO ...typing password: zxww20185665
+2019-03-01 23:09:15,447 registerView.py[line:60] INFO ...typing username: 51zxww3376@163.com
+2019-03-01 23:09:25,406 registerView.py[line:75] INFO ======add_register_info======
+2019-03-01 23:09:25,406 registerView.py[line:77] INFO ...choosing year
+2019-03-01 23:09:30,130 registerView.py[line:81] INFO ...choosing major
+2019-03-01 23:09:37,465 registerView.py[line:87] INFO ...choosing school
+2019-03-01 23:09:44,319 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-01 23:12:30,528 myunit.py[line:10] INFO ======SET UP======
+2019-03-01 23:12:52,713 testRegister.py[line:10] INFO test_user_register
+2019-03-01 23:12:52,714 registerView.py[line:113] INFO ...generating random user info
+2019-03-01 23:12:52,714 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-01 23:13:01,035 common_fn.py[line:22] INFO no cancelBtn
+2019-03-01 23:13:01,035 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-01 23:13:01,465 registerView.py[line:46] INFO ======register_action======
+2019-03-01 23:13:02,629 registerView.py[line:49] INFO ...setting user icon
+2019-03-01 23:13:10,139 registerView.py[line:55] INFO ...typing username: zxww2018FLY8029
+2019-03-01 23:13:16,041 registerView.py[line:58] INFO ...typing password: zxww20186416
+2019-03-01 23:13:21,419 registerView.py[line:61] INFO ...typing username: 51zxww1580@163.com
+2019-03-01 23:13:36,130 registerView.py[line:69] ERROR register failed!
+2019-03-01 23:13:36,130 common_fn.py[line:56] INFO get register_action screenshot
+2019-03-01 23:13:37,008 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-01 23:36:06,467 myunit.py[line:10] INFO ======SET UP======
+2019-03-01 23:37:27,793 myunit.py[line:10] INFO ======SET UP======
+2019-03-01 23:38:24,756 myunit.py[line:10] INFO ======SET UP======
+2019-03-01 23:38:52,804 testLogin.py[line:12] INFO test_login_one
+2019-03-01 23:38:52,824 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-01 23:39:01,079 common_fn.py[line:22] INFO no cancelBtn
+2019-03-01 23:39:01,079 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-01 23:39:01,709 loginView.py[line:24] INFO ======login_action======
+2019-03-01 23:39:01,710 loginView.py[line:25] INFO username is:amoyshmily
+2019-03-01 23:39:07,292 loginView.py[line:28] INFO password is:6959054wc
+2019-03-01 23:39:12,771 loginView.py[line:31] INFO click loginBtn
+2019-03-01 23:39:13,450 loginView.py[line:33] INFO ======login finished!======
+2019-03-01 23:39:13,451 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-01 23:40:25,462 myunit.py[line:10] INFO ======SET UP======
+2019-03-01 23:40:48,186 testLogin.py[line:12] INFO test_login_one
+2019-03-01 23:40:48,190 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-01 23:40:56,621 common_fn.py[line:22] INFO no cancelBtn
+2019-03-01 23:40:56,621 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-01 23:40:57,271 loginView.py[line:24] INFO ======login_action======
+2019-03-01 23:40:57,272 loginView.py[line:25] INFO username is:amoyshmily
+2019-03-01 23:41:03,605 loginView.py[line:28] INFO password is:6959054wc
+2019-03-01 23:41:08,917 loginView.py[line:31] INFO click loginBtn
+2019-03-01 23:41:09,919 loginView.py[line:33] INFO ======login finished!======
+2019-03-01 23:41:09,919 loginView.py[line:47] INFO ======check_login_status======
+2019-03-01 23:41:09,920 common_fn.py[line:66] INFO ======check_market_ad======
+2019-03-01 23:41:18,156 loginView.py[line:37] INFO ======ckeck_account_alert======
+2019-03-01 23:41:28,139 loginView.py[line:59] INFO login success!
+2019-03-01 23:41:28,139 loginView.py[line:64] INFO ======logout_action======
+2019-03-01 23:41:32,506 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-01 23:43:28,120 myunit.py[line:10] INFO ======SET UP======
+2019-03-01 23:43:51,384 testLogin.py[line:20] INFO test_login_failure
+2019-03-01 23:43:51,387 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-01 23:43:59,758 common_fn.py[line:22] INFO no cancelBtn
+2019-03-01 23:43:59,758 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-01 23:44:00,992 loginView.py[line:24] INFO ======login_action======
+2019-03-01 23:44:00,992 loginView.py[line:25] INFO username is:zxw2018
+2019-03-01 23:44:06,595 loginView.py[line:28] INFO password is:active.123
+2019-03-01 23:44:12,160 loginView.py[line:31] INFO click loginBtn
+2019-03-01 23:44:12,864 loginView.py[line:33] INFO ======login finished!======
+2019-03-01 23:44:12,865 loginView.py[line:47] INFO ======check_login_status======
+2019-03-01 23:44:12,865 common_fn.py[line:66] INFO ======check_market_ad======
+2019-03-01 23:44:20,976 loginView.py[line:37] INFO ======ckeck_account_alert======
+2019-03-01 23:44:37,533 loginView.py[line:55] ERROR login failed
+2019-03-01 23:44:37,533 common_fn.py[line:56] INFO get login failed screenshot
+2019-03-01 23:44:38,203 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-01 23:51:46,339 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 10:50:45,398 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 10:51:18,056 testRegister.py[line:10] INFO test_user_register
+2019-03-02 10:51:18,057 registerView.py[line:113] INFO ...generating random user info
+2019-03-02 10:51:18,057 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-02 10:51:26,102 common_fn.py[line:22] INFO no cancelBtn
+2019-03-02 10:51:26,102 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-02 10:51:27,090 registerView.py[line:46] INFO ======register_action======
+2019-03-02 10:51:28,203 registerView.py[line:49] INFO ...setting user icon
+2019-03-02 10:51:32,637 registerView.py[line:55] INFO ...typing username: zxww2018FLY1052
+2019-03-02 10:51:39,291 registerView.py[line:58] INFO ...typing password: zxww20187603
+2019-03-02 10:51:44,813 registerView.py[line:61] INFO ...typing username: 51zxww8860@163.com
+2019-03-02 10:51:52,527 registerView.py[line:76] INFO ======add_register_info======
+2019-03-02 10:51:52,528 registerView.py[line:78] INFO ...choosing year
+2019-03-02 10:51:57,347 registerView.py[line:82] INFO ...choosing major
+2019-03-02 10:52:04,397 registerView.py[line:88] INFO ...choosing school
+2019-03-02 10:52:14,044 registerView.py[line:99] INFO ...checking register status
+2019-03-02 10:52:14,044 common_fn.py[line:66] INFO ======check_market_ad======
+2019-03-02 10:52:25,352 registerView.py[line:109] INFO succeed in register
+2019-03-02 10:52:25,353 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-02 11:24:22,936 testRun.py[line:16] INFO start test case
+2019-03-02 11:24:22,952 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 11:25:15,602 testLogin.py[line:21] INFO test_login_failure
+2019-03-02 11:25:15,663 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-02 11:25:23,879 common_fn.py[line:22] INFO no cancelBtn
+2019-03-02 11:25:23,880 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-02 11:25:26,519 loginView.py[line:24] INFO ======login_action======
+2019-03-02 11:25:26,520 loginView.py[line:25] INFO username is:zxw2018
+2019-03-02 11:25:32,818 loginView.py[line:28] INFO password is:active.123
+2019-03-02 11:25:38,372 loginView.py[line:31] INFO click loginBtn
+2019-03-02 11:25:39,122 loginView.py[line:33] INFO ======login finished!======
+2019-03-02 11:25:39,122 loginView.py[line:47] INFO ======check_login_status======
+2019-03-02 11:25:39,122 common_fn.py[line:66] INFO ======check_market_ad======
+2019-03-02 11:25:47,636 loginView.py[line:37] INFO ======ckeck_account_alert======
+2019-03-02 11:26:04,485 loginView.py[line:55] ERROR login failed
+2019-03-02 11:26:04,486 common_fn.py[line:56] INFO get login failed screenshot
+2019-03-02 11:26:05,678 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-02 11:26:13,286 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 15:31:09,085 run.py[line:21] INFO start test case
+2019-03-02 15:31:09,107 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 15:32:16,888 testLogin.py[line:21] INFO test_login_failure
+2019-03-02 15:32:16,969 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-02 15:32:25,613 common_fn.py[line:22] INFO no cancelBtn
+2019-03-02 15:32:25,615 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-02 15:32:26,572 loginView.py[line:24] INFO ======login_action======
+2019-03-02 15:32:26,572 loginView.py[line:25] INFO username is:zxw2018
+2019-03-02 15:32:33,572 loginView.py[line:28] INFO password is:active.123
+2019-03-02 15:32:38,993 loginView.py[line:31] INFO click loginBtn
+2019-03-02 15:32:39,681 loginView.py[line:33] INFO ======login finished!======
+2019-03-02 15:32:39,681 loginView.py[line:47] INFO ======check_login_status======
+2019-03-02 15:32:39,682 common_fn.py[line:66] INFO ======check_market_ad======
+2019-03-02 15:32:48,220 loginView.py[line:37] INFO ======ckeck_account_alert======
+2019-03-02 15:33:04,437 loginView.py[line:55] ERROR login failed
+2019-03-02 15:33:04,438 common_fn.py[line:56] INFO get login failed screenshot
+2019-03-02 15:33:05,446 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-02 15:33:13,054 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 15:37:04,412 run.py[line:21] INFO start test case
+2019-03-02 15:37:04,413 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 15:37:32,675 testLogin.py[line:21] INFO test_login_failure
+2019-03-02 15:37:32,679 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-02 15:37:40,785 common_fn.py[line:22] INFO no cancelBtn
+2019-03-02 15:37:40,786 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-02 15:37:41,337 loginView.py[line:24] INFO ======login_action======
+2019-03-02 15:37:41,337 loginView.py[line:25] INFO username is:zxw2018
+2019-03-02 15:37:47,665 loginView.py[line:28] INFO password is:active.123
+2019-03-02 15:37:52,980 loginView.py[line:31] INFO click loginBtn
+2019-03-02 15:37:53,718 loginView.py[line:33] INFO ======login finished!======
+2019-03-02 15:37:53,718 loginView.py[line:47] INFO ======check_login_status======
+2019-03-02 15:37:53,719 common_fn.py[line:66] INFO ======check_market_ad======
+2019-03-02 15:38:02,309 loginView.py[line:37] INFO ======ckeck_account_alert======
+2019-03-02 15:38:19,521 loginView.py[line:55] ERROR login failed
+2019-03-02 15:38:19,521 common_fn.py[line:56] INFO get login failed screenshot
+2019-03-02 15:38:20,333 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-02 15:38:27,924 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 15:40:59,499 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 15:41:54,674 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 15:42:17,443 testLogin.py[line:21] INFO test_login_failure
+2019-03-02 15:42:17,447 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-02 15:42:26,023 common_fn.py[line:22] INFO no cancelBtn
+2019-03-02 15:42:26,023 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-02 15:42:26,682 loginView.py[line:24] INFO ======login_action======
+2019-03-02 15:42:26,682 loginView.py[line:25] INFO username is:zxw2018
+2019-03-02 15:42:32,304 loginView.py[line:28] INFO password is:active.123
+2019-03-02 15:42:37,860 loginView.py[line:31] INFO click loginBtn
+2019-03-02 15:42:38,611 loginView.py[line:33] INFO ======login finished!======
+2019-03-02 15:42:38,611 loginView.py[line:47] INFO ======check_login_status======
+2019-03-02 15:42:38,612 common_fn.py[line:66] INFO ======check_market_ad======
+2019-03-02 15:42:47,148 loginView.py[line:37] INFO ======ckeck_account_alert======
+2019-03-02 15:43:03,715 loginView.py[line:55] ERROR login failed
+2019-03-02 15:43:03,716 common_fn.py[line:56] INFO get login failed screenshot
+2019-03-02 15:43:04,416 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-02 15:43:12,030 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 15:43:42,807 run.py[line:21] INFO start test case
+2019-03-02 15:43:42,807 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 15:43:42,866 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 15:43:55,805 run.py[line:21] INFO start test case
+2019-03-02 15:43:55,805 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 15:43:55,876 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 15:45:18,543 run.py[line:21] INFO start test case
+2019-03-02 15:45:18,544 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 15:45:39,919 testLogin.py[line:21] INFO test_login_failure
+2019-03-02 15:45:39,921 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-02 15:45:48,349 common_fn.py[line:22] INFO no cancelBtn
+2019-03-02 15:45:48,349 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-02 15:45:48,787 loginView.py[line:24] INFO ======login_action======
+2019-03-02 15:45:48,787 loginView.py[line:25] INFO username is:zxw2018
+2019-03-02 15:45:54,339 loginView.py[line:28] INFO password is:active.123
+2019-03-02 15:45:59,740 loginView.py[line:31] INFO click loginBtn
+2019-03-02 15:46:00,413 loginView.py[line:33] INFO ======login finished!======
+2019-03-02 15:46:00,413 loginView.py[line:47] INFO ======check_login_status======
+2019-03-02 15:46:00,414 common_fn.py[line:66] INFO ======check_market_ad======
+2019-03-02 15:46:08,463 loginView.py[line:37] INFO ======ckeck_account_alert======
+2019-03-02 15:46:24,719 loginView.py[line:55] ERROR login failed
+2019-03-02 15:46:24,720 common_fn.py[line:56] INFO get login failed screenshot
+2019-03-02 15:46:25,306 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-02 15:47:10,111 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 18:44:08,565 desired_caps.py[line:37] INFO appium port on 4725 for 127.0.0.1:62001 at Sat Mar  2 18:44:08 2019
+2019-03-02 18:46:20,612 desired_caps.py[line:37] INFO appium port on 4725 for 127.0.0.1:62001 at Sat Mar  2 18:46:20 2019
+2019-03-02 18:47:03,663 desired_caps.py[line:37] INFO appium port on 4725 for 127.0.0.1:62001 at Sat Mar  2 18:47:03 2019
+2019-03-02 18:47:29,698 desired_caps.py[line:37] INFO appium port on 4725 for 127.0.0.1:62001 at Sat Mar  2 18:47:29 2019
+2019-03-02 18:47:56,007 desired_caps.py[line:37] INFO appium port on 4725 for 127.0.0.1:62025 at Sat Mar  2 18:47:56 2019
+2019-03-02 18:48:37,766 desired_caps.py[line:37] INFO appium port on 4727 for 217.0.0.1:62025 at Sat Mar  2 18:48:37 2019
+2019-03-02 18:49:20,809 desired_caps.py[line:37] INFO appium port on 4725 for 127.0.0.1:62025 at Sat Mar  2 18:49:20 2019
+2019-03-02 18:49:56,461 desired_caps.py[line:37] INFO appium port on 4727 for 127.0.0.1:62025 at Sat Mar  2 18:49:56 2019
+2019-03-02 18:59:15,500 desired_caps.py[line:37] INFO appium port on 4725 for 127.0.0.1:62001 at Sat Mar  2 18:59:15 2019
+2019-03-02 19:02:19,935 desired_caps.py[line:37] INFO appium port on 4725 for 127.0.0.1:62001 at Sat Mar  2 19:02:19 2019
+2019-03-02 19:03:01,868 desired_caps.py[line:37] INFO appium port on 4727 for 127.0.0.1:62025 at Sat Mar  2 19:03:01 2019
+2019-03-02 22:02:57,354 run.py[line:21] INFO start test case
+2019-03-02 22:02:57,371 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 22:02:57,376 desired_caps.py[line:37] INFO appium port on 4725 for 127.0.0.1:62025 at Sat Mar  2 22:02:57 2019
+2019-03-02 22:03:20,827 run.py[line:21] INFO start test case
+2019-03-02 22:03:20,828 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 22:03:20,832 desired_caps.py[line:37] INFO appium port on 4725 for 127.0.0.1:62025 at Sat Mar  2 22:03:20 2019
+2019-03-02 22:03:48,022 testLogin.py[line:20] INFO test_login_failure
+2019-03-02 22:03:48,048 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-02 22:03:56,545 common_fn.py[line:22] INFO no cancelBtn
+2019-03-02 22:03:56,546 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-02 22:03:59,739 loginView.py[line:24] INFO ======login_action======
+2019-03-02 22:03:59,740 loginView.py[line:25] INFO username is:zxw2018
+2019-03-02 22:04:07,117 loginView.py[line:28] INFO password is:active.123
+2019-03-02 22:04:12,556 loginView.py[line:31] INFO click loginBtn
+2019-03-02 22:04:13,366 loginView.py[line:33] INFO ======login finished!======
+2019-03-02 22:04:13,367 loginView.py[line:47] INFO ======check_login_status======
+2019-03-02 22:04:13,367 common_fn.py[line:60] INFO ======check_market_ad======
+2019-03-02 22:04:21,908 loginView.py[line:37] INFO ======check_account_alert======
+2019-03-02 22:04:38,503 loginView.py[line:55] ERROR login failed
+2019-03-02 22:04:38,504 common_fn.py[line:56] INFO get login failed screenshot
+2019-03-02 22:04:42,944 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-02 22:04:49,171 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 22:04:49,183 desired_caps.py[line:37] INFO appium port on 4725 for 127.0.0.1:62025 at Sat Mar  2 22:04:49 2019
+2019-03-02 22:05:20,066 testLogin.py[line:11] INFO test_login_one
+2019-03-02 22:05:20,067 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-02 22:05:28,099 common_fn.py[line:22] INFO no cancelBtn
+2019-03-02 22:05:28,100 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-02 22:05:30,631 loginView.py[line:24] INFO ======login_action======
+2019-03-02 22:05:30,632 loginView.py[line:25] INFO username is:amoyshmily
+2019-03-02 22:05:36,887 loginView.py[line:28] INFO password is:6959054wc
+2019-03-02 22:05:42,266 loginView.py[line:31] INFO click loginBtn
+2019-03-02 22:05:43,068 loginView.py[line:33] INFO ======login finished!======
+2019-03-02 22:05:43,068 loginView.py[line:47] INFO ======check_login_status======
+2019-03-02 22:05:43,069 common_fn.py[line:60] INFO ======check_market_ad======
+2019-03-02 22:05:52,308 loginView.py[line:37] INFO ======check_account_alert======
+2019-03-02 22:06:04,943 loginView.py[line:59] INFO login success!
+2019-03-02 22:06:04,943 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-02 22:09:05,822 run.py[line:21] INFO start test case
+2019-03-02 22:09:05,823 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 22:09:05,827 desired_caps.py[line:37] INFO appium port on 4725 for 127.0.0.1:62025 at Sat Mar  2 22:09:05 2019
+2019-03-02 22:09:20,548 testLogin.py[line:22] INFO test_login_failure
+2019-03-02 22:09:20,550 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-02 22:09:28,854 common_fn.py[line:22] INFO no cancelBtn
+2019-03-02 22:09:28,854 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-02 22:09:29,364 loginView.py[line:24] INFO ======login_action======
+2019-03-02 22:09:29,364 loginView.py[line:25] INFO username is:zxw2018
+2019-03-02 22:09:35,573 loginView.py[line:28] INFO password is:active.123
+2019-03-02 22:09:40,897 loginView.py[line:31] INFO click loginBtn
+2019-03-02 22:09:41,686 loginView.py[line:33] INFO ======login finished!======
+2019-03-02 22:09:41,686 loginView.py[line:47] INFO ======check_login_status======
+2019-03-02 22:09:41,687 common_fn.py[line:61] INFO ======check_market_ad======
+2019-03-02 22:09:50,222 loginView.py[line:37] INFO ======check_account_alert======
+2019-03-02 22:10:06,703 loginView.py[line:55] ERROR login failed
+2019-03-02 22:10:06,704 common_fn.py[line:56] INFO get login failed screenshot
+2019-03-02 22:10:06,704 common_fn.py[line:57] INFO !!!!!!!!!!E:\pyScript\cifer/screenshots/login failed_<bound method Common.get_time of <businessView.loginView.LoginView object at 0x021A8CB0>>.png
+2019-03-02 22:10:08,507 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-02 22:12:15,314 run.py[line:21] INFO start test case
+2019-03-02 22:12:15,314 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 22:12:15,318 desired_caps.py[line:37] INFO appium port on 4725 for 127.0.0.1:62025 at Sat Mar  2 22:12:15 2019
+2019-03-02 22:12:30,088 testLogin.py[line:22] INFO test_login_failure
+2019-03-02 22:12:30,091 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-02 22:12:38,512 common_fn.py[line:22] INFO no cancelBtn
+2019-03-02 22:12:38,512 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-02 22:12:39,028 loginView.py[line:24] INFO ======login_action======
+2019-03-02 22:12:39,028 loginView.py[line:25] INFO username is:zxw2018
+2019-03-02 22:12:45,280 loginView.py[line:28] INFO password is:active.123
+2019-03-02 22:12:50,774 loginView.py[line:31] INFO click loginBtn
+2019-03-02 22:12:51,559 loginView.py[line:33] INFO ======login finished!======
+2019-03-02 22:12:51,559 loginView.py[line:47] INFO ======check_login_status======
+2019-03-02 22:12:51,559 common_fn.py[line:61] INFO ======check_market_ad======
+2019-03-02 22:12:59,979 loginView.py[line:37] INFO ======check_account_alert======
+2019-03-02 22:13:16,680 loginView.py[line:55] ERROR login failed
+2019-03-02 22:13:16,680 common_fn.py[line:56] INFO get login failed screenshot
+2019-03-02 22:13:16,681 common_fn.py[line:57] INFO !!!!!!!!!!E:\pyScript\cifer/screenshots/login failed_2019-03-02 22_13_16.png
+2019-03-02 22:13:18,595 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-02 22:23:09,623 run.py[line:24] INFO start test case
+2019-03-02 22:23:09,624 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 22:23:09,628 desired_caps.py[line:37] INFO appium port on 4725 for 127.0.0.1:62025 at Sat Mar  2 22:23:09 2019
+2019-03-02 22:23:24,472 testLogin.py[line:22] INFO test_login_failure
+2019-03-02 22:23:24,475 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-02 22:23:32,979 common_fn.py[line:22] INFO no cancelBtn
+2019-03-02 22:23:32,980 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-02 22:23:33,665 loginView.py[line:24] INFO ======login_action======
+2019-03-02 22:23:33,666 loginView.py[line:25] INFO username is:zxw2018
+2019-03-02 22:23:39,748 loginView.py[line:28] INFO password is:active.123
+2019-03-02 22:23:45,083 loginView.py[line:31] INFO click loginBtn
+2019-03-02 22:23:45,880 loginView.py[line:33] INFO ======login finished!======
+2019-03-02 22:23:45,880 loginView.py[line:47] INFO ======check_login_status======
+2019-03-02 22:23:45,881 common_fn.py[line:36] INFO ======check_market_ad======
+2019-03-02 22:23:54,448 common_fn.py[line:40] INFO ad not appeared
+2019-03-02 22:23:54,448 loginView.py[line:37] INFO ======check_account_alert======
+2019-03-02 22:24:11,044 loginView.py[line:55] ERROR login failed
+2019-03-02 22:24:12,683 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-02 22:37:37,607 run.py[line:24] INFO start test case
+2019-03-02 22:37:37,621 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 22:37:37,626 desired_caps.py[line:37] INFO appium port on 4725 for 127.0.0.1:62025 at Sat Mar  2 22:37:37 2019
+2019-03-02 22:42:47,973 run.py[line:29] INFO start test case
+2019-03-02 22:42:47,974 myunit.py[line:10] INFO ======SET UP======
+2019-03-02 22:42:48,001 desired_caps.py[line:37] INFO appium port on 4725 for 127.0.0.1:62025 at Sat Mar  2 22:42:48 2019
+2019-03-02 22:43:13,182 testRegister.py[line:9] INFO test_user_register
+2019-03-02 22:43:13,183 registerView.py[line:114] INFO ...generating random user info
+2019-03-02 22:43:13,183 common_fn.py[line:18] INFO ======check cancelBtn======
+2019-03-02 22:43:21,628 common_fn.py[line:22] INFO no cancelBtn
+2019-03-02 22:43:21,629 common_fn.py[line:27] INFO ======check skipBtn======
+2019-03-02 22:43:22,534 registerView.py[line:45] INFO ======register_action======
+2019-03-02 22:43:23,566 registerView.py[line:48] INFO ...setting user icon
+2019-03-02 22:43:37,511 registerView.py[line:54] INFO ...typing username: zxww2018FLY8246
+2019-03-02 22:43:43,700 registerView.py[line:57] INFO ...typing password: zxww20181079
+2019-03-02 22:43:49,345 registerView.py[line:60] INFO ...typing email: zxww2018FLY8246@163.com
+2019-03-02 22:44:00,478 registerView.py[line:75] INFO ======add_register_info======
+2019-03-02 22:44:00,478 registerView.py[line:77] INFO ...choosing year
+2019-03-02 22:44:04,857 registerView.py[line:81] INFO ...choosing major
+2019-03-02 22:44:12,120 registerView.py[line:87] INFO ...choosing school
+2019-03-02 22:44:21,433 registerView.py[line:98] INFO ...checking register status
+2019-03-02 22:44:21,433 common_fn.py[line:36] INFO ======check_market_ad======
+2019-03-02 22:44:32,575 common_fn.py[line:40] INFO ad not appeared
+2019-03-02 22:44:37,458 registerView.py[line:109] INFO succeed in register
+2019-03-02 22:44:37,458 myunit.py[line:14] INFO ======TEAR DOWN======
+2019-03-10 19:22:19,664 desired_caps.py[line:37] INFO appium port on 4723 for 127.0.0.1:21503 at Sun Mar 10 19:22:19 2019
