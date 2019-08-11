@@ -628,7 +628,7 @@ class BSTestRunner(Template_mixin):
     def getReportAttributes(self, result):
         """
         Return report attributes as a list of (name, value).
-        Override this to add custom attributes.
+        Override this to demo custom attributes.
         """
         startTime = str(self.startTime)[:19]
         duration = str(self.stopTime - self.startTime)
