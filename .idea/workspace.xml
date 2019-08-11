@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c3bbb9b-72d3-4142-b6b1-98e82134c6da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/learning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/learning.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperNotes/VueNotes.md" beforeDir="false" afterPath="$PROJECT_DIR$/SuperNotes/VueNotes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zxw_appium_tutorial/lib/BSTestRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/zxw_appium_tutorial/lib/BSTestRunner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperNotes/Postman/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/SuperNotes/Postman/note.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +15,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="34" column="37" lean-forward="true" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+            <state relative-caret-position="672">
+              <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
               <folding>
                 <element signature="e#56#115#0" expanded="true" />
               </folding>
@@ -29,11 +24,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/my_db.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="311">
               <caret line="58" selection-start-line="58" selection-end-line="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SuperNotes/Postman/note.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="499">
+                <caret line="150" column="34" selection-start-line="150" selection-start-column="34" selection-end-line="150" selection-end-column="34" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -70,7 +77,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/PyQt5Learn/widgets/label/QLabelBuddy.py" />
         <option value="$PROJECT_DIR$/RunnerFramework/test/test.yaml" />
         <option value="$PROJECT_DIR$/SuperNotes/Linux/DevEnv.md" />
         <option value="$PROJECT_DIR$/RunnerFramework/test/test.yml" />
@@ -121,6 +127,7 @@
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/code/dbTest.py" />
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/main.py" />
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/my_db.py" />
+        <option value="$PROJECT_DIR$/SuperNotes/Postman/note.md" />
       </list>
     </option>
   </component>
@@ -149,44 +156,13 @@
             <path>
               <item name="learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="learning" type="462c0819:PsiDirectoryNode" />
-              <item name="MyFlask" type="462c0819:PsiDirectoryNode" />
+              <item name="SuperNotes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="learning" type="462c0819:PsiDirectoryNode" />
-              <item name="MyFlask" type="462c0819:PsiDirectoryNode" />
-              <item name="Tutorial" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learning" type="462c0819:PsiDirectoryNode" />
-              <item name="MyFlask" type="462c0819:PsiDirectoryNode" />
-              <item name="Tutorial" type="462c0819:PsiDirectoryNode" />
-              <item name="Lesson06" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learning" type="462c0819:PsiDirectoryNode" />
-              <item name="MyFlask" type="462c0819:PsiDirectoryNode" />
-              <item name="Tutorial" type="462c0819:PsiDirectoryNode" />
-              <item name="Lesson07" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learning" type="462c0819:PsiDirectoryNode" />
-              <item name="MyFlask" type="462c0819:PsiDirectoryNode" />
-              <item name="Tutorial" type="462c0819:PsiDirectoryNode" />
-              <item name="Lesson07" type="462c0819:PsiDirectoryNode" />
-              <item name="FormDemoEXT" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learning" type="462c0819:PsiDirectoryNode" />
-              <item name="MyFlask" type="462c0819:PsiDirectoryNode" />
-              <item name="Tutorial" type="462c0819:PsiDirectoryNode" />
-              <item name="Lesson07" type="462c0819:PsiDirectoryNode" />
-              <item name="FormDemoEXT" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="SuperNotes" type="462c0819:PsiDirectoryNode" />
+              <item name="Postman" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -200,19 +176,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson06\demo1" />
-      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson02" />
-      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson01" />
-      <recent name="D:\MyGithub\learning\Flask\Tutorial\Day One" />
-      <recent name="D:\MyGithub\learning\Flask\Tutorial" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson07\FormDemoEXT" />
       <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson07" />
       <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson06" />
       <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson04\demo\static" />
       <recent name="D:\MyGithub\learning\MyFlask\Tutorial\DayOne\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MyGithub\learning\SuperNotes" />
+      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson06\demo1" />
+      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson02" />
+      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson01" />
+      <recent name="D:\MyGithub\learning\Flask\Tutorial\Day One" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -446,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558538739673</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added some vue notes">
+      <created>1565530814762</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1565530814762</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -468,8 +451,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1618" height="870" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -506,16 +490,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="added some vue notes" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/items/table/QTableView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="35" column="36" lean-forward="true" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
-          <folding>
-            <element signature="e#75#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PyQt5Learn/widgets/items/table/QTableWidget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -599,16 +573,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="310">
             <caret line="71" column="11" lean-forward="true" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SuperNotes/HttpRunner/notes.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="601">
-            <caret line="75" column="6" selection-start-line="75" selection-start-column="6" selection-end-line="75" selection-end-column="6" />
           </first_editor>
           <second_editor />
         </state>
@@ -892,20 +856,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/code/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/code/db.py" />
     <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="34" column="37" lean-forward="true" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+        <state relative-caret-position="672">
+          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
           <folding>
             <element signature="e#56#115#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SuperNotes/HttpRunner/notes.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1008">
+            <caret line="51" column="3" lean-forward="true" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -913,6 +881,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SuperNotes/Postman/note.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="499">
+            <caret line="150" column="34" selection-start-line="150" selection-start-column="34" selection-end-line="150" selection-end-column="34" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
