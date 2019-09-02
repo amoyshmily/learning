@@ -36,7 +36,7 @@ def register():
     if request.method == 'POST':
         addUser(my_form.username.data, my_form.password.data)
 
-    return render_template('index.html')
+    return render_template('index.html', my_form=my_form)
 
 
 if __name__ == '__main__':

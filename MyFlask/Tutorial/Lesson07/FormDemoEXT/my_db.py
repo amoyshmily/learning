@@ -40,7 +40,7 @@ def doCUD(sql: str) -> int:
     return affected_rows
 
 
-def addUser(username: str, password:str):
+def addUser(username: str, password: str):
     """
     新增用户
     :param username:

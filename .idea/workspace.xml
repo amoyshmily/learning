@@ -2,16 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c3bbb9b-72d3-4142-b6b1-98e82134c6da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MyFlask/MovieProject/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyFlask/MovieProject/app/admin/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyFlask/MovieProject/app/admin/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyFlask/MovieProject/app/admin/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyFlask/MovieProject/app/home/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyFlask/MovieProject/app/home/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyFlask/MovieProject/app/home/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyFlask/MovieProject/app/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyFlask/MovieProject/manage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/MovieProject/app/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/MovieProject/app/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/MovieProject/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/MovieProject/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson01/Lesson01.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson01 路由/Lesson01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson01/note.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/Lesson02.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/Lesson02.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/Model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/base_child_one.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/base_child_one.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/base_child_two.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/base_child_two.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/user_id.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/user_id.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/user_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/user_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/users_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/users_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson03/code/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson03 消息提示/code/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson03/code/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson03 消息提示/code/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson03/code/templates/not_found.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson03 消息提示/code/templates/not_found.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson03/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson03 消息提示/note.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson04/demo/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson04 Web基础/demo/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson04/demo/static/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson04 Web基础/demo/static/add.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson04/demo/static/add.png" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson04 Web基础/demo/static/add.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson04/demo/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson04 Web基础/demo/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson04/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson04 Web基础/note.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson05/code/checkValue.js" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson05 表单开发/code/checkValue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson05/code/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson05 表单开发/code/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson05/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson05 表单开发/note.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06/FormDemo/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06 wtf扩展/FormDemo/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06/FormDemo/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06 wtf扩展/FormDemo/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06/FormDemoEXT/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06 wtf扩展/FormDemoEXT/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06/FormDemoEXT/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06 wtf扩展/FormDemoEXT/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06 wtf扩展/note.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/my_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/my_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/note.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,89 +46,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SuperNotes/Postman/note.md">
+        <entry file="file://$PROJECT_DIR$/MyFlask/Notes/flaskNotes.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="226">
-                <caret line="137" column="12" selection-start-line="137" selection-start-column="12" selection-end-line="137" selection-end-column="12" />
+              <first_editor relative-caret-position="7119">
+                <caret line="339" column="37" selection-start-line="339" selection-start-column="37" selection-end-line="339" selection-end-column="37" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/manage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/home/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="16" lean-forward="true" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/home/forms.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/admin/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/admin/forms.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/home/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="21" lean-forward="true" selection-end-line="4" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/admin/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/note.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="84">
+                <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -133,6 +93,9 @@
       <find>正在解析客户</find>
       <find>press</find>
       <find>key</find>
+      <find>form</find>
+      <find>redirect</find>
+      <find>urlfor</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,31 +104,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/InvoiceTool/SumHelper/run2.py" />
-        <option value="$PROJECT_DIR$/InvoiceTool/SumHelper/run.py" />
-        <option value="E:/HttpRunnerManager/HttpRunnerManager/settings.py" />
-        <option value="$PROJECT_DIR$/SuperNotes/HttpRunner/notes.md" />
-        <option value="$PROJECT_DIR$/SuperNotes/VueNotes.md" />
-        <option value="$PROJECT_DIR$/Selenium/test.py" />
-        <option value="$PROJECT_DIR$/Flask/Tutorial/HelloWorld.py" />
-        <option value="$PROJECT_DIR$/Flask/Tutorial/templates/index.html" />
-        <option value="$PROJECT_DIR$/Flask/Tutorial/Moudle.py" />
-        <option value="$PROJECT_DIR$/Flask/Tutorial/templates/Model.py" />
-        <option value="$PROJECT_DIR$/Flask/Tutorial/Day One/Moudle.py" />
-        <option value="$PROJECT_DIR$/Flask/Tutorial/DayOne/templates/user_index.html" />
-        <option value="$PROJECT_DIR$/Flask/Tutorial/DayOne/Moudle.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/DayOne/templates/user_id.html" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/DayOne/templates/users_index.html" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/DayOne/templates/base_child_one.html" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/DayOne/templates/base_child_two.html" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/DayOne/Moudle.py" />
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/DayOne/templates/base.html" />
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson03/code/templates/index.html" />
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson03/code/templates/not_found.html" />
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson03/code/app.py" />
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson03/note.md" />
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson01/Lesson01.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson01/note.md" />
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson04/code/cgi-bin/main.py" />
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson04/note.md" />
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson04/demo/templates/index.html" />
@@ -178,20 +122,39 @@
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06/note.md" />
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06/demo2/main.py" />
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06/demo2/templates/index.html" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/note.md" />
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/code/dbTest.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/main.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/my_db.py" />
         <option value="$PROJECT_DIR$/SuperNotes/Postman/note.md" />
         <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/home/forms.py" />
         <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/admin/forms.py" />
         <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/home/__init__.py" />
         <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/admin/__init__.py" />
-        <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/home/views.py" />
         <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/admin/views.py" />
         <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/__init__.py" />
         <option value="$PROJECT_DIR$/MyFlask/MovieProject/manage.py" />
+        <option value="$PROJECT_DIR$/MyFlask/Notes/movieProjectNotes.md" />
         <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/models.py" />
+        <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/templates/home/index.html" />
+        <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/home/views.py" />
+        <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/templates/home/login.html" />
+        <option value="$PROJECT_DIR$/MyFlask/TodoProject/manage.py" />
+        <option value="$PROJECT_DIR$/MyFlask/TodoProject/app/models.py" />
+        <option value="$PROJECT_DIR$/MyFlask/TodoProject/app/templates/index.html" />
+        <option value="$PROJECT_DIR$/MyFlask/TodoProject/app/views.py" />
+        <option value="$PROJECT_DIR$/MyFlask/TodoProject/application/__init__.py" />
+        <option value="$PROJECT_DIR$/MyFlask/TodoProject/app/__init__.py" />
+        <option value="$PROJECT_DIR$/MyFlask/TodoProject/run.py" />
+        <option value="$PROJECT_DIR$/MyFlask/TodoProject/config.py" />
+        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/my_db.py" />
+        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/main.py" />
+        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/note.md" />
+        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06/FormDemoEXT/main.py" />
+        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson01/note.md" />
+        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/user_index.html" />
+        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/user_id.html" />
+        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/Lesson02.py" />
+        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/users_index.html" />
+        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06 wtf扩展/FormDemoEXT/templates/index.html" />
+        <option value="$PROJECT_DIR$/MyFlask/Notes/flaskNotes.md" />
       </list>
     </option>
   </component>
@@ -209,7 +172,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -226,35 +188,26 @@
               <item name="learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="learning" type="462c0819:PsiDirectoryNode" />
               <item name="MyFlask" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieProject" type="462c0819:PsiDirectoryNode" />
+              <item name="Notes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="learning" type="462c0819:PsiDirectoryNode" />
               <item name="MyFlask" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieProject" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Tutorial" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="learning" type="462c0819:PsiDirectoryNode" />
               <item name="MyFlask" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieProject" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learning" type="462c0819:PsiDirectoryNode" />
-              <item name="MyFlask" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieProject" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="Tutorial" type="462c0819:PsiDirectoryNode" />
+              <item name="Lesson07" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -263,19 +216,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson07\FormDemoEXT" />
-      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson07" />
-      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson06" />
-      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson04\demo\static" />
-      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\DayOne\templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MyGithub\learning\MyFlask\MovieProject" />
+      <recent name="D:\MyGithub\learning\MyFlask\TodoProject\app" />
       <recent name="D:\MyGithub\learning\SuperNotes" />
       <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson06\demo1" />
       <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson02" />
-      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson01" />
-      <recent name="D:\MyGithub\learning\Flask\Tutorial\Day One" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyGithub\learning\MyFlask\MovieProject\app\templates\home" />
+      <recent name="D:\MyGithub\learning\MyFlask\MovieProject\app\static" />
+      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson07\FormDemoEXT" />
+      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson07" />
+      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson06" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -290,8 +243,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.manage">
-    <configuration name="dbTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Lesson02">
+    <configuration name="Lesson02" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -299,11 +252,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/code" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\MyGithub\learning\MyFlask\Tutorial\Lesson07\code\db.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/Lesson02.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -312,7 +265,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -320,11 +273,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06/demo2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MyFlask/TodoProject/application" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06/demo2/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MyFlask/TodoProject/application/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -354,7 +328,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="my_db" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -362,11 +336,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MyFlask/TodoProject" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/my_db.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MyFlask/TodoProject/run.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -375,28 +349,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in D:/MyGithub/learning/MyFlask/Tutorial/Lesson07/code/db.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="learning" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/code" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/code/db.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Lesson02" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.run" />
+        <item itemvalue="Python.__init__" />
         <item itemvalue="Python.manage" />
-        <item itemvalue="Python.my_db" />
-        <item itemvalue="Python.dbTest" />
-        <item itemvalue="Python tests.pytest in D:/MyGithub/learning/MyFlask/Tutorial/Lesson07/code/db.py" />
-        <item itemvalue="Python.main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -523,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565537707993</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added flask movie project">
+      <created>1566316481436</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1566316481436</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -547,12 +513,12 @@
     <frame x="-9" y="-9" width="1618" height="870" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21119593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31303117" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28186968" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -581,207 +547,10 @@
     <MESSAGE value="some notesss" />
     <MESSAGE value="some" />
     <MESSAGE value="added some vue notes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some vue notes" />
+    <MESSAGE value="added flask movie project" />
+    <option name="LAST_COMMIT_MESSAGE" value="added flask movie project" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SuperNotes/VueNotes.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="310">
-            <caret line="71" column="11" lean-forward="true" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Selenium/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/HttpRunnerManager/HttpRunnerManager/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="133" column="50" selection-start-line="133" selection-start-column="50" selection-end-line="133" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Programs/Anaconda3/Lib/site-packages/flask/templating.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="121" column="4" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/Model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/user_id.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/user_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Programs/Anaconda3/Lib/site-packages/jinja2/parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/users_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/base_child_two.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/base_child_one.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson03/code/templates/not_found.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson03/code/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson03/code/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="33" selection-start-line="33" selection-end-line="36" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson01/note.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1323">
-            <caret line="63" column="6" selection-end-line="71" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/Lesson02.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson01/Lesson01.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson03/note.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="328">
-            <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson04/code/cgi-bin/main.py" />
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson04/note.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="567">
-            <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson04/demo/static/add.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson04/demo/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson04/demo/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson05/code/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="7" selection-start-line="8" selection-end-line="29" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson05/code/checkValue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zxw_appium_tutorial/common/common_fn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
@@ -811,64 +580,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson05/note.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="478">
-            <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson06/FormDemo/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson06/FormDemo/main.py">
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson06 wtf扩展/FormDemo/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson06/note.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="105">
-            <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson06/FormDemoEXT/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson06/FormDemoEXT/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-          <folding>
-            <element signature="e#56#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/note.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="210">
-            <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -883,43 +598,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-          <folding>
-            <element signature="e#56#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/my_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1218">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SuperNotes/Postman/note.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="226">
-            <caret line="137" column="12" selection-start-line="137" selection-start-column="12" selection-end-line="137" selection-end-column="12" />
+          <first_editor relative-caret-position="3129">
+            <caret line="149" column="12" selection-start-line="149" selection-start-column="12" selection-end-line="149" selection-end-column="12" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/home/forms.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/SuperNotes/Python/skills.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/admin/forms.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/home/__init__.py">
+    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="21" lean-forward="true" selection-end-line="4" selection-end-column="21" />
+        <state relative-caret-position="1302">
+          <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/static/404/404.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -930,41 +643,303 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/home/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="16" lean-forward="true" selection-end-line="7" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/admin/forms.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/admin/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="42">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/__init__.py">
+    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/templates/home/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="84">
+          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/home/forms.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/home/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/templates/home/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+          <folding>
+            <element signature="e#283#289#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#906#912#0" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#div#1;n#fieldset#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#1411#1417#0" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#div#3;n#fieldset#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/app/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/app/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" selection-start-column="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#56#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/my_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/base_child_two.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/movieProjectNotes.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-698">
+            <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/templates/home/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="93" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="93" />
+          <folding>
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#6;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#7;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson01/note.md" />
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/Model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/user_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/user_id.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="6" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/base_child_one.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" selection-start-line="2" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/users_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson05 表单开发/note.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="279">
+            <caret line="67" lean-forward="true" selection-end-line="67" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson04 Web基础/note.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="24">
+            <caret line="2" column="8" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson03 消息提示/note.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="147">
+            <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/Lesson02.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="e#54#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson01 路由/Lesson01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson06 wtf扩展/note.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="21">
+            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/models.py">
+    <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/manage.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/home/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="292">
+          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="35" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson06 wtf扩展/FormDemo/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="15" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="18" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson06 wtf扩展/FormDemoEXT/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="14" column="15" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="14" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson06 wtf扩展/FormDemoEXT/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#56#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Notes/flaskNotes.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="7119">
+            <caret line="339" column="37" selection-start-line="339" selection-start-column="37" selection-end-line="339" selection-end-column="37" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/note.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="84">
+            <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

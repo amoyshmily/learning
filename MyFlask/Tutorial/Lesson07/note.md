@@ -10,4 +10,4 @@
 
 #### Python操作数据库
 
-模块：mysql-python
+模块：pymysql
