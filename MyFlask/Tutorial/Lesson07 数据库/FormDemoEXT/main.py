@@ -4,9 +4,9 @@
 cifer woods
 """
 
-from flask import Flask, request, redirect, render_template
+from flask import Flask, request, redirect, render_template, url_for
 from wtforms import Form, StringField, PasswordField, SubmitField, validators
-from my_db import addUser
+from db import *
 
 app = Flask(__name__)
 
@@ -21,8 +21,7 @@ class LoginForm(Form):
 def login():
     my_form = LoginForm(request.form)
     if request.method == 'POST':
-
-        if my_form.username.data == 'cifer' and my_form.password.data == '123456' and my_form.validate():
+        if isExisted(my_form.username.data, my_form.password.data) and my_form.validate():
             return redirect('https://baidu.com')
         else:
             msg = 'Login failed!'
@@ -35,9 +34,16 @@ def register():
     my_form = LoginForm(request.form)
     if request.method == 'POST':
         addUser(my_form.username.data, my_form.password.data)
+        print(type(my_form.username.data))
+        return 'Register Success!'
 
     return render_template('index.html', my_form=my_form)
 
 
+@app.errorhandler(404)
+def notFound(e):
+    return redirect(url_for('login'))
+
+
 if __name__ == '__main__':
-    app.run(port=8888)
+    app.run(port=8888, debug=True)

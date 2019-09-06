@@ -6,7 +6,6 @@
       <sourceFolder url="file://$MODULE_DIR$/zxw_spider_tutorial" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/PyQt5Learn" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/WebService" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
