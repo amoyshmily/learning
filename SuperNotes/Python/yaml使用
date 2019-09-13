@@ -1,0 +1,7 @@
+
+#### 导出yaml文件，保证中文正常显示
+
+```
+with open(yaml_file, 'wb') as file:
+    yaml.dump(json_str, file, encoding='utf-8', allow_unicode=True)
+```

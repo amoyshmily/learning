@@ -62,19 +62,8 @@ public void test(){
 
 # 常用内置对象
 
-## vars 用户自定义变量
-```
-vars.put(String key,Value)放置一个Map到vars
-vars.get(String key)获取String变量
 
- 
-vars.putObject("list",list);
-Object Value = vars.getObject("list");
-```
-
-
-
-## cxt 调用请求/响应数据
+## cxt 上下文对象
 
 ```
 //SampleResult需要import对象
@@ -99,9 +88,71 @@ log.info(RequestHeaders);
 
 ```
 
-## prev 
+## vars 用户自定义变量
 
-prev是Beanshell后置处理器的内置对象 相当于`ctx.getPreviousResult()`。
+
+系统内置定义：JMeterVariables vars=ctx.getVariables();
+
+```
+vars.put(String key,Value)放置一个Map到vars
+vars.get(String key)获取String变量
+
+ 
+vars.putObject("list",list);
+Object Value = vars.getObject("list");
+```
+
+
+
+
+
+## prev
+
+prev是Beanshell后置处理器的内置对象，
+
+系统内置定义：SampleResult prev=ctx.getPreviousResult() ;
+
 
 
 ## props 全局变量
+
+```
+String response = prev.getResponseDataAsString();
+
+如果对于json结果，可以参考使用fastJSON进行解析。
+
+```
+
+
+
+
+# 常用元件
+
+## 逻辑控制器 Logic Controller
+
+Logic Controllers determine the order in which Samplers are processed.
+
+分类：
+（1）控制测试计划执行过程中节点的逻辑执行顺序，如：Loop Controller、If Controller等
+（2）对测试计划中的脚本进行分组、方便JMeter统计执行结果以及进行脚本的运行时控制等，如：Throughput Controller、Transaction Controller。
+
+#### if控制器
+
+菜单路径：添加/逻辑控制器/如果IF控制器
+
+在if逻辑控制器的Expression中不能直接填写条件表达式，需要借助函数将条件表达式计算为true/false，可以借助的函数有__jexl3和__groovy函数。
+
+勾选“Interpret Condition as Variable Expression?”，则指定为groovy脚本，否则默认视为JavaScript脚本。
+
+> groovy脚本示例
+
+```
+${__groovy(vars.get('response').equals("true"))}
+```
+
+> JS脚本示例
+
+```
+"${response}" == "true"
+```
+
