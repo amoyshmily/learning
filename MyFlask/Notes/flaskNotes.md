@@ -347,3 +347,47 @@ def login():
             return render_template('index.html', re_form=my_form)
     return render_template('index.html', re_form=my_form)
 ```
+
+
+# 数据库
+
+## ORM模型
+
+```
+# 安装
+pip install flask-sqlalchemy
+
+# 引用
+from flask_sqlalchemy import SQLAlchemy
+import pymysql
+pymysql.install_as_MySQLdb()
+
+
+# 实例化
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:123456@127.0.0.1:3306/flask'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+db = SQLAlchemy(app)
+
+# 插入数据
+try:
+    db.session.add(obj)
+    db.session.commit()
+except:
+    db.session.rollback()
+finally:
+    doSomething()
+
+# 查询数据
+obj = Obj.query.filter_by(field1=self.XX, field2=self.XXX).first()
+obj_all = Obj.query.filter_by().all()
+
+```
+
+#### 常见异常排除
+```
+【问题】关于“KeyError: 'SQLALCHEMY_TRACK_MODIFICATIONS'”
+产生原因：在model文件和视图函数文件中重复实例化了Flask对象。
+解决办法：在视图函数中引用已经示例化的app对象。
+例如模型文件db = SQLAlchemy(app)，则视图文件中app = db.app，而不要再app = Flask(__name__)。
+```

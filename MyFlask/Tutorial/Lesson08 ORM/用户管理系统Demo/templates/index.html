@@ -9,10 +9,9 @@
         <h2>User Management</h2>
         {% if message %} {{message}} {% endif %}
         <form action="" name="form" method="post">
-            Username: {{my_form.username}}<br/>
-            Password: {{my_form.password}}<br/>
+            Username: {{my_form.inp_username}}<br/>
+            Password: {{my_form.inp_password}}<br/>
             {{my_form.btn_submit}}
-            <!--<input type="submit" value="submit" />-->
         </form>
     </div>
 </body>

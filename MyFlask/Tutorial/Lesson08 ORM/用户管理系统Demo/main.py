@@ -6,22 +6,24 @@ cifer woods
 
 from flask import Flask, request, redirect, render_template, url_for
 from wtforms import Form, StringField, PasswordField, SubmitField, validators
-from db import *
+from model import *
+from model import db
 
-app = Flask(__name__)
+app = db.app  # 千万不要app = Flask(__name__)，否则会报错'SQLALCHEMY_TRACK_MODIFICATIONS'
 
 
 class LoginForm(Form):
-    username = StringField("username", [validators.data_required()])
-    password = PasswordField("password", [validators.data_required()])
+    inp_username = StringField("username", [validators.data_required()])
+    inp_password = PasswordField("password", [validators.data_required()])
     btn_submit = SubmitField("submit")
 
 
-@app.route('/user', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     my_form = LoginForm(request.form)
     if request.method == 'POST':
-        if isExisted(my_form.username.data, my_form.password.data) and my_form.validate():
+        u = User(username=my_form.inp_username.data, password=my_form.inp_password.data)
+        if u.isExisted() and my_form.validate():
             return redirect('https://baidu.com')
         else:
             msg = 'Login failed!'
@@ -33,8 +35,8 @@ def login():
 def register():
     my_form = LoginForm(request.form)
     if request.method == 'POST':
-        addUser(my_form.username.data, my_form.password.data)
-        print(type(my_form.username.data))
+        u = User(username=my_form.inp_username.data, password=my_form.inp_password.data)
+        u.addUser()
         return 'Register Success!'
 
     return render_template('index.html', my_form=my_form)

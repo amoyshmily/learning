@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板Demo</title>
+</head>
+<body>
+
+<form method="post">
+    content: {{re_form.inp_content}}
+    <br>
+    sender: {{re_form.inp_sender}}
+    <br>
+    {{re_form.btn_submit}}
+</form>
+
+<ul>
+    {% for entry in re_entries %}
+    <li>{{entry.content}} sent by {{entry.sender}}</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
