@@ -351,8 +351,8 @@ def login():
 
 # 数据库
 
-## pymysql
-
+## 常规操作
+使用pymysql库
 ```
 # 安装
 pip install pymysql
