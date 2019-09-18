@@ -351,8 +351,10 @@ def login():
 
 # 数据库
 
-## 常规操作
-使用pymysql库
+## Flask与MySQL
+
+#### 驱动：pymysql
+
 ```
 # 安装
 pip install pymysql
@@ -428,7 +430,7 @@ if __name__ == '__main__':
     isExisted('amoy', '12')
 ```
 
-## ORM模型
+#### ORM模型:flask-sqlalchemy
 
 ```
 # 安装
@@ -467,4 +469,36 @@ obj_all = Obj.query.filter_by().all()
 产生原因：在model文件和视图函数文件中重复实例化了Flask对象。
 解决办法：在视图函数中引用已经示例化的app对象。
 例如模型文件db = SQLAlchemy(app)，则视图文件中app = db.app，而不要再app = Flask(__name__)。
+```
+
+## Flask与MongoDB
+
+应用场景：非事务型，如日志系统。
+
+#### 驱动：pymongo
+
+
+概念：
+collection：类似表
+document：类似记录
+
+
+
+#### DORM模型: flask_mongoengine
+
+
+
+DORM=document object relation mapping
+
+
+```
+CRUD操作：
+
+# 查询 Address.objects(name="zhangsan").first()
+ 
+# 添加 Address(name='lisi', address='lisi@gmail.com').save()
+
+# 删除 Address.delete()
+
+# 更新 Address.update(name="lisi@outlook.com")
 ```
