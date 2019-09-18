@@ -486,12 +486,19 @@ document：类似记录
 
 #### DORM模型: flask_mongoengine
 
-
-
 DORM=document object relation mapping
 
 
 ```
+实例化：
+from flask import Flask
+from flask_mongoengine import MongoEngine
+
+app = Flask(__name__)
+app.config['MONGODB_SETTINGS'] = {'db': 'jikexueyuan', 'host': '127.0.0.1', 'port': 27017}
+db = MongoEngine(app)
+
+
 CRUD操作：
 
 # 查询 Address.objects(name="zhangsan").first()

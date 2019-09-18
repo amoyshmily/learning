@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c3bbb9b-72d3-4142-b6b1-98e82134c6da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyFlask/Notes/flaskNotes.md" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Notes/flaskNotes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07 数据库/DbDemo/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07 数据库mysql/MySQLDemo/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07 数据库/DbDemo/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07 数据库mysql/MySQLDemo/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07 数据库/DbDemo/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07 数据库mysql/MySQLDemo/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07 数据库/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07 数据库mysql/note.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson08 ORM/留言板Demo/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson08 ORM/留言板Demo/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson10 DORM/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyFlask/Tutorial/Lesson10 DORM/model.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,23 +13,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyFlask/Notes/flaskNotes.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="111">
-                <caret line="495" lean-forward="true" selection-start-line="495" selection-end-line="495" />
+              <first_editor relative-caret-position="226">
+                <caret line="496" column="21" lean-forward="true" selection-start-line="496" selection-start-column="21" selection-end-line="496" selection-end-column="21" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson10 DORM/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state>
+              <caret selection-end-line="1" selection-end-column="41" />
               <folding>
                 <element signature="e#2#25#0" expanded="true" />
               </folding>
@@ -137,8 +132,8 @@
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson09 MongoDB/note.md" />
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson09 MongoDB/用户管理系统Demo/model.py" />
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson10 DORM/app.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Notes/flaskNotes.md" />
         <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson10 DORM/model.py" />
+        <option value="$PROJECT_DIR$/MyFlask/Notes/flaskNotes.md" />
       </list>
     </option>
   </component>
@@ -174,20 +169,6 @@
               <item name="learning" type="462c0819:PsiDirectoryNode" />
               <item name="MyFlask" type="462c0819:PsiDirectoryNode" />
               <item name="Tutorial" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learning" type="462c0819:PsiDirectoryNode" />
-              <item name="MyFlask" type="462c0819:PsiDirectoryNode" />
-              <item name="Tutorial" type="462c0819:PsiDirectoryNode" />
-              <item name="Lesson09 MongoDB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learning" type="462c0819:PsiDirectoryNode" />
-              <item name="MyFlask" type="462c0819:PsiDirectoryNode" />
-              <item name="Tutorial" type="462c0819:PsiDirectoryNode" />
-              <item name="Lesson10 DORM" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -516,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568388198915</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="added flask MongoDB note">
+      <created>1568826032217</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1568826032217</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -545,7 +533,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28186968" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28186968" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -580,7 +568,8 @@
     <MESSAGE value="added flask orm" />
     <MESSAGE value="added flask orm examples" />
     <MESSAGE value="added flask db note" />
-    <option name="LAST_COMMIT_MESSAGE" value="added flask db note" />
+    <MESSAGE value="added flask MongoDB note" />
+    <option name="LAST_COMMIT_MESSAGE" value="added flask MongoDB note" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/app/templates/index.html">
@@ -952,23 +941,23 @@
     <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson09 MongoDB/model.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Notes/flaskNotes.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="111">
-            <caret line="495" lean-forward="true" selection-start-line="495" selection-end-line="495" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson10 DORM/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state>
+          <caret selection-end-line="1" selection-end-column="41" />
           <folding>
             <element signature="e#2#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFlask/Notes/flaskNotes.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="226">
+            <caret line="496" column="21" lean-forward="true" selection-start-line="496" selection-start-column="21" selection-end-line="496" selection-end-column="21" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
