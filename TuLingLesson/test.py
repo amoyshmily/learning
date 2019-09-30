@@ -1,11 +1,3 @@
-class PythonStudent():
-	# 类属性
-	name = 'Amoy'
-	age = 18
-
-	# 定义函数
-	def introduce(self):
-		msg = 'My name is {} and I\'m {} years old.'.format(self.name, self.age)
-		print(msg)
-stu = PythonStudent()
-stu.introduce()
+s = bytes('Python编程使我快乐！', encoding='utf-8')
+print(s)
+print(s.decode('utf-8'))
