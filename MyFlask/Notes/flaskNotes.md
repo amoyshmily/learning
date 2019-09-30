@@ -348,6 +348,57 @@ def login():
     return render_template('index.html', re_form=my_form)
 ```
 
+# 外部脚本 flask_script
+
+```
+安装：
+pip install flask-script
+
+app.py文件
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return 'hello world'
+
+
+manage.py脚本
+
+from flask_script import Manager
+from app import app
+
+manager = Manager(app)
+
+@manage.command
+def hello():
+    print("hello world")
+    
+@manage.option('-m', '--msg', dest='msg_val', default='world)
+def helloWorld(msg_val):
+    print('hello' + msg_val)
+    
+if __name__ == "__main__":
+    manager.run()
+
+
+# 命令行运行
+python manage.py hello
+>>>
+hello world
+
+python manage.py helloWorld
+>>>
+hello world
+
+python manage.py helloWorld -m cifer
+>>>
+hello cifer
+
+```
+
+
 
 # 数据库
 
