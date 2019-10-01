@@ -1,3 +1,6 @@
-s = bytes('Python编程使我快乐！', encoding='utf-8')
-print(s)
-print(s.decode('utf-8'))
+
+s1 = 'hello world'
+s2 = '1234'
+
+print(max(s1))
+print(max(s2))
