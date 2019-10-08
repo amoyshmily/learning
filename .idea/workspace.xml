@@ -13,13 +13,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="163">
-                <caret line="283" column="37" lean-forward="true" selection-start-line="283" selection-start-column="37" selection-end-line="283" selection-end-column="37" />
+              <first_editor relative-caret-position="349">
+                <caret line="386" column="11" selection-start-line="386" selection-start-column="11" selection-end-line="386" selection-end-column="11" />
+                <folding>
+                  <element signature="e#8#15#0" />
+                  <element signature="e#59#66#0" />
+                  <element signature="e#194#201#0" />
+                  <element signature="e#503#514#0" />
+                  <element signature="e#731#745#0" />
+                  <element signature="e#826#833#0" />
+                  <element signature="e#3433#3447#0" />
+                  <element signature="e#1858#1870#0" />
+                  <element signature="e#5390#5400#0" />
+                  <element signature="e#5630#5640#0" />
+                  <element signature="e#5911#5921#0" />
+                  <element signature="e#6651#6661#0" />
+                  <element signature="e#5934#5944#0" />
+                </folding>
               </first_editor>
               <second_editor />
             </state>
@@ -131,7 +146,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,10 +153,22 @@
               <item name="learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="learning" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learning" type="462c0819:PsiDirectoryNode" />
+              <item name="SuperNotes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learning" type="462c0819:PsiDirectoryNode" />
+              <item name="SuperNotes" type="462c0819:PsiDirectoryNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -494,7 +520,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569861224471</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="added crazy IT notes">
+      <created>1569915709902</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1569915709902</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -518,7 +551,7 @@
     <frame x="-9" y="-9" width="1618" height="870" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21119593" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21119593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -927,8 +960,23 @@
     <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="163">
-            <caret line="283" column="37" lean-forward="true" selection-start-line="283" selection-start-column="37" selection-end-line="283" selection-end-column="37" />
+          <first_editor relative-caret-position="349">
+            <caret line="386" column="11" selection-start-line="386" selection-start-column="11" selection-end-line="386" selection-end-column="11" />
+            <folding>
+              <element signature="e#8#15#0" />
+              <element signature="e#59#66#0" />
+              <element signature="e#194#201#0" />
+              <element signature="e#503#514#0" />
+              <element signature="e#731#745#0" />
+              <element signature="e#826#833#0" />
+              <element signature="e#3433#3447#0" />
+              <element signature="e#1858#1870#0" />
+              <element signature="e#5390#5400#0" />
+              <element signature="e#5630#5640#0" />
+              <element signature="e#5911#5921#0" />
+              <element signature="e#6651#6661#0" />
+              <element signature="e#5934#5944#0" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
