@@ -1,2 +1,3 @@
-flag = not 3>5  # False
-print(flag)
+tup = (10, 20, 30)
+a, b, c = tup
+print(c)    
