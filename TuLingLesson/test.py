@@ -1,3 +1,2 @@
-tup = (10, 20, 30)
-a, b, c = tup
-print(c)    
+L2 = list(1, 2, 3)
+print(L2)
