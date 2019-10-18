@@ -1,5 +1,2 @@
-li = ['a', 'b', 'c']
-print(dict.fromkeys(li))
-tup = ('x', 'y')
-print(dict.fromkeys(tup))
-print(dict.fromkeys(tup, 100))
+li = [x*x for x in range(1, 6) if x%2==0]
+print(li)
