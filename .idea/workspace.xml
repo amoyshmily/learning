@@ -18,13 +18,10 @@
         <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="184">
-                <caret line="1057" lean-forward="true" selection-start-line="1057" selection-end-line="1057" />
+              <first_editor relative-caret-position="310">
+                <caret line="1457" column="24" lean-forward="true" selection-start-line="1457" selection-start-column="24" selection-end-line="1457" selection-end-column="24" />
                 <folding>
                   <element signature="e#8#15#0" />
-                  <element signature="e#15234#15501#0" />
-                  <element signature="e#15723#16031#0" />
-                  <element signature="e#16081#17857#0" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -63,6 +60,7 @@
       <find>endfor</find>
       <find>格式化</find>
       <find>update</find>
+      <find>for表达式</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -139,7 +137,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,6 +153,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -556,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571417376482</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="added crazy IT notes">
+      <created>1571457261659</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1571457261660</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -580,7 +585,7 @@
     <frame x="-9" y="-9" width="1618" height="870" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21119593" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16157761" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -989,13 +994,10 @@
     <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="184">
-            <caret line="1057" lean-forward="true" selection-start-line="1057" selection-end-line="1057" />
+          <first_editor relative-caret-position="310">
+            <caret line="1457" column="24" lean-forward="true" selection-start-line="1457" selection-start-column="24" selection-end-line="1457" selection-end-column="24" />
             <folding>
               <element signature="e#8#15#0" />
-              <element signature="e#15234#15501#0" />
-              <element signature="e#15723#16031#0" />
-              <element signature="e#16081#17857#0" />
             </folding>
           </first_editor>
           <second_editor />
