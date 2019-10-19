@@ -1383,7 +1383,7 @@ if __name__ == '__main__':
 谁想调用函数，谁就要负责传入参数值。
 入参：传入参数。
 
-【固定参数】
+1.【固定参数】
 参数的个数能够确定。
 
 
@@ -1447,11 +1447,13 @@ def introduce(name: str, age: int = 18):
 if __name__ == '__main__':
 	introduce('cifer')  # 大家好！我的名字叫“cifer”, 今年“18”岁。
 
-【可变参数】
-Python定义函数时允许形参的个数是可变的，这样在调用函数时可以传入任意多个参数。
+2.【可变参数】-零存整取-吸星大法
+Python定义函数时允许形参的个数是可变的，这样在调用函数时可以传入任意多个零星参数。
+？？？可变参数的位置是否任意（特别是关键字参数），待考证
 
 # 普通参数收集
-在形参前添加星号*，即表示该参数可以接收N个参数值，它们将被当做元祖传入。
+在形参前添加一个星号*，即表示该参数可以接收N个参数值，传入后将被收集成元祖对象。
+一个函数最多只能带一个普通参数收集的形参。
 
 示例6
 def tellHobby(name, *hobbies):
@@ -1466,10 +1468,92 @@ if __name__ == '__main__':
 ('coding', 'fishing', 'cooking')
 我叫“cifer”，我喜欢('coding', 'fishing', 'cooking')
 
+普通参数收集可以处于形参列表的任意位置。
+如果普通参数收集的形参后面有固定参数，那么传参时的固定参数必须使用关键字方式传值。
+示例7
+def tellHobby(*hobbies, name):
+	print(type(hobbies))
+	print(hobbies)
+	print('我叫“%s”，我喜欢%s' %(name, hobbies))
+if __name__ == '__main__':
+	tellHobby('coding', 'fishing', 'cooking', name='cifer')
 
+>>>
+<class 'tuple'>
+('coding', 'fishing', 'cooking')
+我叫“cifer”，我喜欢('coding', 'fishing', 'cooking')
 
 # 关键字参数收集
+在形参前添加两个星号**，即表示该参数可以接收N个关键字参数值，传入后将被收集成字典对象。
+一个函数最多只能带一个关键字参数收集的形参。
+关键字参数收集的可变形参，在参数列表中必须位于末尾。？？？待考证
 
+示例8
+def showScore(name, **scores):
+	print(type(scores))
+	print(scores)
+	print('我叫“%s”，我的成绩是%s' %(name, scores))
+if __name__ == '__main__':
+	showScore(语文=89, 数学=125, 英语=130, name='乔碧萝')
+>>>
+<class 'dict'>
+{'语文': 89, '数学': 125, '英语': 130}
+我叫“乔碧萝”，我的成绩是{'语文': 89, '数学': 125, '英语': 130}
+
+# 混搭收集
+一个函数的参数列表允许同时包含一个普通参数收集和一个关键字参数收集。
+
+示例9
+def showScore(name, *hobbies, **scores):
+	print('我叫“%s”，我爱好是%s，我的成绩是%s' %(name, hobbies, scores))
+if __name__ == '__main__':
+	showScore('乔碧萝', '直播', '美颜', 语文=89, 数学=125)
+>>>
+我叫“乔碧萝”，我爱好是('直播', '美颜')，我的成绩是{'语文': 89, '数学': 125}
+
+3.【参数分解】-整存零取
+Python允许在函数调用时，将现有的列表、元祖、字典等对象的元素拆开，逐个传值给形参。
+逆向参数收集需要在传入的列表、元祖参数之前添加一个星号*，在字典参数之前添加两个
+星号**。
+
+示例10
+def introduce(name, age):
+	msg = '大家好！我的名字叫“%s”, 今年“%s”岁。'  %(name, age)
+	print(msg)
+
+if __name__ == '__main__':
+	tup = ('公主', '19')
+	li = ['王子', '20']
+	dic = {'age': '21', 'name': '骑士'}
+	introduce('cifer', '18')	# 普通青年：一个萝卜一个坑
+	introduce(*tup)		# 文艺青年：分解元祖
+	introduce(*li)      # 文艺青年：分解列表
+	introduce(**dic)    # 文艺青年：分解字典
+
+>>>
+大家好！我的名字叫“cifer”, 今年“18”岁。
+大家好！我的名字叫“公主”, 今年“19”岁。
+大家好！我的名字叫“王子”, 今年“20”岁。
+大家好！我的名字叫“骑士”, 今年“21”岁。
+
+
+被分解后的元素，将会根据形参的位置依次进行赋值。
+示例11
+def tellHobby(name, *hobbies):
+	print('我叫“%s”，我喜欢%s' %(name, hobbies))
+if __name__ == '__main__':
+	li = ['cifer', 'coding', 'fishing', 'cooking']
+	tellHobby(*li)  # 列表的元素被分解，第一个赋值给name，剩下的则被hobbies收集
+
+示例12
 
 ```
 
+
+> 变量作用域
+```
+# 局部变量
+
+# 全局变量
+
+```
