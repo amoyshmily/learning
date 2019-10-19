@@ -1,2 +1,4 @@
-li = [x*x for x in range(1, 6) if x%2==0]
-print(li)
+for i in range(3):
+	if i == 1:
+		continue
+	print('啦啦啦，我被翻牌子啦 i=%.0f' % i)

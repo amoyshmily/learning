@@ -719,11 +719,11 @@ print('伦敦' not in China)    # True
 
 > 常用方法
 ```
-# clear():清空字典的所有键值对，返回一个空字典。
+# clear():清空。清空字典的所有键值对，返回一个空字典。
 d = {'name': 'Dota', 'hot': False}
 d.clear()   # {}
 
-# update():使用一个新字典来更新原有的字典。如果新字典的key已存在，则会用新字典的value覆盖
+# update():有则改之，无则加勉。使用一个新字典来更新原有的字典。如果新字典的key已存在，则会用新字典的value覆盖
 原有字典的value;如果新字典的key不存在，则向原有字典中新增。
 d = {'x': 1, 'y': 2}
 d1 = {'y': 99, 'Python': 60}
@@ -739,7 +739,7 @@ print(list(items_obj))  # [('x', 1), ('y', 99), ('Python', 60)]
 keys_obj = d.keys()     # <class 'dict_keys'>
 print(list(keys_obj))   # ['x', 'y', 'Python']
 
-# pop():通过key来删除指定的键值对。
+# pop():删除。通过key来删除指定的键值对。
 d = {'x': 1, 'y': 2, '垃圾': '香港废青'}
 d.pop('垃圾')     # {'x': 1, 'y': 2}
 
@@ -960,7 +960,9 @@ s3 = s[2:8:2]   # loo
 ```
 
 #### 三目运算符
-
+```
+x = 1 if flag else 0
+```
 
 #### 包含运算符
 
@@ -975,6 +977,10 @@ s3 = s[2:8:2]   # loo
 
 ### 顺序结构
 程序总是从上向下依次执行。Python默认是顺序执行流。
+
+```
+pass: 表示空语句，用来占位，实际不会做任何事情。
+```
 
 ### 分支结构
 实现根据条件，选择性地执行某段代码。
@@ -1007,6 +1013,7 @@ else:
 详见三目运算。
 
 ```
+
 
 ### 循环结构
 实现当满足循环条件，重复执行某段代码；当条件为假时则结束循环。否则程序会成为死循环。
@@ -1085,33 +1092,139 @@ print(li)   # [11, 25, 28, 32, 47, 64]
 
 
 # for表达式
-也称之为列表生成式，返回结果是列表。
-语法：表达式 for 计数器 in 可迭代对象
+1.列表推导式（方括号的for表达式）
 
-表达式相当于是循环体。可迭代对象拥有的元素个数即为循环执行的次数，并将每次执行的值收集起来作为新的列表元素。
+语法：my_list = [表达式 for 计数器 in 可迭代对象]
+上述语法返回结果是列表。其中，表达式相当于是循环体。可迭代对象拥有的元素个数即为循环执行的次数，并将每次执行的值收集起来作为新的列表元素。
 
 li = [x*x for x in range(1, 6)] # [1, 4, 9, 16, 25]
 
 可以在for表达式后添加if条件，那么for表达式只会循环执行那些符合条件的元素。
 li = [x*x for x in range(1, 6) if x%2==0]   # [4, 16]
+
+还可以使用多个循环。并且多循环场景也支持if条件过滤。
+li = [(x, y, z) for x in range(1, 3) for y in range(6, 8) for z in range(0,2)]
+print(li)   # [(1, 6, 0), (1, 6, 1), (1, 7, 0), (1, 7, 1), (2, 6, 0), (2, 6, 1), (2, 7, 0), (2, 7, 1)]
+
+2.生成器推导式（圆括号的for表达式）
+
+语法：my_generator = (x*x for x in range(1, 6)) # [1, 4, 9, 16, 25)
+最终返回的是生成器对象。
+print(type(my_generator))   # <class 'generator'>
+print(my_generator) # <generator object <genexpr> at 0x0000000002553E60>
+for item in my_generator:
+	print(item)
+	
+	
+# 工具函数
+
+1.打包函数 zip()
+接收N个列表，返回一个zip对象（可迭代对象），这样就可以使用一个循环来遍历这些列表。此时zip对象
+的元素就是长度为N的子元祖。
+
+示例1
+list1 = ['a', 'b', 'c']
+list2 = [1, 2, 3]
+result = [x for x in zip(list1, list2)]     # [('a', 1), ('b', 2), ('c', 3)]
+
+示例2
+courses = ['语文', '数学', '英语']
+scores = [105, 135, 120]
+for course,score in zip(courses, scores):
+	print('%s成绩是：%.0f 分' % (course, score))
+>>>
+语文成绩是：105 分
+数学成绩是：135 分
+英语成绩是：120 分
+
+如果被打包的列表长度不一致，那么打包后的长度以短的列表为准。
+示例3
+courses = ['语文', '数学']
+scores = [105, 135, 120]
+for course,score in zip(courses, scores):
+	print('%s成绩是：%.0f 分' % (course, score))
+>>>
+语文成绩是：105 分
+数学成绩是：135 分
+
+2.反转函数 reversed()
+支持进行反向遍历。反转函数可以接收各种序列，包括字符串、元祖、列表、区间等，并返回一个逆序排列的迭代器。
+反转函数不会对原对象产生影响。
+
+示例1
+num = range(10)
+li = [x for x in reversed(num)]
+print(li)   # [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+print(num)  # range(0, 10)
+
+3.排序函数 sorted()
+接收一个可迭代对象作为参数，返回一个队元素排列后的列表。排序函数不会对原对象产生影响。
+示例1
+s = 'hello'
+li = [56, 23, 47, 19]
+print(sorted(s))    # ['e', 'h', 'l', 'l', 'o']
+print(sorted(li))   # [19, 23, 47, 56]
+
+sorted()函数还可以传入一个reverse参数。如果设置为True，则表示反向排序。
+示例2
+li = [56, 23, 47, 19]
+print(sorted(li))   # [19, 23, 47, 56]
+print(sorted(li, reverse=True)) # [56, 47, 23, 19]
+
+sorted()函数还可以传入一个key参数，用于指定一个函数来作为排序的标准。例如，如果希望按照
+长度作为依据排列，那么可以传入len函数。
+示例3
+li = ['Python', 'Java', 'Ruby', 'Swift', 'C']
+print(sorted(li, key=len))
+
 ```
 
 
-##### 关键字
+> 循环控制
 
-> pass
-```
-空语句，用来占位，实际不会做任何事情。
-```
 
-> break
+#### break 结束循环
 ```
-```
-> continue
-```
+当某种条件出现的时候需要强制结束循环，而不再是等待循环条件为False才退出循环。
+示例1
+for i in range(10):
+	if i == 2:
+		print('强制结束循环 i=%.0f' % i)
+		break
+	else:
+		print('正在循环 i=%.0f' % i)
+>>>
+正在循环 i=0
+正在循环 i=1
+强制结束循环 i=2
 
+应对嵌套循环：break只能结束当前所在的循环，而不能跳出外层循环。如果需要break语句同时跳出
+外层循环，可以使用预定义的旗标来辅助。
+示例2
+flag = False
+for i in range(5):
+	for j in range(3):
+		if j == 2:
+			flag = True
+			break
+	if flag:
+		break
 ```
-> return 
+#### continue 跳开并继续循环
 ```
+不会结束循环，只会忽略当次循环的剩余语句，仍会继续执行下一个循环。
 
+示例1
+for i in range(3):
+	if i == 1:
+		continue
+	print('啦啦啦，我被翻牌子啦 i=%.0f' % i)
+>>>
+啦啦啦，我被翻牌子啦 i=0
+啦啦啦，我被翻牌子啦 i=2
+```
+#### return 结束方法
+```
+用于从被包围的最直接的函数处返回，该函数随之结束。如果return处于循环体中，无论循环有多少层，
+都会直接结束整个所在函数或方法。
 ```

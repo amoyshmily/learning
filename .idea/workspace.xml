@@ -18,10 +18,13 @@
         <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="226">
-                <caret line="1086" column="8" lean-forward="true" selection-start-line="1086" selection-start-column="8" selection-end-line="1086" selection-end-column="8" />
+              <first_editor relative-caret-position="184">
+                <caret line="1057" lean-forward="true" selection-start-line="1057" selection-end-line="1057" />
                 <folding>
                   <element signature="e#8#15#0" />
+                  <element signature="e#15234#15501#0" />
+                  <element signature="e#15723#16031#0" />
+                  <element signature="e#16081#17857#0" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -59,6 +62,7 @@
       <find>MySQL</find>
       <find>endfor</find>
       <find>格式化</find>
+      <find>update</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -545,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571327633161</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="added crazy IT notes">
+      <created>1571417376482</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1571417376482</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -978,10 +989,13 @@
     <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="226">
-            <caret line="1086" column="8" lean-forward="true" selection-start-line="1086" selection-start-column="8" selection-end-line="1086" selection-end-column="8" />
+          <first_editor relative-caret-position="184">
+            <caret line="1057" lean-forward="true" selection-start-line="1057" selection-end-line="1057" />
             <folding>
               <element signature="e#8#15#0" />
+              <element signature="e#15234#15501#0" />
+              <element signature="e#15723#16031#0" />
+              <element signature="e#16081#17857#0" />
             </folding>
           </first_editor>
           <second_editor />
