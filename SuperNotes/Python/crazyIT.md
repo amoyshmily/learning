@@ -1252,10 +1252,14 @@ if __name__ == '__main__':
 
 > 定义
 ```
-函数是实现特定功能的一段代码，可以接收零个或多个参数，可以返回零个或多个值。
+函数是实现特定功能的可以复用的一段代码。函数拥有自己的名称，可以接收零个或多个参数，
+可以返回零个或多个值。
 1.参数：函数需要传入的动态变化的数据，应该被定义成函数的参数。
 2.返回值：函数需要传出的重要数据，应该被定义成返回值。
 3.函数体：函数的内部实现过程。
+
+Python中的函数是“一等公民”，函数本身也是一个<class 'function'>对象，既可以用于赋值，
+也可以作为其他函数的入参，还可以作为其他函数的返回值。
 ```
 
 > 声明函数
@@ -1286,6 +1290,7 @@ if __name__ == '__main__':
 
 ```
 
+
 > 调用函数
 ```
 函数体默认按照顺序流执行，即从上往下依次执行。
@@ -1302,6 +1307,7 @@ if __name__ == '__main__':
 >>>
 2
 ```
+
 
 > 函数文档
 ```
@@ -1340,6 +1346,7 @@ print(add.__doc__)
 @return 和值
 ```
 
+
 > 递归函数
 ```
 递归是指一个函数体内调用自身。其中包含了一种隐式循环，会重复执行某段代码，并且这种重复执行
@@ -1376,6 +1383,7 @@ if __name__ == '__main__':
 	print(data)     # 55
 
 ```
+
 
 > 入参详解
 ```
@@ -1549,8 +1557,263 @@ if __name__ == '__main__':
 
 > 变量作用域
 ```
-# 局部变量
+是指在程序中定义的变量的作用范围。
 
 # 全局变量
+全局变量是指在函数外面、全局范围内定义的变量。全局变量可以在所有函数中被访问。
 
+示例1
+var_global = 'global variables here'
+def test():
+	pass
+
+# 局部变量
+局部变量是指在函数中定义的变量，包括参数。如果在函数中对一个不存在的变量赋值时，默认是
+重新定义一个新的局部变量。如果赋值给一个全局已存在的变量赋值，则会产生遮蔽。
+
+示例2
+def test(var_local1):
+	var_local2 = 'local variables here'
+
+# 查看变量字典
+1.globals():返回当前全局范围内所有变量组成的变量字典。
+2.locals():返回当前局部范围内所有变量组成的变量字典。
+3.vars(object):获取在指定对象范围内的所有变量组成的变量字典。如果不传入object对象，
+则跟locals()的效果完全相同。
+
+示例3
+hobby = 'Python'
+def introduce(name, age):
+	msg = '大家好！我的名字叫“%s”, 今年“%s”岁。' % (name, age)
+	print(locals())
+
+if __name__ == '__main__':
+	print(globals())
+	introduce('cifer', '18')
+
+>>>
+全局变量字典：{内置的变量...,'hobby': 'Python', 'introduce': <function introduce at 0x0000000001D42EA0>}
+局部变量字典：{'msg': '大家好！我的名字叫“cifer”, 今年“18”岁。', 'age': '18', 'name': 'cifer'}
+
+
+# 同名困境
+
+（1）变量遮蔽 hide
+如果在函数中定义了与全局变量同名的局部变量，那么该全局变量就会被局部变量遮蔽。
+
+示例4 遮蔽前
+name = '王校长'
+def marry():
+	print(name)    # 王校长
+marry()
+
+示例4 遮蔽后
+name = '王校长'
+def marry():
+	print(name) # name变量已被遮蔽，强行访问被报错
+	name = '叶良辰'
+marry()
+>>>
+UnboundLocalError: local variable 'name' referenced before assignment
+
+（2）解决遮蔽
+
+1.不要同名
+在函数中定义局部变量时，尽量不要跟全局变量同名，所谓一山不容二虎。
+
+2.精确锁定
+如果发生遮蔽，无力回天，却仍需要访问被遮蔽的全局变量时，则可以借助globals()获取全局变量字典来实现。
+
+示例5
+name = '王校长'
+def marry():
+	print(globals()['name'])    # 王校长
+	name = '叶良辰'
+	print(name)     # 叶良辰
+marry()
+
+3.升级作用域
+在函数中定义局部变量时，可以使用global关键字来将其声明成全局变量，其作用域升级为全局。
+
+示例6
+name = '王校长'
+def marry():
+	global name
+	print(name)
+	name = '叶良辰'
+marry()
+print(name)
+
+```
+
+
+> 局部函数
+```
+局部函数是指在函数体内定义的函数，对于外部来说是隐藏的，只能在其封闭函数内
+有效。其封闭函数也可以返回局部函数，以便程序在其他作用域中使用局部函数。
+
+示例1
+def get_math_func(type, nn):
+
+	def square(n):
+		return n*n
+
+	def cube(n):
+		return n*n*n
+
+	def factorial(n):
+		result = 1
+		for index in range(2, n+1):
+			result *= index
+		return result
+
+	if type == 'square':
+		return square(nn)
+	elif type == 'cube':
+		return cube(nn)
+	else:
+		return factorial(nn)
+
+局部函数中的局部变量也有可能出现遮蔽情形。解决对策跟普通函数思路类似，可以使用nonlocal
+关键字将同名的局部变量升级为全局变量来使用，道理类似global关键字。
+```
+
+
+> 函数高阶
+```
+（1）函数变量
+所有函数都是function对象，可以把函数本身赋值给变量。当把函数赋值给变量后，程序可以通过
+该变量来调用函数。
+
+示例1
+def area(width, height):
+	return width * height
+
+my_func = area      # <class 'function'>
+data = my_func(2, 5)    # 10
+
+
+（2）函数形参
+有时候在定义一个函数的时候，发现大部分计算逻辑都能确定，但是某些部分的处理逻辑暂时无法
+确定，意味着程序的代码需要动态改变。如果希望调用函数的时候能够动态传入这些代码，则可以
+在函数中定义函数形参，这样就可以在调用时传入不同的函数作为参数从而实现动态改变这段代码。
+
+示例2
+def my_map(data, func):
+	result = []
+
+	for item in data:
+		result.append(func(item))
+	return result
+
+def square(n):
+	return n*n
+
+def cube(n):
+	return n*n*n
+
+def factorial(n):
+	result = 1
+	for index in range(2, n+1):
+		result *= index
+	return result
+
+if __name__ == '__main__':
+	data=[3, 4, 9, 5, 8]
+	in_square = my_map(data, square)   # [9, 16, 81, 25, 64]
+	in_cube = my_map(data, cube)   # [27, 64, 729, 125, 512]
+	in_factorial = my_map(data, factorial) # [6, 24, 362880, 120, 40320]
+
+
+（3）返回函数
+可以使用函数对象作为其他函数的返回值。
+
+示例3
+def get_math_func(type):
+
+	def square(n):
+		return n*n
+
+	def cube(n):
+		return n*n*n
+
+	def factorial(n):
+		result = 1
+		for index in range(2, n+1):
+			result *= index
+		return result
+
+	if type == 'square':
+		return square
+	elif type == 'cube':
+		return cube
+	else:
+		return factorial
+
+if __name__ == '__main__':
+	my_func = get_math_func('square')
+	print(type(my_func))    # <class 'function'>
+	print(my_func.__name__) # square
+
+
+（4）lambda表达式（匿名函数）
+函数是命名的可复用的代码块，而lambda表达式则是匿名的单行函数体。
+
+# 语法（左进右出）
+lambda 形参:表达式
+
+语法说明：
+1.关键字：必须使用lambda关键字声明。
+2.形参：表达式的冒号左边是形参列表，形参个数可以是0，也可以是多个。多个形参之间用半角
+逗号隔开。
+3.返回：冒号右边整体是表达式的返回值。表达式中包含了对入参的各种逻辑运算。
+
+
+# 简化局部函数
+由于局部函数的特点是，其作用域仅限封闭函数内，因此它的名字没有太大意义，因此可以考虑使用
+lambda表达式来简化局部函数的写法。
+
+使用lambda前：
+def get_math_func(type):
+
+	def square(n):
+		return n*n
+
+	def cube(n):
+		return n*n*n
+
+	if type == 'square':
+		return square
+	elif type == 'cube':
+		return cube
+
+if __name__ == '__main__':
+	my_func = get_math_func('square')
+	print(type(my_func))    # <class 'function'>
+	print(my_func.__name__) # square
+	print(my_func(5))       # 25
+
+
+使用lambda后：
+def get_math_func(type):
+
+	if type == 'square':
+		return lambda n: n*n
+	elif type == 'cube':
+		return lambda n: n*n*n
+if __name__ == '__main__':
+	my_func = get_math_func('square')
+	print(type(my_func))    # <class 'function'>
+	print(my_func.__name__) # <lambda>
+	print(my_func(5))       # 25
+
+# 特点
+总体来说，函数比lambda表达式的适应性更强，lambda表达式只能创建简单的函数对象。
+lambda表达式的最佳实践：
+1.对于单行函数，使用lambda表达式可以省去定义函数的过程，让代码更加简洁；
+2.对于不需要多次复用的函数，使用lambda表达式可以用完后立即释放，提高了性能。
+
+示例1：使用lambda表达式作为函数对象传入
+data = map(lambda x: x*x, range(5))
+print([i for i in data])    # [0, 1, 4, 9, 16]
 ```
