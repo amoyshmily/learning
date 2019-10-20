@@ -4,7 +4,6 @@
     <list default="true" id="1c3bbb9b-72d3-4142-b6b1-98e82134c6da" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SuperNotes/Python/crazyIT.md" beforeDir="false" afterPath="$PROJECT_DIR$/SuperNotes/Python/crazyIT.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TuLingLesson/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/TuLingLesson/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,15 +17,63 @@
         <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="247">
-                <caret line="1729" lean-forward="true" selection-start-line="1729" selection-end-line="1729" />
+              <first_editor relative-caret-position="42">
+                <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
                 <folding>
+                  <element signature="e#0#6#0" />
                   <element signature="e#8#15#0" />
+                  <element signature="e#54#60#0" />
+                  <element signature="e#198#205#0" />
+                  <element signature="e#512#1489#0" />
+                  <element signature="e#1502#1548#0" />
+                  <element signature="e#1559#1570#0" />
+                  <element signature="e#1779#1793#0" />
+                  <element signature="e#1875#1888#0" />
+                  <element signature="e#1911#1926#0" />
+                  <element signature="e#1945#1962#0" />
+                  <element signature="e#3978#5672#0" />
+                  <element signature="e#5676#5694#0" />
+                  <element signature="e#7687#7704#0" />
+                  <element signature="e#9695#9711#0" />
+                  <element signature="e#9727#9753#0" />
+                  <element signature="e#12321#12330#0" />
+                  <element signature="e#12323#12337#0" />
+                  <element signature="e#13295#13307#0" />
+                  <element signature="e#13335#13342#0" />
+                  <element signature="e#13320#13330#0" />
+                  <element signature="e#13560#13570#0" />
+                  <element signature="e#13841#13851#0" />
+                  <element signature="e#14581#14591#0" />
+                  <element signature="e#14924#14934#0" />
+                  <element signature="e#15080#15092#0" />
+                  <element signature="e#15107#15117#0" />
+                  <element signature="e#15148#15158#0" />
+                  <element signature="e#15169#15183#0" />
+                  <element signature="e#15194#15202#0" />
+                  <element signature="e#15577#15585#0" />
+                  <element signature="e#15797#16105#0" />
+                  <element signature="e#16119#18776#0" />
+                  <element signature="e#18788#18803#0" />
+                  <element signature="e#19198#19352#0" />
+                  <element signature="e#19354#19370#0" />
+                  <element signature="e#19624#19630#0" />
+                  <element signature="e#19637#19852#0" />
+                  <element signature="e#19771#20232#0" />
                   <element signature="e#20241#20434#0" />
                   <element signature="e#20443#20875#0" />
                   <element signature="e#20884#21423#0" />
                   <element signature="e#21432#25116#0" />
                   <element signature="e#25127#26379#0" />
+                  <element signature="e#26601#27074#0" />
+                  <element signature="e#27185#29667#0" />
+                  <element signature="e#29724#29732#0" />
+                  <element signature="e#29680#29691#0" />
+                  <element signature="e#29746#29754#0" />
+                  <element signature="e#29703#29714#0" />
+                  <element signature="e#29768#29775#0" />
+                  <element signature="e#29723#29734#0" />
+                  <element signature="e#29789#29800#0" />
+                  <element signature="e#29748#29823#0" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -587,7 +634,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571504119860</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="added crazy IT notes">
+      <created>1571558354433</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1571558354434</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1020,15 +1074,63 @@
     <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="247">
-            <caret line="1729" lean-forward="true" selection-start-line="1729" selection-end-line="1729" />
+          <first_editor relative-caret-position="42">
+            <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             <folding>
+              <element signature="e#0#6#0" />
               <element signature="e#8#15#0" />
+              <element signature="e#54#60#0" />
+              <element signature="e#198#205#0" />
+              <element signature="e#512#1489#0" />
+              <element signature="e#1502#1548#0" />
+              <element signature="e#1559#1570#0" />
+              <element signature="e#1779#1793#0" />
+              <element signature="e#1875#1888#0" />
+              <element signature="e#1911#1926#0" />
+              <element signature="e#1945#1962#0" />
+              <element signature="e#3978#5672#0" />
+              <element signature="e#5676#5694#0" />
+              <element signature="e#7687#7704#0" />
+              <element signature="e#9695#9711#0" />
+              <element signature="e#9727#9753#0" />
+              <element signature="e#12321#12330#0" />
+              <element signature="e#12323#12337#0" />
+              <element signature="e#13295#13307#0" />
+              <element signature="e#13335#13342#0" />
+              <element signature="e#13320#13330#0" />
+              <element signature="e#13560#13570#0" />
+              <element signature="e#13841#13851#0" />
+              <element signature="e#14581#14591#0" />
+              <element signature="e#14924#14934#0" />
+              <element signature="e#15080#15092#0" />
+              <element signature="e#15107#15117#0" />
+              <element signature="e#15148#15158#0" />
+              <element signature="e#15169#15183#0" />
+              <element signature="e#15194#15202#0" />
+              <element signature="e#15577#15585#0" />
+              <element signature="e#15797#16105#0" />
+              <element signature="e#16119#18776#0" />
+              <element signature="e#18788#18803#0" />
+              <element signature="e#19198#19352#0" />
+              <element signature="e#19354#19370#0" />
+              <element signature="e#19624#19630#0" />
+              <element signature="e#19637#19852#0" />
+              <element signature="e#19771#20232#0" />
               <element signature="e#20241#20434#0" />
               <element signature="e#20443#20875#0" />
               <element signature="e#20884#21423#0" />
               <element signature="e#21432#25116#0" />
               <element signature="e#25127#26379#0" />
+              <element signature="e#26601#27074#0" />
+              <element signature="e#27185#29667#0" />
+              <element signature="e#29724#29732#0" />
+              <element signature="e#29680#29691#0" />
+              <element signature="e#29746#29754#0" />
+              <element signature="e#29703#29714#0" />
+              <element signature="e#29768#29775#0" />
+              <element signature="e#29723#29734#0" />
+              <element signature="e#29789#29800#0" />
+              <element signature="e#29748#29823#0" />
             </folding>
           </first_editor>
           <second_editor />
