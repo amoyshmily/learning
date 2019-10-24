@@ -112,7 +112,40 @@ print(c)    # U
 
 
 【区间range】
-？？？待补充
+
+range()：可创建一个整数列表
+
+语法：range(start, stop, step)
+start：计数从start开始，默认是从0开始，允许是负数。例如range(5)等价于range(0,5)；
+stop：计数到stop为止，但不包括stop自身，允许是负数。例如：range(0,3)表示[0,1,2]，不包含3；
+step：步长，默认为1。例如range(0,3)等价于range(0,3,1)
+
+示例1
+data = range(10)
+print(type(data))   # <class 'range'>
+print([x for x in data])    # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+示例2
+data = range(2, 10, 2)
+print([x for x in data])    # [2, 4, 6, 8]
+
+示例3
+data = range(-10, 2, 3)
+print([x for x in data])    # [-10, -7, -4, -1]
+
+示例4
+s = 'Python'
+for i in range(len(s)):
+	print(s[i])
+	
+>>>
+P
+y
+t
+h
+o
+n
+
 ```
 
 ## 3.1 Number 数字
@@ -135,7 +168,7 @@ Python3 支持 int、float、bool、complex（复数）。
 
 > 分隔符
 ```
-Python 3.X 允许为了提高可读性，允许给数值(包括浮点数)增加下划线作为分隔符，不会影响数值本身。
+Python 3 允许为了提高可读性，允许给数值(包括浮点数)增加下划线作为分隔符，不会影响数值本身。
 例如：million = 1_000_000
 ```
 
@@ -623,8 +656,177 @@ print(L)    # ['Python', 'Swift', 'Java', 'Ruby', 'Go', 'R']
 ```
 
 ## 3.5 Set 集合 {}
+> 定义
 ```
-???待补充
+无序的，不重复元素集合。适用于数据集的逻辑运算。
+```
+
+> 实例化
+```
+# 直接赋值
+set1 = {1, 2, 3}
+print(type(set1))   # <class 'set'>
+注意：不要直接用{}，因为空的花括号表示空的字典。
+
+# 函数
+set2 = set()   # 空集合
+
+set3 = set('hello')
+print(type(set3))   # <class 'set'>
+print(set3)     # {'o', 'e', 'h', 'l'}
+
+set4 = set([1, 2, 'Python'])
+print(set4)     # {1, 2, 'Python'}
+
+# 推导式
+set5 = {x for x in range(5)}
+print(set5) # {0, 1, 2, 3, 4}
+
+set6 = {s for s in 'hello'}
+print(set6) # {'e', 'l', 'o', 'h'}
+```
+
+> 算术运算
+```
+set1 = set('python')
+set2 = set('php')
+print(set1)     # {'n', 'o', 'p', 'y', 't', 'h'}
+print(set2)     # {'p', 'h'}
+
+# 差集==减法 A-B 等价于 A.difference(B)
+获取一个集合包含而另一个集合不包含的元素集合
+print(set1 - set2)  # {'n', 'y', 'o', 't'}
+
+# 并集==加法 A | B 等价于 A.union(B)，支持多个参数
+获取两个集合中包含的所有元素的集合
+print(set1 | set2)  # {'o', 'p', 'h', 'y', 'n', 't'}
+
+# 交集==求同 A & B 等价于 A.intersection(B)，支持多个参数
+获取两个集合都包含的相同元素的集合
+print(set1 & set2)  # {'h', 'p'}
+
+# 异集==存异 A ^ B 等价于 A.symmetric_difference(B)
+获取两个集合中互相不相同的所有元素的集合
+print(set1 ^ set2)  # {'n', 'y', 'o', 't'}
+```
+
+> 成员检测
+```
+跟元祖、列表一致。使用in运算符判断是否包含。
+
+示例1
+set1 = {1, 'hello', 'python'}
+print('python' in set1) # True
+```
+
+
+> 增删改查
+```
+# 增
+add():向集合中增加元素，无返回值。
+
+示例1
+set1 = {'Python', 'Java'}
+set1.add('Go')
+print(set1) # {'Java', 'Python', 'Go'}
+
+update(): 用于修改当前集合，无返回值。可以添加新的元素或集合到当前集合中，
+如果添加的元素在集合中已存在，则该元素只会出现一次，重复的会忽略。
+
+示例2
+set1 = {'Python', 'Java'}
+set1.update(['Python', 'Go'])
+print(set1) # {'Python', 'Go', 'Java'}
+
+示例3
+set1 = {'Python', 'Java'}
+set1.update(['Python', 'Go'], ('C', 'Ruby'))
+print(set1) # {'Python', 'C', 'Java', 'Go', 'Ruby'}
+
+# 删
+discard():用于移除指定的集合元素，无返回值。在移除一个不存在的元素时不会报错。
+
+示例4
+set1 = {'Python', 'Java', 'Go'}
+set1.discard('Go')      # {'Java', 'Python'}
+print(set1)     # {'Java', 'Python'}
+set1.discard('C++')
+print(set1)     # {'Java', 'Python'}
+
+remove():用于移除集合中的指定元素，无返回值。在移除一个不存在的元素时会报错KeyError。
+
+示例5
+set1 = {'Python', 'Java', 'Go'}
+set1.remove('Go')
+print(set1)     # {'Java', 'Python'}
+set1.remove('C++')	# 引发KeyError
+
+clear():用于移除集合中的所有元素。
+
+示例6
+set1 = {'Python', 'Java', 'Go'}
+set1.clear()
+print(set1)     # set()
+
+pop():用于随机弹出一个元素，返回被弹出的元素对象。
+
+示例7
+set1 = {'Python', 'Java', 'Go'}
+for i in range(3):
+	print(set1.pop())
+	print(set1)
+
+>>>
+Python
+{'Go', 'Java'}
+Go
+{'Java'}
+Java
+set()
+
+# 改
+集合不支持修改既有元素。
+
+# 查
+集合不支持访问某个指定元素的操作，只支持遍历。
+```
+
+> 常用方法：
+```
+# copy():用于拷贝一个集合，无返回值。
+
+示例1
+set1 = {'Python', 'Java'}
+set2 = set1.copy()
+print(set2)     # {'Java', 'Python'}
+
+# isdisjoint():验证清白。判断两个集合之间是否清白（无相同元素）。
+如果没有相同元素返回True，否则返回False。
+
+示例3
+set1 = {'Python', 'Java'}
+set2 = {'Go', 'Php'}
+print(set1.isdisjoint(set2))    # True
+
+示例4
+set1 = {'Python', 'Java'}
+set2 = {'Java', 'Php'}
+print(set1.isdisjoint(set2))    # False
+
+# issubset():子集判断。用于判断集合的所有元素是否都包含在指定集合中。
+如果是则返回True，否则返回False。
+
+示例5
+set1 = {'Python', 'Java'}
+set2 = {'Java', 'Python', 'Php', 'Go'}
+print(set1.issubset(set2))  # True
+
+# issuperset():父集判断。用于判断指定集合的所有元素是否都包含在原始的集合中。
+如果是则返回True，否则返回False。
+
+set1 = {'Python', 'Java'}
+set2 = {'Java', 'Python', 'Php', 'Go'}
+print(set2.issuperset(set1))  # True
 ```
 
 ## 3.6 Dictionary 字典 {k:v}

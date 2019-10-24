@@ -1,2 +1,3 @@
-data = map(lambda x: x*x, range(5))
-print([i for i in data])
+set1 = {'Python', 'Java'}
+set2 = {'Java', 'Python', 'Php', 'Go'}
+print(set2.issuperset(set1))  # True
