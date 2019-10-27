@@ -18,13 +18,8 @@
         <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="160">
-                <caret line="2347" column="8" lean-forward="true" selection-start-line="2347" selection-start-column="8" selection-end-line="2347" selection-end-column="8" />
-                <folding>
-                  <element signature="e#54#60#0" />
-                  <element signature="e#198#205#0" />
-                  <element signature="e#30751#33233#0" />
-                </folding>
+              <first_editor relative-caret-position="34">
+                <caret line="2395" column="21" lean-forward="true" selection-start-line="2395" selection-start-column="21" selection-end-line="2395" selection-end-column="21" />
               </first_editor>
               <second_editor />
             </state>
@@ -141,7 +136,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,6 +147,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -602,7 +597,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572097753826</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="added class and object notes">
+      <created>1572160293266</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1572160293266</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -624,9 +626,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1618" height="870" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16157761" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16157761" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1019,30 +1020,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SuperNotes/Python/testClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="7" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SuperNotes/Python/123.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SuperNotes/Python/testClass.py" />
+    <entry file="file://$PROJECT_DIR$/SuperNotes/Python/123.py" />
     <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="160">
-            <caret line="2347" column="8" lean-forward="true" selection-start-line="2347" selection-start-column="8" selection-end-line="2347" selection-end-column="8" />
-            <folding>
-              <element signature="e#54#60#0" />
-              <element signature="e#198#205#0" />
-              <element signature="e#30751#33233#0" />
-            </folding>
+          <first_editor relative-caret-position="34">
+            <caret line="2395" column="21" lean-forward="true" selection-start-line="2395" selection-start-column="21" selection-end-line="2395" selection-end-column="21" />
           </first_editor>
           <second_editor />
         </state>

@@ -2339,18 +2339,84 @@ if __name__ == '__main__':
 
 
 # 类方法
+在类体中，使用装饰器@classmethod修饰的方法就是类方法。类方法的第一个参数是cls，
+不管是以类还是对象来调用，都会自动绑定到类本身。
+
+语法：
+@classmethod
+def 方法名(cls, 形参):
+    代码块
+
+调用：
+Python支持使用类或者对象来调用类方法，推荐使用类来调用。
+
+示例4
+class Student:
+	room = '302'
+
+	@classmethod    # 定义类方法
+	def clean(cls):
+		print('clean the classroom {}.'.format(cls.room))
+
+if __name__ == '__main__':
+	Student.clean() # 使用类来调用类方法
+	
+	stu = Student()
+	stu.room = '303'
+	stu.clean()     # 对象调用类方法，会自动绑定首参
 
 
 # 静态方法
+在类体中，使用装饰器@staticmethod修饰的方法就是静态方法。静态方法不存在首参自动绑定
+机制，不管是以类还是对象的方式来调用，都必须手工传参。
+
+
+示例4
+class Student:
+	room = '302'
+
+	@staticmethod
+	def study(course):
+		print('study {}.'.format(course))
+
+if __name__ == '__main__':
+	Student.study('Python') # 使用类来调用静态方法，需要手工传参
+	
+	stu = Student()
+	stu.study('Python')    # 使用对象来调用静态方法，需要手工传参
+
+备注：在Python中，一般不需要使用到类方法或者静态方法，程序完全可以使用函数来替代
+类方法或者静态方法。但是在特殊场景（如工厂模式）下，类方法和景甜方法就是不错的选择。
+
+# 装饰器
+使用@符号引用已有的函数后，可用于装饰其他函数。
+
+原理：
+1.投入：被装饰函数作为参数传给装饰函数；
+2.产出：被装饰函数化作装饰函数的返回值。
+
+示例5
+def fx(fn):
+	print('函数fx执行')
+	fn()
+	return '这是装饰函数返回值'
+
+@fx
+def fy():
+	print('函数fy执行')
+	print('fy = \'这是装饰函数返回值\'')
+
+if __name__ == '__main__':
+	print(type(fy)) # <class 'str'>
+	print(fy)       # 这是装饰函数返回值
+
+>>>
+函数fx执行
+函数fy执行
+fy = '这是装饰函数返回值'
 
 ```
 
-#### 装饰器
-```
-
-
-
-```
 
 #### 特征
 
