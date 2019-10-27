@@ -2039,51 +2039,85 @@ print([i for i in data])    # [0, 1, 4, 9, 16]
 Python是面向对象的编程语言，支持面向对象的三大特征：封装、继承和多态。子类继承父类
 同样可以继承到父类的变量和方法。
 
+四大重点：类、对象、属性、方法。
 ```
 
-> 类和对象
+#### 概念
 
 ```
 一般来说，定义一个类是为了能够重复创建该类的对象，同一个类的多个对象具有相同的特征，而类
-则定义了多个对象的共同特征。类是一种抽象，对象则是具体存在的实体。
+则定义了多个对象的共同特征。
+类是一种抽象，对象则是具体存在的实体。
 
 （1）类
 概念：是对一批对象的抽象。可以把类当成一种自定义的类型，可以用来表示变量，也可以使用
 类来创建对象。
 
-Python中使用class关键字来声明类。
+Python中使用class关键字来声明类。类的作用是创建对象、派生子类。
 
 语法：
 class 类名(父类名):
-    类变量
-    实例方法
+    属性
+    方法
+
+结构：
+class 类名(父类名):
+    """
+    类文档
+    """
+    
+    类属性
+    构造方法(self):
+        实例化
+        代码块
+    实例方法(self):
+        实例属性
+        代码块
+    
+    @classmethod
+    类方法(cls):
+        代码块
+    
+    @staticmethod
+    静态方法():
+        代码块
     ...
 
-类名：必须由一个或者多个有意义的单词组成，每个单词的首字母大写，单词与单词之间不要使用
+# 类名
+必须由一个或者多个有意义的单词组成，每个单词的首字母大写，单词与单词之间不要使用
 分隔符。
-类变量：归属于类本身，用于定义该类本身所包含的状态数据。
-实例方法：用于定义该类的对象的行为或功能实现。
-父类名：所继承的父类名称（详见“继承”版块）。如果没有父类，则可以省略括号和父类名。
 
+# 父类名
+所继承的父类名称（详见“继承”版块知识）。如果没有父类，则可以省略括号和父类名。
 
-Python是动态语言，因此类所包含的变量可以动态增加和删除。程序在类体中为新变量赋值
-就是增加类变量，程序也可以在任何地方为已有的类增加变量。程序可以使用del语句删除已有的
-类变量。
+# 类文档
+放在类声明之后、类体之前，描述类的一些说明信息。
 
-同理，对象的实例变量也可以动态增加或者删除。只要对新的实例变量进行赋值，就是增加
-实例变量，程序也可以在任何地方为已有的对象增加实例变量。程序可以使用del语句删除已有的
-实例变量。
+# 类属性
+也称“类变量”，归属于类本身，用于定义该类本身所包含的状态数据。表达的是共性。
+Python是动态语言，因此类所包含的变量可以动态增加和删除。程序在类体中为新变量赋值就是
+增加类变量，程序也可以在任何地方为已有的类增加变量。程序可以使用del语句删除已有的类变量。
 
-在类中定义的方法默认是实例方法，定义方式类似普通函数，只是实例方法的第一个参数会被绑定到
-方法的调用者（该类的实例），因此实例方法天生自带一个参数，通常被命名为self。
-
-构造方法：
+# 构造方法
 在实例方法中有一个非常特别的方法：__init__，称为“构造方法”，用于构造该类的对象，并直接
 返回该类的对象。这是创建对象的根本途径，如果开发者没有定义，那么Python会默认添加该函数。
 
-类说明文档：放在类声明之后、类体之前。
+# 实例方法
+用于定义该类的对象的行为或功能实现。
+在类中定义的方法默认是实例方法（包括构造方法），定义方式类似普通函数，只是实例方法
+天生自带一个形参self，位于首位，并且会被绑定到方法的调用者（该类的实例）。
+形参名字虽然可以是其他字母，但是约定俗称地取为self。
 
-类的作用：创建对象、派生子类
+# 实例属性
+也称“实例属性”，归属于对象。对象的实例变量也可以动态增加或者删除。只要对新的实例变量进行赋值，
+就是增加实例变量，程序也可以在任何地方为已有的对象增加实例变量。程序可以使用del语句删除已有
+的实例变量。
+
+实例对象的属性好比特征（静态），对象的方法好比行为（动态）。
+
+# 类方法：详见后续的版块内容。
+
+# 静态方法：详见后续版块内容。
 
 示例1
 class Student(Person):
@@ -2103,37 +2137,44 @@ class Student(Person):
 
     # 定义实例方法
     def eat(self):
+        # 定义实例变量
+        self.weight += 1
         pass
 
-    def study(self):
+    def study(self, course):
+        print('{} study {} at school'.format(self.name, course))
         pass
 
     def sleep(self):
         pass
 
+# 类的动态性
+详见后续的“动态性”版块知识。
+
 
 （2）对象
 也称为“实例”，是一个具体存在的实体。
 
-创建：也称“实例化”，创建对象的根本途径是构造方法，调用类的构造方法即可创建这个类的对象。
-class Student:
+# 创建
+也称“实例化”，创建对象的根本途径是构造方法，调用类的构造方法即可创建这个类的对象。
 
+示例2
+class Student:
     def __init__(self, name: str, age: int):
         self.name = name
         self.age = age
 
-cifer = Student(name='cifer', age=18)
-print(cifer)       # <__main__.Student object at 0x00000000021F85C0>
+if __name__ == '__main__':
+    cifer = Student(name='cifer', age=18)
+    print(cifer)       # <__main__.Student object at 0x00000000021F85C0>
 
 
-对象的作用：
-对象的属性好比特征（静态），对象的方法好比行为（动态）。
-
+# 作用
 1.操作对象的实例变量（属性）：访问实例变量的值、添加实例变量、删除实例变量。
 
-语法：     类.属性        对象.属性
+语法：对象.属性
 
-示例1
+示例3
 class Student:
 
     def __init__(self, name: str, age: int):
@@ -2152,27 +2193,79 @@ if __name__ == '__main__':
 
 2.操作对象的方法：调用方法、添加方法、删除方法。
 
-【首参self 自动绑定】
+语法：对象.方法(参数)
 
-# 定义方法
-对于在类体中定义的实例方法（包括构造方法），Python会自动绑定，将方法的第一个参数self
-与调用方法的对象进行绑定。通常将首参命名为self，当然其他单词也可以但是不建议。
+从Python语言的设计来看，Python的类、对象有点类似于命名空间，因此在调用类、方法时，一定要
+加上“类.方法()”或“对象.方法()”的形式，否则光秃秃的直接调用方法的形式属于调用函数。
+
+示例2：调用方法
+    class Student:
+        # 构造方法
+        def __init__(self, name: str, age: int):
+            self.name = name    # self作为对象的默认引用
+            self.age = age
+        # 实例方法
+        def study(self, language: str):
+            print('study {} everyday'.format(language))
+    
+    if __name__ == '__main__':
+        stu = Student(name='叶良辰', age=18)   # 调用构造方法实例化对象
+        stu.study('Python')   # 调用实例方法
+
+示例3：添加方法、删除方法
+    class Student:
+        def __init__(self, name: str, age: int):
+            self.name = name
+            self.age = age
+    
+    if __name__ == '__main__':
+        stu = Student(name='叶良辰', age=18)   # 调用构造方法实例化对象
+        stu.play = lambda self: print(self.name+'在玩游戏。')    # 添加方法
+        print(dir(stu)) # [...'age', 'name', 'play']
+        del stu.play    # 删除方法
+        print(dir(stu)) # # [...'age', 'name']
+
+# 对象的动态性
+备注：Python支持为类和对象动态添加属性和方法。以上只举例了为对象添加方法的一种方式。详见
+后续的“动态性”版块知识。
+
+```
+
+#### 结构
+
+> 属性
+```
+
+```
+
+> 方法
+```
+方法是类或对象的行为特征的抽象。Python的方法也是函数，它的定义方式、调用方式和函数
+非常相似。
+
+（1） 实例方法
+在类体中定义的方法默认都是自带self参数的实例方法，包括构造方法。
+
+# self绑定机制
+
+1.self作为入参
+
+定义时·自动绑定：
+对于在类体中定义的实例方法（包括构造方法），必须设定一个默认形参self作为第一个入参。并且
+Python会执行自动绑定，将方法的第一个参数self与调用方法的对象进行绑定。
+这个形参命名为self是约定俗成，当然其他单词也可以，只是推崇使用self。
+
 在构造方法中，首参self自动绑定的是该构造方法正在实例化的对象，而在普通实例方法中，首参
 self自动绑定的是调用该实例方法的对象（调用者）。
 
-# 调用方法·谁
+调用时·自动指向：
 由于首参自动绑定机制的存在，在调用构造方法和普通实例方法时就可以无需传入首参self。
-首参self所指向的对象虽然是不确定的，但是它的类型是确定的，也就是self只能代表当前类的实例。
+
+首参self所指向的对象虽然是不确定的，但是它的类型是确定的，即self只能代表当前类的【实例】。
 只有当这个方法被调用时，self所代表的具体对象才能确定下来，即谁在调用这个方法，那么self就
 指向谁。
 
-语法：     类.方法()        对象.方法()
-
-# 方法调用 VS 函数调用
-从Python语言的设计来看，Python的类、对象有点类似于命名空间，因此在调用类、方法时，一定要
-加上“类.方法()”或“对象.方法()”的形式，否则光秃秃的直接嗲用方法的形式属于调用函数。
-
-示例2
+示例1
 class Student:
 
     # 此处self绑定正在实例化的对象
@@ -2182,123 +2275,106 @@ class Student:
 
     # 此处self绑定调用者
     def study(self, language: str):
-    	print('study {} everyday'.format(language))
+        print('study {} everyday'.format(language))
 
-if __name__ == '__main__':
-	stu = Student(name='叶良辰', age=18)   # 实例化对象
-	stu.study('Python')   # 调用方法
+2.self作为返回值
+首参self除了可以作为方法的入参外，还可以作为实例方法的返回值。这样在某些场景下可以实现连续
+调用（链式调用）。优点是可以让代码更加简洁，缺点是有可能造成实际意义的模糊。
 
-当给对象动态增加方法时，Python不会自动将调用者绑定到它们的第一个参数，因此程序需要手动
-为新增的方法传入参数值。
-
-示例3
+示例2
 class Student:
 
-    def __init__(self, name: str, age: int):
+    def __init__(self, name: str):
         self.name = name
-        self.age = age
 
-    def study(self, language: str):
-    	print('study {} everyday'.format(language))
+    def read(self):
+        print('{} finished reading.'.format(self.name))
+        return self
 
-if __name__ == '__main__':
-	stu = Student(name='叶良辰', age=18)   # 实例化对象
-	stu.study('Python')   # 调用方法
+    def write(self):
+        print('{} finished writing.'.format(self.name))
+        return self
 
-    # 动态添加方法：定义函数
-	def fn(self):
-		print(self.name, self.age, end='')		# 叶良辰 18
-
-	stu.show = fn		# 动态添加方法
-	stu.show(stu)	# 调用添加后的方法
-	print(type(stu.show))		# <class 'function'>
-	print(dir(stu))		# [...'name', 'age', 'study', 'show']
-	
-	# 动态添加方法：lambda表达式
-	stu.sleep = lambda self: print(self.name+'晚上10点睡觉。')    # 叶良辰晚上10点睡觉。
-	stu.sleep(stu)
-	print(dir(stu))     # [...'name', 'age', 'study', 'show']
-	
-	# 删除方法
-	del stu.show
-	print(dir(stu))     # [...'name', 'age', 'study']
-	
-
-如果希望既能为对象动态添加方法，又能让其自动绑定到第一个参数，则可以借助types模块
-的MethodType进行包装。
-
-示例4
-class Student:
-
-    def __init__(self, name: str, age: int):
-        self.name = name
-        self.age = age
+    def exam(self):
+        print('{} finished exam.'.format(self.name))
+        return self
 
 if __name__ == '__main__':
-
-	stu = Student(name='叶良辰', age=18)   # 实例化对象
-
-    # 动态添加方法：定义函数
-	def fn(self):
-		print(self.name, self.age, end='')		# 叶良辰 18
-
-	# 动态添加方法
-	from types import MethodType
-	stu.show = MethodType(fn, stu)		# 包装
-	stu.show()	# 调用添加后的方法
-
-
-动态绑定的首参self并不依赖方法的具体调用方式，不管是采用方法调用形式，还是函数调用形式来
-执行它，self参数都一样可以自动绑定。
-
-示例5
-class Student:
-    def study(self):
-    	print(self)
-
-if __name__ == '__main__':
-	stu = Student()
-	stu.study()		# <__main__.Student object at 0x00000000023E8240>
-
-	fn = stu.study
-	fn()		# <__main__.Student object at 0x0000000001E585C0>
-
-
-首参self除了可以作为方法的入参外，还可以作为方法的返回值。这样在某些场景下可以实现连续
-调用（链式调用）。
-
-示例6
-class Student:
-
-	def __init__(self, name: str):
-		self.name = name
-
-	def read(self):
-		print('{} finished reading.'.format(self.name))
-		return self
-
-	def write(self):
-		print('{} finished writing.'.format(self.name))
-		return self
-
-	def exam(self):
-		print('{} finished exam.'.format(self.name))
-		return self
-
-if __name__ == '__main__':
-	Student('叶良辰').read().write().exam()
+    Student('叶良辰').read().write().exam()
 
 >>>
 叶良辰 finished reading.
 叶良辰 finished writing.
 叶良辰 finished exam.
+
+# 类VS实例方法
+Python的类在很大程度上是一个命名空间，Python程序默认处于全局命名空间内，类体则处于类
+命名空间内，Python允许在全局范围内放置可执行的代码，当Python执行该程序时，这些代码就
+获得被执行的机会；Python同样允许在类范围内放置可执行的代码，当Python执行该类定义时，
+这些代码同样获得被执行的机会。因此，类也可以调用实例方法。
+
+在类调用实例方法时，由于类是抽象而非实体对象，self只能代表当前类的实例，因此自动绑定机制
+失效，Python绝不可能为其自动绑定首参。
+如果程序依然需要使用类来调用实例方法，则必须手工为实例方法传入实参。
+
+示例3
+num = 3     # 定义全局空间的变量
+def eat():  # 定义全局空间的函数
+    print('全局空间的eat方法，num={}'.format(str(num)))
+
+class Student:
+    num = 4     # 定义Student空间的变量
+    def eat(self):  # 定义Student空间的方法
+        print('Student空间的eat方法，num={}'.format(self.num))
+
+if __name__ == '__main__':
+    # 调用全局空间的变量和函数
+    eat()  
+    print(num)
+    
+    # 调用Student空间的属性和方法
+    stu = Student()
+    Student.eat(stu)
+    print(Student.num)
+
+
+# 类方法
+
+
+# 静态方法
+
+```
+
+#### 装饰器
 ```
 
 
 
+```
 
+#### 特征
 
+> 封装
+```
 
+```
+
+> 继承
+```
+
+```
+
+> 多态
+```
+
+```
+
+> 动态性
+```
+
+```
+
+> 枚举类
 
 
 

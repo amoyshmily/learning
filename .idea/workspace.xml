@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c3bbb9b-72d3-4142-b6b1-98e82134c6da" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SuperNotes/Python/crazyIT.md" beforeDir="false" afterPath="$PROJECT_DIR$/SuperNotes/Python/crazyIT.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TuLingLesson/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/TuLingLesson/test.py" afterDir="false" />
     </list>
@@ -17,11 +18,12 @@
         <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="381">
-                <caret line="2293" column="18" selection-start-line="2293" selection-start-column="18" selection-end-line="2293" selection-end-column="18" />
+              <first_editor relative-caret-position="160">
+                <caret line="2347" column="8" lean-forward="true" selection-start-line="2347" selection-start-column="8" selection-end-line="2347" selection-end-column="8" />
                 <folding>
                   <element signature="e#54#60#0" />
                   <element signature="e#198#205#0" />
+                  <element signature="e#30751#33233#0" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -146,17 +148,6 @@
             <path>
               <item name="learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="learning" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learning" type="462c0819:PsiDirectoryNode" />
-              <item name="SuperNotes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learning" type="462c0819:PsiDirectoryNode" />
-              <item name="SuperNotes" type="462c0819:PsiDirectoryNode" />
-              <item name="Python" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -604,7 +595,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571559272784</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="added class and object notes">
+      <created>1572097753826</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1572097753826</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -633,7 +631,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28186968" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21246459" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -671,7 +669,8 @@
     <MESSAGE value="added flask MongoDB note" />
     <MESSAGE value="added flask MongoDB note2" />
     <MESSAGE value="added crazy IT notes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added crazy IT notes" />
+    <MESSAGE value="added class and object notes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added class and object notes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/user_id.html">
@@ -1037,11 +1036,12 @@
     <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="381">
-            <caret line="2293" column="18" selection-start-line="2293" selection-start-column="18" selection-end-line="2293" selection-end-column="18" />
+          <first_editor relative-caret-position="160">
+            <caret line="2347" column="8" lean-forward="true" selection-start-line="2347" selection-start-column="8" selection-end-line="2347" selection-end-column="8" />
             <folding>
               <element signature="e#54#60#0" />
               <element signature="e#198#205#0" />
+              <element signature="e#30751#33233#0" />
             </folding>
           </first_editor>
           <second_editor />

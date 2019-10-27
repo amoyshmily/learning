@@ -1,19 +1,15 @@
+num = 3
+def eat():
+	print('全局空间的eat方法，num={}'.format(str(num)))
+
 class Student:
-
-	def __init__(self, name: str):
-		self.name = name
-
-	def read(self):
-		print('{} finished reading.'.format(self.name))
-		return self
-
-	def write(self):
-		print('{} finished writing.'.format(self.name))
-		return self
-
-	def exam(self):
-		print('{} finished exam.'.format(self.name))
-		return self
+	num = 4
+	def eat(self):
+		print('Student空间的eat方法，num={}'.format(self.num))
 
 if __name__ == '__main__':
-	Student('叶良辰').read().write().exam()
+	eat()
+	print(num)
+	stu = Student()
+	Student.eat(stu)
+	print(Student.num)
