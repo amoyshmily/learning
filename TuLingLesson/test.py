@@ -1,16 +1,16 @@
+class Programmer:
 
-def fx(fn):
-	print('函数fx执行')
-	def fz(*args):
-		print(fn.__name__)
-		fn()
-	return fz
+    has_hair = True 	# 类属性
 
-@fx
-def fy():
-	print('函数fy执行')
-	print('fy = \'这是装饰函数返回值\'')
+    def soul_torture(self):
+    	self.has_hair = False	# 实例属性
+    	self.has_mate = False
+
 
 if __name__ == '__main__':
-	print(type(fy))
-	print(fy)
+	p = Programmer()
+	p.soul_torture()
+	print('类属性：', Programmer.has_hair)
+	print('实例属性：', p.has_hair)
+	Programmer.has_hair = None
+	print('实例属性：', p.has_hair)

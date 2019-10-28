@@ -2235,6 +2235,105 @@ if __name__ == '__main__':
 
 > 属性
 ```
+在类体中定义的变量，称之为类变量，也称为类属性，默认归属于类本身。
+
+（1）类属性
+Python支持使用类来读取、修改类属性。
+
+示例1：通过类来访问和修改类属性
+class Programmer:
+
+    # 定义类变量
+    has_hair = True
+    has_mate = True
+    work_overtime = False
+
+    def soul_torture(self):
+    	print('程序猿有头发吗？', Programmer.has_hair)
+    	print('程序猿有对象吗？', Programmer.has_mate)
+    	print('程序猿要加班吗？', Programmer.work_overtime)
+
+if __name__ == '__main__':
+	print(Programmer.has_hair)
+	Programmer().soul_torture()
+	print('------ 请说实话 ------')
+	Programmer.has_hair = False
+	Programmer.has_mate = False
+	Programmer.work_overtime = True
+	Programmer().soul_torture()
+
+>>>
+True
+程序猿有头发吗？ True
+程序猿有对象吗？ True
+程序猿要加班吗？ False
+------ 请说实话 ------
+程序猿有头发吗？ False
+程序猿有对象吗？ False
+程序猿要加班吗？ True
+
+Python允许使用对象来访问对象所属类的类属性（变）量，其本质还是通过类名在访问类变量。
+因此推荐优先使用类来访问和修改类属性。
+
+示例2：通过对象来访问类属性
+class Programmer:
+
+    has_hair = True
+
+    def soul_torture(self):
+    	print('程序猿有头发吗？', self.has_hair)
+
+
+if __name__ == '__main__':
+	p = Programmer()
+	print(Programmer.has_hair)
+	p.soul_torture()
+	print('------ 前方高能预警 ------')
+	Programmer.has_hair = False
+	p.soul_torture()
+>>>
+True
+程序猿有头发吗？ True
+------ 前方高能预警 ------
+程序猿有头发吗？ False
+
+如果程序通过对象对类属性进行赋值时，实际上并不会改变类属性，而是会定义新的实例属性。
+
+（2）实例属性
+
+示例3
+class Programmer:
+
+    has_hair = True 	# 类属性
+
+    def soul_torture(self):
+    	self.has_hair = False	# 实例属性
+    	self.has_mate = False
+
+
+if __name__ == '__main__':
+	p = Programmer()
+	p.soul_torture()
+	print('类属性：', Programmer.has_hair)
+	print('实例属性：', p.has_hair)
+	Programmer.has_hair = None  # 改变类属性
+	print('实例属性：', p.has_hair)  # 实例属性并不会受影响
+
+>>>
+类属性： True
+实例属性： False
+实例属性： False
+
+（3）property 关键字
+如果为一个类定义了getter和setter等访问器方法，则可以使用property()函数将它们
+定义成实例属性。
+
+语法：
+property(fget=None, fset=None, fdel=None, doc=None)
+fget：getter方法
+fset：setter方法
+fdel：删除方法
+doc：说明文档
 
 ```
 
@@ -2243,8 +2342,9 @@ if __name__ == '__main__':
 方法是类或对象的行为特征的抽象。Python的方法也是函数，它的定义方式、调用方式和函数
 非常相似。
 
-（1） 实例方法
 在类体中定义的方法默认都是自带self参数的实例方法，包括构造方法。
+
+（1） 实例方法
 
 # self绑定机制
 
@@ -2395,7 +2495,10 @@ if __name__ == '__main__':
 1.投入：被装饰函数作为参数传给装饰函数；
 2.产出：被装饰函数化作装饰函数的返回值。
 
-示例5
+作用：可以在不改变被装饰函数代码的情况下，很灵活地在被装饰函数执行前添加一些额外的逻辑
+处理（比如权限检查），也可以在被修饰函数执行后添加一些额外的逻辑处理（比如记录日志）
+
+示例5：装饰函数返回固定值
 def fx(fn):
 	print('函数fx执行')
 	fn()
@@ -2415,6 +2518,41 @@ if __name__ == '__main__':
 函数fy执行
 fy = '这是装饰函数返回值'
 
+
+示例6：装饰函数返回函数
+def fx(fn):
+	print('装饰函数执行')
+	print('传入的函数：', fn.__name__)
+	
+	def fz(n: int):
+		print('装饰后的函数执行')
+		num = fn(n)
+		return num**2
+	return fz
+
+@fx
+def fy(m: int):
+	print('被装饰的函数执行')
+	return m+1
+
+if __name__ == '__main__':
+	print(type(fy))
+	print(fy.__name__)
+	print(fy(2))
+
+>>>
+装饰函数执行
+传入的函数： fy
+<class 'function'>
+fz
+装饰后的函数执行
+被装饰的函数执行
+9
+
+解析：@fx即表示将fy作为入参传给装饰函数fx，并将fy指向fx函数的返回值，所以fy=fz，
+是一个函数对象。因此type(fy)的结果是<class 'function'>,fy的函数名即fz。当调用
+fy(2)时，等同于调用fz(2),而在fz(2)执行中又调用了fy(2)并将返回值赋值给num，所以
+num=3,然后fz(2)返回num的平方值，因此，fy(2)等于fz(2)得值9。
 ```
 
 
