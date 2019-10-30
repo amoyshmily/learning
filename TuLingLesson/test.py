@@ -1,16 +1,26 @@
-class Programmer:
+class Person:
+	def __init__(self, name: str):
+		self.name = name
 
-    has_hair = True 	# 类属性
+	def eat(self):
+		print('{}是铁饭是钢'.format(self.name))
 
-    def soul_torture(self):
-    	self.has_hair = False	# 实例属性
-    	self.has_mate = False
+class Student(Person):
+	def __init__(self, name):
+		# 通过super()函数实例化super对象
+		super().__init__(name)
 
+class Teacher(Person):
+	def __init__(self, name):
+		# 通过super()函数传参实例化super对象
+		super(Teacher, self).__init__(name)
+
+class Programmer(Person):
+	def __init__(self, name):
+		# 通过类调用实例方法的方式实现，需要手动传参self
+		Person.__init__(self, name)
 
 if __name__ == '__main__':
-	p = Programmer()
-	p.soul_torture()
-	print('类属性：', Programmer.has_hair)
-	print('实例属性：', p.has_hair)
-	Programmer.has_hair = None
-	print('实例属性：', p.has_hair)
+	Student('学生').eat()
+	Teacher('老师').eat()
+	Programmer('程序猿').eat()

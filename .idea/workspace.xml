@@ -18,8 +18,8 @@
         <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="118">
-                <caret line="2321" column="3" lean-forward="true" selection-start-line="2321" selection-start-column="3" selection-end-line="2321" selection-end-column="3" />
+              <first_editor relative-caret-position="223">
+                <caret line="2791" column="3" lean-forward="true" selection-start-line="2791" selection-start-column="3" selection-end-line="2791" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -60,6 +60,9 @@
       <find>for表达式</find>
       <find>range</find>
       <find>set</find>
+      <find>propert</find>
+      <find>r'c</find>
+      <find>property</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -136,7 +139,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,6 +150,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -611,7 +614,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572192418755</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="added class and object notes">
+      <created>1572279177932</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1572279177932</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1033,8 +1043,8 @@
     <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="118">
-            <caret line="2321" column="3" lean-forward="true" selection-start-line="2321" selection-start-column="3" selection-end-line="2321" selection-end-column="3" />
+          <first_editor relative-caret-position="223">
+            <caret line="2791" column="3" lean-forward="true" selection-start-line="2791" selection-start-column="3" selection-end-line="2791" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>

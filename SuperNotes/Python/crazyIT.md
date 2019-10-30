@@ -245,12 +245,21 @@ worlds = 'There are so many \
 ```
 由于反斜杠\自身拥有特殊意义，一旦字符串中必须使用\时，必须对其进行转义。
 
-例如Windows系统的路径C:\windows\System32，转义后的普通写法是：path = 'C:\\windows\\System32'。
+例如Windows系统的路径C:\windows\System32，转义后的普通写法是：
+path = 'C:\\windows\\System32'。
 但是这种处理方式显得非常繁琐。
 
 原始字符串以r开头，原始字符串不会把反斜杠当成特殊字符。
-上述路径可以写为 path = r'C:\\windows\\System32'
+上述路径可以写为 path = r'C:\windows\System32'
 
+示例：
+print('普通青年：', 'C:\\windows\\System32')
+>>>
+普通青年： C:\windows\System32
+
+print('文艺青年：', r'C:\windows\System32')
+>>>
+文艺青年： C:\windows\System32
 ```
 
 > 拼接
@@ -2199,31 +2208,31 @@ if __name__ == '__main__':
 加上“类.方法()”或“对象.方法()”的形式，否则光秃秃的直接调用方法的形式属于调用函数。
 
 示例2：调用方法
-    class Student:
-        # 构造方法
-        def __init__(self, name: str, age: int):
-            self.name = name    # self作为对象的默认引用
-            self.age = age
-        # 实例方法
-        def study(self, language: str):
-            print('study {} everyday'.format(language))
-    
-    if __name__ == '__main__':
-        stu = Student(name='叶良辰', age=18)   # 调用构造方法实例化对象
-        stu.study('Python')   # 调用实例方法
+class Student:
+    # 构造方法
+    def __init__(self, name: str, age: int):
+        self.name = name    # self作为对象的默认引用
+        self.age = age
+    # 实例方法
+    def study(self, language: str):
+        print('study {} everyday'.format(language))
+
+if __name__ == '__main__':
+    stu = Student(name='叶良辰', age=18)   # 调用构造方法实例化对象
+    stu.study('Python')   # 调用实例方法
 
 示例3：添加方法、删除方法
-    class Student:
-        def __init__(self, name: str, age: int):
-            self.name = name
-            self.age = age
-    
-    if __name__ == '__main__':
-        stu = Student(name='叶良辰', age=18)   # 调用构造方法实例化对象
-        stu.play = lambda self: print(self.name+'在玩游戏。')    # 添加方法
-        print(dir(stu)) # [...'age', 'name', 'play']
-        del stu.play    # 删除方法
-        print(dir(stu)) # # [...'age', 'name']
+class Student:
+    def __init__(self, name: str, age: int):
+        self.name = name
+        self.age = age
+
+if __name__ == '__main__':
+    stu = Student(name='叶良辰', age=18)   # 调用构造方法实例化对象
+    stu.play = lambda self: print(self.name+'在玩游戏。')    # 添加方法
+    print(dir(stu)) # [...'age', 'name', 'play']
+    del stu.play    # 删除方法
+    print(dir(stu)) # # [...'age', 'name']
 
 # 对象的动态性
 备注：Python支持为类和对象动态添加属性和方法。以上只举例了为对象添加方法的一种方式。详见
@@ -2324,9 +2333,12 @@ if __name__ == '__main__':
 实例属性： False
 实例属性： False
 
-（3）property 关键字
+（3）property 计算属性
 如果为一个类定义了getter和setter等访问器方法，则可以使用property()函数将它们
 定义成实例属性。
+
+类似这种property合成的属性，也被称为“计算属性”。这种属性并不真正存储任何状态，它的
+值其实是通过某种算法计算得到的。当程序对该属性赋值时，被赋的值也会被存储到其他变量中。
 
 语法：
 property(fget=None, fset=None, fdel=None, doc=None)
@@ -2335,6 +2347,61 @@ fset：setter方法
 fdel：删除方法
 doc：说明文档
 
+示例4
+class Student:
+
+    def __init__(self, name: str, age: int):
+        self.name = name
+        self.age = age
+
+    def setInfo(self, info):
+    	self.name, self.age = info
+
+    def getInfo(self):
+    	return self.name, self.age
+
+    def delInfo(self):
+    	self.name, self.age = '', 0
+
+    # 使用property函数定义实例属性
+    info = property(getInfo, setInfo, delInfo, '用于描述学生信息。')
+
+if __name__ == '__main__':
+	print(Student.info.__doc__)     # 用于描述学生信息。
+	help(Student.info)
+	
+	stu = Student('叶良辰', 18)
+	print(stu.info)     # ('叶良辰', 18)
+
+	stu.info = '王校长', 20
+	print(stu.name)     # 王校长
+	print(stu.age)      # 20
+	
+使用装饰器@property来装饰方法，使之成为属性。
+
+示例5
+class Student:
+
+	def __init__(self, value):
+		self.age = value
+
+	@property   # 相当于设定getter方法（读）
+	def age(self):
+		return self._age
+
+	@age.setter # 为age属性设定setter方法（写）
+	def age(self, value):
+		self._age = value
+    
+	@property   # 为is_adult属性只设定getter方法（只读）
+	def is_adult(self):
+		return self._age >= 18
+	
+
+if __name__ == '__main__':
+	stu = Student(19)
+	print(stu.age)  # 19
+	print(stu.is_adult) # True
 ```
 
 > 方法
@@ -2560,11 +2627,164 @@ num=3,然后fz(2)返回num的平方值，因此，fy(2)等于fz(2)得值9。
 
 > 封装
 ```
+封装是指将对象的状态信息隐藏在对象内部，不允许外部程序直接访问对象的内部信息，而是通过
+该类对外暴露的方法来实现对内部信息的访问和操作。
+
+说人话：该藏的藏，该露的露。
+
+示例1
+class Person:
+
+	def __hide(self):
+		print('这是隐藏的方法')
+
+	def get_gender(self):
+		return self.__gender
+
+	def set_gender(self, value: str):
+		if value == '男' or value == '女':
+			self.__gender = value
+		else:
+			raise ValueError('性别只允许是“男”或者“女”。')
+
+	gender = property(get_gender, set_gender)
+
+if __name__ == '__main__':
+	p = Person()
+	p.gender = '男'
+	print(p.gender)		# 男
+	p.gender = '单身狗'
+	print(p.gender)		# ValueError: 性别只允许是“男”或者“女”。
+
+
+Python并没有提供真正的隐藏机制，因此Python类定义的所有成员（属性、方法）默认都是公开
+的；如果程序希望将某些成员隐藏起来，那么只需要将该成员的命名以双下划线开头即可，实现假
+隐藏。
 
 ```
 
 > 继承
 ```
+
+# 定义
+
+Python支持多继承机制，一个子类可以同时有多个直接父类。如果没有显式指定父类，那么默认
+继承object类。
+
+作用：复用和扩展父类的属性和方法（实例方法，包括构造方法）。
+
+语法：
+class 子类名(父类名1, 父类名2, ...):
+    代码块
+
+从子类的角度来看，子类扩展extend了父类；从父类的角度来看，父类派生derive出子类。
+
+示例1
+class Developer:
+
+	def dev(self):
+		print('我会撸代码')
+
+class Tester:
+	def test(self):
+		print('我会找bug')
+
+class DevTester(Developer, Tester):
+	def __init__(self):
+		print('我是一名测试开发工程师')
+
+if __name__ == '__main__':
+	cifer = DevTester()
+	cifer.dev()
+	cifer.test()
+
+注意：Python虽然在语法上支持多继承，但是通常不推荐使用。除非必要，则尽量不要使用多继承，
+而是优先使用单继承，这样可以保证编程思路更加清晰，从而避免不必要的麻烦。
+
+# 同名覆盖 Override
+子类一般以父类为基础，扩展新的方法。但是有些时候，则需要重写（覆盖）父类的同名方法。
+
+示例2
+class Bird:
+	def fly(self):
+		print('我在天上飞')
+
+class Ostrich(Bird):
+	def fly(self):
+		print('我是鸵鸟，飞不起来了')
+
+if __name__ == '__main__':
+	o = Ostrich()
+	o.fly()
+>>>
+我是鸵鸟，飞不起来了
+
+
+# 同名困境
+当子类覆盖了父类的方法后，在子类中调用该同名方法，总是会执行重写后的方法，不会执行父类中
+定义的被覆盖的方法。
+
+解药：
+如果非要在覆盖后，仍旧需要在子类中调用父类的同名方法，那么只能通过类来调用该实例方法。需要
+注意的是，这种调用方式中必须手动绑定入参。
+
+示例3
+class Bird:
+	def fly(self):
+		print('我在天上飞')
+
+class Ostrich(Bird):
+	def fly(self):
+		print('我是鸵鸟，飞不起来了')
+
+if __name__ == '__main__':
+	o = Ostrich()
+	Bird.fly(o)     # 强行调用父类中被覆盖的方法
+>>>
+我在天上飞
+
+# super
+子类也会通过继承的方式得到父类的构造方法。如果子类有多个父类，那么排在前面的构造方法
+将被优先使用。
+
+如果子类覆盖了父类的构造方法，那么子类的构造方法中，必须调用父类的构造方法。具体的调用
+方式有两种：
+1.他人方式：因为构造方法也是示例方法，可以通过类来调用构造方法，需要手工指定入参。
+2.主人方式：借助super对象调用父类的构造方法。super对象的实例化有两种方式，一种是
+super()无参函数，实质是调用了super类的构造方法；另一种是使用super(type, obj)
+有参函数来实例化。super对象可以自由调用类的实例方法以及类方法。
+
+示例4
+class Person:
+	def __init__(self, name: str):
+		self.name = name
+
+	def eat(self):
+		print('{}是铁饭是钢'.format(self.name))
+
+class Student(Person):
+	def __init__(self, name):
+		# 通过super()函数实例化super对象
+		super().__init__(name)
+
+class Teacher(Person):
+	def __init__(self, name):
+		# 通过super()函数传参实例化super对象
+		super(Teacher, self).__init__(name)
+
+class Programmer(Person):
+	def __init__(self, name):
+		# 通过类调用实例方法的方式实现，需要手动传参self
+		Person.__init__(self, name)
+
+if __name__ == '__main__':
+	Student('学生').eat()
+	Teacher('老师').eat()
+	Programmer('程序猿').eat()
+>>>
+学生是铁饭是钢
+老师是铁饭是钢
+程序猿是铁饭是钢
 
 ```
 
@@ -2573,12 +2793,15 @@ num=3,然后fz(2)返回num的平方值，因此，fy(2)等于fz(2)得值9。
 
 ```
 
-> 动态性
+#### 动态性
 ```
 
 ```
 
-> 枚举类
+#### 枚举类
+```
+
+```
 
 
 
