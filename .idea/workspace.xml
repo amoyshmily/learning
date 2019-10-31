@@ -4,6 +4,7 @@
     <list default="true" id="1c3bbb9b-72d3-4142-b6b1-98e82134c6da" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SuperNotes/Python/crazyIT.md" beforeDir="false" afterPath="$PROJECT_DIR$/SuperNotes/Python/crazyIT.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuLingLesson/2.py" beforeDir="false" afterPath="$PROJECT_DIR$/TuLingLesson/2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TuLingLesson/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/TuLingLesson/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +19,8 @@
         <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="223">
-                <caret line="2791" column="3" lean-forward="true" selection-start-line="2791" selection-start-column="3" selection-end-line="2791" selection-end-column="3" />
+              <first_editor relative-caret-position="285">
+                <caret line="2855" column="3" lean-forward="true" selection-start-line="2855" selection-start-column="3" selection-end-line="2855" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -139,6 +140,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -150,7 +152,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1043,8 +1044,8 @@
     <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="223">
-            <caret line="2791" column="3" lean-forward="true" selection-start-line="2791" selection-start-column="3" selection-end-line="2791" selection-end-column="3" />
+          <first_editor relative-caret-position="285">
+            <caret line="2855" column="3" lean-forward="true" selection-start-line="2855" selection-start-column="3" selection-end-line="2855" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>
