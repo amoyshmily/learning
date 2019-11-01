@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SuperNotes/Python/crazyIT.md" beforeDir="false" afterPath="$PROJECT_DIR$/SuperNotes/Python/crazyIT.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TuLingLesson/2.py" beforeDir="false" afterPath="$PROJECT_DIR$/TuLingLesson/2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TuLingLesson/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/TuLingLesson/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +18,14 @@
         <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="285">
-                <caret line="2855" column="3" lean-forward="true" selection-start-line="2855" selection-start-column="3" selection-end-line="2855" selection-end-column="3" />
+              <first_editor relative-caret-position="136">
+                <caret line="3168" column="32" lean-forward="true" selection-start-line="3168" selection-start-column="32" selection-end-line="3168" selection-end-column="32" />
+                <folding>
+                  <element signature="e#37095#39974#0" />
+                  <element signature="e#39981#43869#0" />
+                  <element signature="e#43872#43879#0" />
+                  <element signature="e#47502#47510#0" />
+                </folding>
               </first_editor>
               <second_editor />
             </state>
@@ -64,6 +69,7 @@
       <find>propert</find>
       <find>r'c</find>
       <find>property</find>
+      <find>Metho</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -72,7 +78,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/home/forms.py" />
         <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/admin/forms.py" />
         <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/home/__init__.py" />
         <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/admin/__init__.py" />
@@ -122,6 +127,7 @@
         <option value="$PROJECT_DIR$/MyFlask/TodoProject/app/models.py" />
         <option value="$PROJECT_DIR$/SuperNotes/Python/testClass.py" />
         <option value="$PROJECT_DIR$/SuperNotes/Python/123.py" />
+        <option value="$PROJECT_DIR$/1.py" />
         <option value="$PROJECT_DIR$/SuperNotes/Python/crazyIT.md" />
       </list>
     </option>
@@ -140,7 +146,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -152,6 +157,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -187,7 +193,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.123">
+  <component name="RunManager" selected="Python.1">
+    <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="123" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -201,27 +228,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SuperNotes/Python/123.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="learning" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson08 ORM/留言板Demo" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson08 ORM/留言板Demo/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -295,11 +301,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.1" />
         <item itemvalue="Python.123" />
         <item itemvalue="Python.run" />
         <item itemvalue="Python.model" />
         <item itemvalue="Python.model (2)" />
-        <item itemvalue="Python.main (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -622,7 +628,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572279177932</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="added class and object notes">
+      <created>1572539727984</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1572539727984</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -646,12 +659,12 @@
     <frame x="-9" y="-9" width="1618" height="870" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16157761" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16157761" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21246459" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21246459" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -693,13 +706,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="added class and object notes" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/user_id.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="6" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/base_child_one.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -1041,11 +1047,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SuperNotes/Python/testClass.py" />
     <entry file="file://$PROJECT_DIR$/SuperNotes/Python/123.py" />
+    <entry file="file://$PROJECT_DIR$/1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="285">
-            <caret line="2855" column="3" lean-forward="true" selection-start-line="2855" selection-start-column="3" selection-end-line="2855" selection-end-column="3" />
+          <first_editor relative-caret-position="136">
+            <caret line="3168" column="32" lean-forward="true" selection-start-line="3168" selection-start-column="32" selection-end-line="3168" selection-end-column="32" />
+            <folding>
+              <element signature="e#37095#39974#0" />
+              <element signature="e#39981#43869#0" />
+              <element signature="e#43872#43879#0" />
+              <element signature="e#47502#47510#0" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>

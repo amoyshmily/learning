@@ -2238,6 +2238,29 @@ if __name__ == '__main__':
 备注：Python支持为类和对象动态添加属性和方法。以上只举例了为对象添加方法的一种方式。详见
 后续的“动态性”版块知识。
 
+（3）检查类型
+1.issubclass(cls, class_or_tuple)：检查cls是否是后一个类或者元祖包含的多个类中
+某个类的子类。
+2.isinstance(obj, class_or_tuple)：检查obj对象是否是后一个类或者元祖包含的多个
+类中某个类的实例。
+
+示例1
+msg = 'Hello world!'
+print(isinstance(msg, str))     # True
+print(issubclass(str, tuple))   # False
+
+3.__bases__ 查看所有父类
+
+示例2
+class A:
+	pass
+class B:
+	pass
+class C(A, B):
+	pass
+
+if __name__ == '__main__':
+	print(C.__bases__)
 ```
 
 #### 结构
@@ -2847,8 +2870,8 @@ we.interview(Donkey())
 Python是动态语言，动态性的典型特征是类、对象的属性、方法都支持动态增加修改。
 
 （1）类属性
-？？？
-
+对类属性进行赋值，如果类属性已存在，则是修改；如果类属性不存在，则是新增。
+详见本章“属性”板块内容。
 
 （2）类方法
 作用是为所有的实例都添加方法。
@@ -2870,11 +2893,10 @@ if __name__ == '__main__':
 
 隐患：程序定义好的类，有可能在后面被莫名其妙篡改。
 
-# slots限定
-
 
 （3）对象属性
-？？？
+对对象属性进行赋值，如果对象的属性已存在，则是修改；如果对象的属性不存在，则是新增。
+详见本章“属性”板块内容。
 
 （4）对象方法
 当给对象动态增加方法时，Python不会自动将调用者绑定到它们的第一个参数，因此程序需要手动
@@ -2953,10 +2975,215 @@ if __name__ == '__main__':
 	fn()		# <__main__.Student object at 0x0000000001E585C0>
 
 
+
+# slots限定对象动态（不是你想改，想改就能改）
+__slots__属性是一个元祖，其包含的元素是类的实例对象允许动态添加的所有属性和方法名。
+
+示例6
+from types import MethodType
+
+class Student:
+	__slots__ = ('name', 'age', 'study')
+	def __init__(self, name: str):
+	    self.name = name
+
+if __name__ == '__main__':
+	stu = Student('叶良辰')
+	stu.study = MethodType(lambda self: print('{}正在努力学习。'.format(self.name)), stu)
+	stu.study()
+	stu.age = 18
+	stu.girlfriend = '一只小团团'
+
+>>>
+叶良辰正在努力学习。
+AttributeError: 'Student' object has no attribute 'girlfriend'
+
+
+# type() 方法
+
+作用：动态创建类
+
+一个类的类型是type类型。
+
+示例1
+class Student:
+	pass
+
+if __name__ == '__main__':
+	print(type(Student))	# <class 'type'>
+
+从Python解释器的角度来看，当程序使用class关键字来声明类的时候，其实是定义了
+一个特殊的type对象，并将对象赋值给Student变量。因此，凡是class定义的所有类
+都是type类的实例。
+
+由于可以是用type类的构造方法来创建type对象，而type类的实例就是类，因此可以
+借助type()构造方法来动态创建类。
+
+语法：
+type('类名', (父类名1,...), dict(类属性=具体值, 实例方法=函数名, ...))
+
+类名：表示所要创建的类的类名
+父类名：表示所继承的父类的类名，只是多个。
+dict：字典对象表示该类绑定的类属性和实例方法。如果value是普通值，那么key表示
+类属性；如果value是函数，那么key则表示实例方法。
+
+示例2
+def study_fn(who):
+	print('{}正在学习'.format(who.name))
+
+Student = type('Student', (object,), dict(study=study_fn, age=18))
+
+if __name__ == '__main__':
+	stu = Student()
+	print(stu.age)
+	stu.name = '叶良辰'
+	stu.study()
+	print(type(Student))
+
+>>>
+18
+叶良辰正在学习
+<class 'type'>
+
+# metaclass 元类
+
+作用：希望创建的某一批类全部具备某种特征，可以在创建类时动态修改类的定义。
+
+可以使用metaclass来动态修改程序中的一批类，对它们进行集中修改，这种用法在开发一些基础
+框架时非常有用，通过metaclass为某一批类需要具有的通用功能的类添加方法。
+
+定义metaclass，继承自type类，并重写__new()__方法。
+
+示例1
+class ItemMetaClass(type):
+
+	def __new__(cls, name, bases, attrs):
+	    # 动态定义的共享方法
+		attrs['cal_price'] = lambda self: self.price* self.discount
+		return type.__new__(cls, name, bases, attrs)
+
+class Book(metaclass=ItemMetaClass):
+	def __init__(self, name, price):
+		self.name = name
+		self.price = price
+
+	@property
+	def discount(self):
+		return self._discount
+
+	@discount.setter
+	def discount(self, discount):
+		self._discount = discount
+
+
+if __name__ == '__main__':
+	book = Book('一只小团团', 120)
+	book.discount = 0.8
+	print(book.cal_price())
+
+
+
 ```
 
 #### 枚举类
 ```
+在某些情况下，一个类的对象是有限并且固定的，在Python中称为枚举类。例如四季。
+枚举的实例，也称为枚举成员，通常使用大写字母表示。
+
+# 创建
+1.构造：使用Enum列出多个枚举值。
+
+示例1
+import enum
+Season = enum.Enum('Season', ('SPRING', 'SUMMER', 'FALL', 'WINTER'))
+print(Season.SPRING)        # Season.SPRING
+
+2.派生：通过继承Enum基类来派生枚举类。
+
+作用：定义比较复杂的枚举。
+
+示例2
+import enum
+
+class Gender(enum.Enum):
+	MALE = '男'
+	FEMALE = '女'
+
+	def info(self):
+		print('枚举成员的值是：{}'.format(self.value))
+
+if __name__ == '__main__':
+	print(Gender.MALE)
+	print(Gender['FEMALE'])
+	print(Gender['FEMALE'].value)
+	Gender.MALE.info()
+
+>>>
+Gender.MALE
+Gender.FEMALE
+女
+枚举成员的值是：男
+
+构造方法：
+
+示例3
+import enum
+
+class Gender(enum.Enum):
+	MALE = '男', '貌似潘安'
+	FEMALE = '女', '含羞闭月'
+
+	def __init__(self, cn_name, desc):
+		self.cn_name = cn_name
+		self.desc = desc
+
+	@property
+	def desc(self):
+		return self._desc
+
+	@desc.setter
+	def desc(self, desc):
+		self._desc = desc
+
+	def info(self):
+		print('枚举成员是：{}, {}'.format(self.value, self.desc))
+
+if __name__ == '__main__':
+	print(Gender.MALE)
+	print(Gender['FEMALE'])
+	print(Gender['FEMALE'].value)
+	Gender.MALE.info()
+	
+>>>
+Gender.MALE
+Gender.FEMALE
+('女', '含羞闭月')
+枚举成员是：('男', '貌似潘安'), 貌似潘安
+
+# 访问
+枚举的每个成员都有name和value属性，分别表示枚举成员的变量名和编号（默认从1开始）。
+
+示例4：
+import enum
+Season = enum.Enum('Season', ('SPRING', 'SUMMER', 'FALL', 'WINTER'))
+print(Season.SPRING.name)   # SPRING
+print(Season.SPRING.value)  # 1
+print(Season['SPRING'])     # Season.SPRING
+print(Season(4))            # Season.WINTER
+
+# __members__属性：遍历成员
+
+示例5
+import enum
+Season = enum.Enum('Season', ('SPRING', 'SUMMER', 'FALL', 'WINTER'))
+
+for name, item in Season.__members__.items():
+	print ('{}=={}=={}'.format(name, item, item.value))
+>>>
+SPRING==Season.SPRING==1
+SUMMER==Season.SUMMER==2
+FALL==Season.FALL==3
+WINTER==Season.WINTER==4
 
 ```
 
