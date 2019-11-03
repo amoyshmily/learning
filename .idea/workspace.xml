@@ -3,8 +3,69 @@
   <component name="ChangeListManager">
     <list default="true" id="1c3bbb9b-72d3-4142-b6b1-98e82134c6da" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperNotes/Python/crazyIT.md" beforeDir="false" afterPath="$PROJECT_DIR$/SuperNotes/Python/crazyIT.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TuLingLesson/2.py" beforeDir="false" afterPath="$PROJECT_DIR$/TuLingLesson/2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/.idea/PyQtLearn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/.idea/PyQtLearn.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/demo/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/demo/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/designer/excel.png" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/designer/excel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/designer/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/designer/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/designer/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/designer/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/designer/test.ui" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/designer/test.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/designer/unselected.png" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/designer/unselected.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/style/WindowStyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/style/WindowStyle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/items/list/QListView.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/widgets/items/list/QListView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/items/list/QListWidget.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/widgets/items/list/QListWidget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/items/table/QTableView.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/widgets/items/table/QTableView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/items/table/QTableWidget.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/widgets/items/table/QTableWidget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/items/tree/ModifyTree.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/widgets/items/tree/ModifyTree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/items/tree/QTreeView.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/widgets/items/tree/QTreeView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/items/tree/QTreeWdiget.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/widgets/items/tree/QTreeWdiget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/items/tree/TreeEvent.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/widgets/items/tree/TreeEvent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/items/tree/img/child1.png" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/widgets/items/tree/img/child1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/items/tree/img/child2.png" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/widgets/items/tree/img/child2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/items/tree/img/gChild.png" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/widgets/items/tree/img/gChild.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/items/tree/img/root.png" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/widgets/items/tree/img/root.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/label/QLabel.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/widgets/label/QLabel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/label/QLabelBuddy.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/widgets/label/QLabelBuddy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt5Learn/widgets/label/img/python.png" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/PyQt5Demos/widgets/label/img/python.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperNotes/VueNotes.md" beforeDir="false" afterPath="$PROJECT_DIR$/MyVue/VueNotes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuLingLesson/1.md" beforeDir="false" afterPath="$PROJECT_DIR$/SuperNotes/Python/TuLingLesson/1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuLingLesson/2.py" beforeDir="false" afterPath="$PROJECT_DIR$/SuperNotes/Python/TuLingLesson/2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuLingLesson/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/SuperNotes/Python/TuLingLesson/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/.idea/WebService.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Lib/site-packages/setuptools-39.1.0-py3.7.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Lib/site-packages/setuptools.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Scripts/Activate.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Scripts/activate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Scripts/activate.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Scripts/deactivate.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Scripts/easy_install-3.7-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Scripts/easy_install-3.7.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Scripts/easy_install-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Scripts/easy_install.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Scripts/pip-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Scripts/pip.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Scripts/pip3-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Scripts/pip3.7-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Scripts/pip3.7.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Scripts/pip3.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Scripts/python.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/Scripts/pythonw.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/venv/pyvenv.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zxw_spider_tutorial/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zxw_spider_tutorial/demo/CustOpener.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zxw_spider_tutorial/demo/CustProxy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zxw_spider_tutorial/demo/LearnPythonReminder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zxw_spider_tutorial/demo/ProjectTieBa.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zxw_spider_tutorial/demo/ProjectYoudao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zxw_spider_tutorial/demo/start.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zxw_spider_tutorial/demo/testGet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zxw_spider_tutorial/demo/userAgent.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zxw_spider_tutorial/download/python第1页.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zxw_spider_tutorial/download/python第2页.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zxw_spider_tutorial/download/python第3页.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,18 +75,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MiniProjects/Screenshot/screenshot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-63">
+              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MiniProjects/capture/capture.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="606">
+              <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
+        <entry file="file://$PROJECT_DIR$/MyGUI/notes.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="136">
-                <caret line="3168" column="32" lean-forward="true" selection-start-line="3168" selection-start-column="32" selection-end-line="3168" selection-end-column="32" />
-                <folding>
-                  <element signature="e#37095#39974#0" />
-                  <element signature="e#39981#43869#0" />
-                  <element signature="e#43872#43879#0" />
-                  <element signature="e#47502#47510#0" />
-                </folding>
+              <first_editor relative-caret-position="168">
+                <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
               </first_editor>
               <second_editor />
             </state>
@@ -70,6 +149,10 @@
       <find>r'c</find>
       <find>property</find>
       <find>Metho</find>
+      <find>create_p_w_picpath</find>
+      <find>print</find>
+      <find>fill</find>
+      <find>lef</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -78,12 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/admin/forms.py" />
-        <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/home/__init__.py" />
-        <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/admin/__init__.py" />
-        <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/admin/views.py" />
-        <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/__init__.py" />
-        <option value="$PROJECT_DIR$/MyFlask/MovieProject/manage.py" />
         <option value="$PROJECT_DIR$/MyFlask/Notes/movieProjectNotes.md" />
         <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/models.py" />
         <option value="$PROJECT_DIR$/MyFlask/MovieProject/app/templates/home/index.html" />
@@ -129,6 +206,12 @@
         <option value="$PROJECT_DIR$/SuperNotes/Python/123.py" />
         <option value="$PROJECT_DIR$/1.py" />
         <option value="$PROJECT_DIR$/SuperNotes/Python/crazyIT.md" />
+        <option value="$PROJECT_DIR$/MiniProjects/Screenshot/screenshot.py" />
+        <option value="$PROJECT_DIR$/MiniProjects/ColorPanel/colors.py" />
+        <option value="$PROJECT_DIR$/MiniProjects/capture/c2.py" />
+        <option value="$PROJECT_DIR$/MiniProjects/capture/capture.py" />
+        <option value="$PROJECT_DIR$/MyGUI/README.md" />
+        <option value="$PROJECT_DIR$/MyGUI/notes.md" />
       </list>
     </option>
   </component>
@@ -146,6 +229,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,32 +237,42 @@
               <item name="learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="learning" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learning" type="462c0819:PsiDirectoryNode" />
+              <item name="MyGUI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learning" type="462c0819:PsiDirectoryNode" />
+              <item name="MyGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="PyQt5Demos" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MyGithub\learning\MyGui" />
+      <recent name="D:\MyGithub\learning\SuperNotes\Python" />
+      <recent name="D:\MyGithub\learning\MyVue" />
+      <recent name="D:\MyGithub\learning\MyFlask\MovieProject" />
+      <recent name="D:\MyGithub\learning\MyFlask\TodoProject\app" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\MyGithub\learning\MyFlask\TodoProject\app\templates" />
       <recent name="D:\MyGithub\learning\MyFlask\TodoProject\app\static" />
       <recent name="D:\MyGithub\learning\MyFlask\Tutorial" />
       <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson09 MongoDB" />
       <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson08 ORM" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\MyGithub\learning\MyFlask\MovieProject" />
-      <recent name="D:\MyGithub\learning\MyFlask\TodoProject\app" />
-      <recent name="D:\MyGithub\learning\SuperNotes" />
-      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson06\demo1" />
-      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson02" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -193,7 +287,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.1">
+  <component name="RunManager" selected="Python.capture">
     <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -215,7 +309,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="123" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="c2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -223,11 +317,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SuperNotes/Python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MiniProjects/capture" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SuperNotes/Python/123.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MiniProjects/capture/c2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -236,7 +330,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="model (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="capture" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -244,11 +338,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson09 MongoDB/用户管理系统Demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MiniProjects/capture" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson09 MongoDB/用户管理系统Demo/model.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MiniProjects/capture/capture.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -257,7 +351,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="colors" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -265,11 +359,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson10 DORM" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MiniProjects/ColorPanel" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson10 DORM/model.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MiniProjects/ColorPanel/colors.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -278,7 +372,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="screenshot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -286,11 +380,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MyFlask/TodoProject" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MiniProjects/Screenshot" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MyFlask/TodoProject/run.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MiniProjects/Screenshot/screenshot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -301,11 +395,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.capture" />
+        <item itemvalue="Python.c2" />
+        <item itemvalue="Python.colors" />
+        <item itemvalue="Python.screenshot" />
         <item itemvalue="Python.1" />
-        <item itemvalue="Python.123" />
-        <item itemvalue="Python.run" />
-        <item itemvalue="Python.model" />
-        <item itemvalue="Python.model (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -635,7 +729,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572539727984</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="added class and object notes">
+      <created>1572629233339</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1572629233339</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -659,12 +760,12 @@
     <frame x="-9" y="-9" width="1618" height="870" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16157761" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21628499" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21246459" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21246459" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -706,135 +807,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="added class and object notes" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/base_child_one.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" selection-start-line="2" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/templates/users_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson05 表单开发/note.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="279">
-            <caret line="67" lean-forward="true" selection-end-line="67" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson04 Web基础/note.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="24">
-            <caret line="2" column="8" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="8" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson03 消息提示/note.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="147">
-            <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson02 模板语法/Lesson02.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="e#54#94#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson01 路由/Lesson01.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson06 wtf扩展/note.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="21">
-            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/MovieProject/app/home/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson06 wtf扩展/FormDemo/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="15" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="18" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson06 wtf扩展/FormDemoEXT/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="14" column="15" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="14" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson06 wtf扩展/FormDemoEXT/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#56#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SuperNotes/JMeter/beanshell.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="307">
-            <caret line="96" column="25" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson07 数据库mysql/MySQLDemo/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Programs/Anaconda3/Lib/site-packages/flask_sqlalchemy/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="1026" column="8" selection-start-line="1026" selection-start-column="8" selection-end-line="1026" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson07 数据库mysql/MySQLDemo/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1047,24 +1019,133 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SuperNotes/Python/testClass.py" />
     <entry file="file://$PROJECT_DIR$/SuperNotes/Python/123.py" />
-    <entry file="file://$PROJECT_DIR$/1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/1.py" />
     <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="136">
-            <caret line="3168" column="32" lean-forward="true" selection-start-line="3168" selection-start-column="32" selection-end-line="3168" selection-end-column="32" />
-            <folding>
-              <element signature="e#37095#39974#0" />
-              <element signature="e#39981#43869#0" />
-              <element signature="e#43872#43879#0" />
-              <element signature="e#47502#47510#0" />
-            </folding>
+          <first_editor relative-caret-position="262">
+            <caret line="3183" column="24" selection-start-line="3183" selection-start-column="24" selection-end-line="3183" selection-end-column="24" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyAppium/fix.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="63">
+            <caret line="3" selection-start-line="3" selection-end-line="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SuperNotes/HttpRunner/notes.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1307" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyVue/VueNotes.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1163" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Selenium/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SuperNotes/interview/interview.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MiniProjects/Screenshot/haha.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MiniProjects/ColorPanel/colors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MiniProjects/capture/c2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3105">
+          <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MiniProjects/Screenshot/screenshot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Programs/Anaconda3/Lib/tkinter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="2472" selection-start-line="2472" selection-end-line="2472" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MiniProjects/capture/temp.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyGUI/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="265">
+            <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MiniProjects/capture/capture.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyGUI/notes.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="168">
+            <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
           </first_editor>
           <second_editor />
         </state>
