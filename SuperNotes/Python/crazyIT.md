@@ -3191,9 +3191,149 @@ WINTER==Season.WINTER==4
 
 
 # 八、异常机制
+
+#### 作用
 ```
-待补充
+Python的异常处理机制可以让程序更加健壮，具有极好的容错性。当程序运行出现意外情况时，
+系统会自动生成一个Error对象来通知程序，从而实现将“业务实现代码”和“错误处理代码”分
+离，提供更好的可读性。
+
 ```
+
+#### 异常类的继承体系
+```
+Python的所有异常类的基类都是BaseException，其主要子类是Exception类。不管是系统
+的异常类，还是用户自定义的异常类，都只能继承Exception类。
+
+BaseException
+|__Exception
+|    |__ArithmeticError
+|    |    |__ZeroDivisionError
+|    |    |__FloatingPointError
+|    |    |__OverflowError
+|    |    |__IndexError
+|    |    |__KeyError
+|    |
+|    |__BufferError
+|    |__LookupError
+|
+|__GeneratorExit
+|__SystemExit
+|__KeyboardInterrupt
+
+```
+
+#### 异常处理机制
+```
+# 语法：主要依赖5个关键字：try、except、else、finally、raise。
+
+try:
+	代码块
+except ExceptionSmall as e:
+	代码块
+except ExceptionBigger as e:
+	代码块
+	raise
+else:
+	代码块
+finally:
+	代码块
+
+try(必备):此代码块内放置的是可能发生异常的代码；
+
+except(必备):后面对应的是异常类型和一个代码块，用于在异常发生时妥当处置；
+
+else(可选):多个except块后可以放一个else代码块，当不出现异常时还要执行的代码；
+如果希望某段代码的异常能够被后面的except捕获，那么就应该把这段代码放在try里头；
+如果希望某段代码的异常能够向外传播而不被捕获，则应该将其放在else块中。
+
+finally(可选):无论是否出现异常都会被执行的代码，用于释放在try块里打开的物理资源；
+有些时候，程序在try中打开了一些物理资源（数据库连接、网络连接或磁盘IO），这些资源
+都必须要被显式回收。一旦try中发生异常，则会导致程序无法及时回收。
+
+raise(可选):用于主动引发一个具体的异常，可以单独使用，无需参数。
+
+# 捕获流程
+如果在try代码块里的业务逻辑代码出现异常，系统会自动生成一个异常对象，该异常对象被
+提价给Python解释器，这个过程称为“引发异常”；
+当Python解释器收到异常对象时，会寻找能处理该异常的except代码块。如果找到则把该
+异常对象交其处理，这个过程称之为“捕获异常”。
+
+如果Python解释器找不到负责捕获的except代码，则运行时环境终止，解释器也将退出。
+
+# 多异常捕获
+当Python解释器接收到异常对象后，会依次判断该异常对象是否是except对应异常类或
+其子类的实例。如果是，则调用该except代码块来处理异常；如果不是，则继续拿该异常
+对象和下一个except对应的异常类进行比较。
+
+# 原则：先处理小异常，再处理大异常。
+
+
+示例1
+import sys
+
+input_a = input('请输入一个整数，作为被除数\n')
+input_b = input('请输入一个整数，作为除数\n')
+try:
+    c = int(input_a) / int(input_b)
+    print('您输入的两个数相除的结果是：', c)
+except IndexError:
+    print('索引错误：运行程序时输入的参数个数不够')
+except ValueError:
+    print('数值错误：程序只能接受整数参数')
+except ArithmeticError:
+    print('算术错误：0不能作为除数')
+except Exception:
+    print('未知异常')
+
+对于多异常捕获，可以将多个异常类构件成一个异常类元祖。
+
+示例2
+import sys
+input_a = input('请输入一个整数，作为被除数\n')
+input_b = input('请输入一个整数，作为除数\n')
+try:
+	a = int(input_a)
+	b = int(input_b)
+	c = a/b
+	print('您输入的两个数相除的结果是：', c)
+except (IndexError, ValueError, ArithmeticError):
+	print('程序发生了索引错误、数值错误或者算术错误其中的一种异常')
+except Exception:
+	print('未知异常')
+
+```
+#### 异常对象
+```
+如果想访问异常对象的相关信息，则可以将异常对象声明为一个变量来实现。
+
+# 常用属性
+args:返回异常的错误编号和描述信息args=errno + strerror。
+errno:返回异常对象的错误编码。
+strerror:返回异常的描述信息。
+
+# 常用方法
+with_traceback():处理异常的传播轨迹
+
+示例1
+def test():
+	try:
+		f = open('notFound.txt', 'rb')
+	except Exception as e:
+		print(e.args)   # (2, 'No such file or directory')
+		print(e.errno)  # 2
+		print(e.strerror)   # No such file or directory
+
+test()
+```
+
+#### 自定义异常类
+```
+待续
+```
+
+
+
 
 
 # 九、多线程
