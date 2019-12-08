@@ -90,4 +90,12 @@ python -m PyQt5.uic.pyuic test.ui -o test.py
 ### GUI工程打包
 ```
 
+pip install pyinstaller
+
+
+pyinstaller -Fw XX.py
+
+-w:不显示终端控制台
+-F:将所有的依赖库打包成一个单独的文件
+
 ```

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://E:/HttpRunnerManager/.idea/HttpRunnerManager.iml" filepath="E:/HttpRunnerManager/.idea/HttpRunnerManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/learning.iml" filepath="$PROJECT_DIR$/.idea/learning.iml" />
+      <module fileurl="file://E:/PythonCodes/train/.idea/train.iml" filepath="E:/PythonCodes/train/.idea/train.iml" />
     </modules>
   </component>
 </project>

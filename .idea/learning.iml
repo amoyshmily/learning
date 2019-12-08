@@ -7,6 +7,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="HttpRunnerManager" />
+    <orderEntry type="module" module-name="train" />
   </component>
   <component name="TestRunnerService">
     <option name="projectConfiguration" value="pytest" />
