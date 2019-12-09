@@ -1,6 +1,6 @@
 import json
 import requests
-from screenOCR.utils.utils import anti_https_warnings
+from utils.utils import anti_https_warnings
 import yaml
 
 

@@ -4,9 +4,9 @@ import tkinter.messagebox as messagebox
 from tkinter import ttk
 import tkinter.font as tkFont
 
-from screenOCR.app.recognize import recognizeWords
-from screenOCR.obj.Admin import Admin
-from screenOCR.obj.Screen import Screen
+from app.recognize import recognizeWords
+from obj.Admin import Admin
+from obj.Screen import Screen
 import pyperclip
 
 

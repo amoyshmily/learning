@@ -84,3 +84,88 @@ http://127.0.0.1:8000/api/register/
 
 
 
+
+
+
+#### httprunner上传文件multipart/form-data
+```
+Rquest Payload
+    ------WebKitFormBoundarymAyGmnyhpf3UBdec
+    Content-Disposition: form-data; name="sysCode"
+
+    S04
+    ------WebKitFormBoundarymAyGmnyhpf3UBdec
+    Content-Disposition: form-data; name="subSysCode"
+
+    S0401
+    ------WebKitFormBoundarymAyGmnyhpf3UBdec
+    Content-Disposition: form-data; name="fileType"
+
+    image
+    ------WebKitFormBoundarymAyGmnyhpf3UBdec
+    Content-Disposition: form-data; name="filePermission"
+
+    PUBLIC
+    ------WebKitFormBoundarymAyGmnyhpf3UBdec
+    Content-Disposition: form-data; name="file"; filename="2.jpg"
+    Content-Type: image/jpeg
+    ------WebKitFormBoundarymAyGmnyhpf3UBdec--
+
+
+#yaml用例
+- test:
+    name: 上传文件
+    request:
+        url: $url/api/add
+        method: POST
+        files:
+            sysCode: [null,'S04']
+            subSysCode: [null,'S0401']
+            fileType: [null,'image' ]
+            filePermission: [null,'PUBLIC']
+            file: ['2.jpg',$file1,'image/jpeg']
+    extract:
+        - fileId: content.responseBody.fileId
+    validate:
+        - eq: [status_code, 200]
+        - eq: [content.status, SUCCESS]
+        - eq: [content.status, SUCCESS]
+    variables:
+        - filePath: "D:\\Pictures\\2.jpg"
+        - file1: ${get_file($filePath)}
+
+
+#debugtalk.py
+# 读取文件内容
+def get_file(filePath):
+    return open(filePath, "rb")
+```
+
+#### 断言
+```
+validate两种格式
+
+validate支持两种格式：
+
+{"comparator_name": [check_item, expect_value]}
+{"check": check_item, "comparator": comparator_name, "expect": expect_value}
+
+
+validate:
+        - check: status_code
+          comparator: eq
+          expect: 200
+ 
+        - check: status_code
+          comparator: less_than
+          expect: 400
+ 
+        - check: content.code
+          comparator: equals
+          expect: 0
+ 
+        - check: content.msg
+          comparator: equals
+          expect: success!
+
+```

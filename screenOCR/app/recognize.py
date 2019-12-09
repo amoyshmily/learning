@@ -1,7 +1,7 @@
 import requests
 import jsonpath
-from screenOCR.obj.Admin import Admin
-from screenOCR.obj.Screen import Screen
+from obj.Admin import Admin
+from obj.Screen import Screen
 
 
 def recognizeWords(api_token: str, img_64_str: str) -> list:
