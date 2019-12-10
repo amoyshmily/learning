@@ -47,6 +47,6 @@ LANGUAGE_CODE = 'zh-hans' 表示使用中文
 (4)配置时区
 【TIME_ZONE】节点
 TIME_ZONE = 'UTC' 使用格林尼治时间
-TIME_ZONE = 'UTC' 使用东八区时间
+TIME_ZONE = 'Asia/Shanghai' 使用东八区时间
 ```
 

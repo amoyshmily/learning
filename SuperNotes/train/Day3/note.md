@@ -12,7 +12,7 @@
 二、知识点
 
 1.编写实体类
-目标文件：/blog/migrations/models.py
+目标文件：/blog/models.py
 
 代码内容：
 from django.db import models
@@ -48,7 +48,7 @@ python manage.py createsuperuser
 然后，按照指引，依次设定超级管理员的用户名、邮箱和密码。
 
 2.自定义界面内容
-目标文件：/blog/migrations/admin.py
+目标文件：/blog/admin.py
 代码内容：
 from django.contrib import admin
 from .models import MyBlog
@@ -56,7 +56,7 @@ from .models import MyBlog
 admin.site.register(MyBlog)
 
 3.丰富博客展示信息
-目标文件：/blog/migrations/admin.py
+目标文件：/blog/admin.py
 代码内容：
 from django.contrib import admin
 from .models import MyBlog
@@ -79,7 +79,7 @@ python manage.py runserver 来启动博客web应用。
 当页面提示登录时，输入之前创建好的超级管理员账号和密码，执行登录
 
 步骤3：发布一条博客
-在【BLOG】栏目中，点击“+添加”，输入Title/Author/Body等信息，然后点击“保存”即可。
+在【BLOG】栏目中，点击“+添加”，输入Title、Author、Body等信息，然后点击“保存”即可。
 
 四、补充知识
 
