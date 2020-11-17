@@ -6,6 +6,8 @@
 命令行：
 pip install pyqt5
 
+使用豆瓣镜像：pip install -i https://pypi.doubanio.com/simple pyqt5
+
 官网下载地址：https://pypi.org/project/PyQt5/#files
 
 当前版本：5.13.2

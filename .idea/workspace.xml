@@ -2,57 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c3bbb9b-72d3-4142-b6b1-98e82134c6da" name="Default Changelist" comment="added Python Exception notes">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/learning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/learning.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyGUI/notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/MyGUI/notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://E:/PythonCodes/train/Day3/note.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="226">
-                <caret line="73" column="15" lean-forward="true" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://E:/PythonCodes/train/Day2/blog/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://E:/PythonCodes/train/Day2/blog/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -99,145 +57,38 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/MyFlask/TodoProject/application/__init__.py" />
-        <option value="$PROJECT_DIR$/MyFlask/TodoProject/run.py" />
-        <option value="$PROJECT_DIR$/MyFlask/TodoProject/config.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/my_db.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/note.md" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06/FormDemoEXT/main.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson01/note.md" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/user_index.html" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/user_id.html" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/Lesson02.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson02/templates/users_index.html" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson06 wtf扩展/FormDemoEXT/templates/index.html" />
-        <option value="$PROJECT_DIR$/SuperNotes/JMeter/beanshell.md" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/db.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07/FormDemoEXT/main.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson08 ORM/FormDemoORM/__init__.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson08 ORM/FormDemoORM/model.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson08 ORM/FormDemoORM/templates/show.html" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson08 ORM/FormDemoORM/main.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson08 ORM/留言板Demo/main.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson08 ORM/note.md" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson08 ORM/用户管理系统Demo/model.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson08 ORM/用户管理系统Demo/main.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson08 ORM/用户管理系统Demo/templates/index.html" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson07 数据库/note.md" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson08 ORM/留言板Demo/model.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson09 MongoDB/note.md" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson09 MongoDB/用户管理系统Demo/model.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson10 DORM/app.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Tutorial/Lesson10 DORM/model.py" />
-        <option value="$PROJECT_DIR$/MyFlask/TodoProject/app/__init__.py" />
-        <option value="$PROJECT_DIR$/MyFlask/Notes/flaskNotes.md" />
-        <option value="$PROJECT_DIR$/MyFlask/TodoProject/manage.py" />
-        <option value="$PROJECT_DIR$/MyFlask/TodoProject/app/models.py" />
-        <option value="$PROJECT_DIR$/SuperNotes/Python/testClass.py" />
-        <option value="$PROJECT_DIR$/SuperNotes/Python/123.py" />
-        <option value="$PROJECT_DIR$/1.py" />
-        <option value="$PROJECT_DIR$/MiniProjects/Screenshot/screenshot.py" />
-        <option value="$PROJECT_DIR$/MiniProjects/ColorPanel/colors.py" />
-        <option value="$PROJECT_DIR$/MiniProjects/capture/c2.py" />
-        <option value="$PROJECT_DIR$/MiniProjects/capture/capture.py" />
-        <option value="$PROJECT_DIR$/MyGUI/README.md" />
-        <option value="$PROJECT_DIR$/MyGUI/notes.md" />
-        <option value="$PROJECT_DIR$/SuperNotes/Python/sss.py" />
-        <option value="$PROJECT_DIR$/SuperNotes/Python/crazyIT.md" />
-        <option value="E:/PythonCodes/train/Day1/calDays.py" />
-        <option value="E:/PythonCodes/train/Day1/DaysHelper.py" />
-        <option value="E:/PythonCodes/train/Day2/note.md" />
-        <option value="E:/PythonCodes/train/Day2/blog/models.py" />
-        <option value="E:/PythonCodes/train/Day2/blog/admin.py" />
-        <option value="E:/PythonCodes/train/Day3/note.md" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="100" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="812" />
-  </component>
+  <component name="ProjectId" id="1c17qN2oe007gqEofk0E3KymOAS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="train" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="train" type="462c0819:PsiDirectoryNode" />
-              <item name="Day2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="train" type="462c0819:PsiDirectoryNode" />
-              <item name="Day2" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="train" type="462c0819:PsiDirectoryNode" />
-              <item name="Day3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tempProjects" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\MyGithub\learning\tempProjects\office" />
+      <recent name="G:\MyGithub\learning\tempProjects\office\newProjects" />
       <recent name="D:\MyGithub\learning\MyGui" />
       <recent name="D:\MyGithub\learning\SuperNotes\Python" />
       <recent name="D:\MyGithub\learning\MyVue" />
-      <recent name="D:\MyGithub\learning\MyFlask\MovieProject" />
-      <recent name="D:\MyGithub\learning\MyFlask\TodoProject\app" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\MyGithub\learning\tempProjects" />
       <recent name="D:\MyGithub\learning\MyFlask\TodoProject\app\templates" />
       <recent name="D:\MyGithub\learning\MyFlask\TodoProject\app\static" />
       <recent name="D:\MyGithub\learning\MyFlask\Tutorial" />
       <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson09 MongoDB" />
-      <recent name="D:\MyGithub\learning\MyFlask\Tutorial\Lesson08 ORM" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.DaysHelper">
+  <component name="RunManager" selected="Python.oooos">
     <configuration name="DaysHelper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="train" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -280,7 +131,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="capture" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="oooos" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -288,11 +139,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MiniProjects/capture" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tempProjects/office" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MiniProjects/capture/capture.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tempProjects/office/oooos.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -345,11 +196,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.oooos" />
         <item itemvalue="Python.DaysHelper" />
         <item itemvalue="Python.calDays" />
         <item itemvalue="Python.sss" />
         <item itemvalue="Python.run" />
-        <item itemvalue="Python.capture" />
       </list>
     </recent_temporary>
   </component>
@@ -727,28 +578,6 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1618" height="870" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21310432" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.19121814" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286119" />
-      <window_info anchor="bottom" id="Python Console" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3286119" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
@@ -778,352 +607,26 @@
     <MESSAGE value="added Python Exception notes" />
     <option name="LAST_COMMIT_MESSAGE" value="added Python Exception notes" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson09 MongoDB/note.md" />
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson08 ORM/用户管理系统Demo/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-          <folding>
-            <element signature="e#56#124#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson08 ORM/用户管理系统Demo/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson09 MongoDB/用户管理系统Demo/main.py" />
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson09 MongoDB/用户管理系统Demo/model.py" />
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson10 DORM/note.md" />
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson09 MongoDB/model.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson10 DORM/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Tutorial/Lesson10 DORM/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/app/static/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/app/static/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/Notes/flaskNotes.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="7350">
-            <caret line="350" column="19" selection-start-line="350" selection-start-column="19" selection-end-line="350" selection-end-column="19" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/app/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" selection-start-column="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFlask/TodoProject/app/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SuperNotes/Python/testClass.py" />
-    <entry file="file://$PROJECT_DIR$/SuperNotes/Python/123.py" />
-    <entry file="file://$PROJECT_DIR$/1.py" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyAppium/fix.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="63">
-            <caret line="3" selection-start-line="3" selection-end-line="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SuperNotes/HttpRunner/notes.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-1307" />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyVue/VueNotes.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-1163" />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Selenium/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SuperNotes/interview/interview.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MiniProjects/Screenshot/haha.jpg" />
-    <entry file="file://$PROJECT_DIR$/MiniProjects/ColorPanel/colors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MiniProjects/capture/c2.py" />
-    <entry file="file://D:/Programs/Anaconda3/Lib/tkinter/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="2472" selection-start-line="2472" selection-end-line="2472" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MiniProjects/capture/temp.png" />
-    <entry file="file://$PROJECT_DIR$/MyGUI/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="265">
-            <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InvoiceTool/MengWen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6031" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InvoiceTool/runMengWen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InvoiceTool/calc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenOCR/run/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#1#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyGUI/notes.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="394">
-            <caret line="95" column="21" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MiniProjects/capture/capture.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MiniProjects/Screenshot/screenshot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SuperNotes/Python/sss.py" />
-    <entry file="file://$PROJECT_DIR$/SuperNotes/Python/crazyIT.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="205">
-            <caret line="3202" selection-start-line="3202" selection-end-line="3202" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/PythonCodes/train/Day1/DaysHelper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/PythonCodes/train/Day1/calDays.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="24" column="51" selection-start-line="23" selection-start-column="4" selection-end-line="24" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/PythonCodes/train/Day2/note.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="105">
-            <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/PythonCodes/train/Day2/mysite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="110" column="15" selection-start-line="110" selection-start-column="15" selection-end-line="110" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/PythonCodes/train/Day2/blog/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/PythonCodes/train/Day2/blog/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/PythonCodes/train/Day3/note.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="226">
-            <caret line="73" column="15" lean-forward="true" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state width="1574" height="193" key="GridCell.Tab.0.bottom" timestamp="1589988079619">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1574" height="193" key="GridCell.Tab.0.bottom/1600.0.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1589988079619" />
+    <state width="1574" height="193" key="GridCell.Tab.0.center" timestamp="1589988079619">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1574" height="193" key="GridCell.Tab.0.center/1600.0.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1589988079619" />
+    <state width="1574" height="193" key="GridCell.Tab.0.left" timestamp="1589988079619">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1574" height="193" key="GridCell.Tab.0.left/1600.0.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1589988079619" />
+    <state width="1574" height="193" key="GridCell.Tab.0.right" timestamp="1589988079619">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1574" height="193" key="GridCell.Tab.0.right/1600.0.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1589988079619" />
+    <state x="379" y="0" width="840" height="858" key="search.everywhere.popup" timestamp="1589987827574">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="379" y="0" width="840" height="858" key="search.everywhere.popup/1600.0.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1589987827574" />
   </component>
 </project>
