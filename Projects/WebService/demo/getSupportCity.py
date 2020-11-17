@@ -1,7 +1,7 @@
 
 import requests
 import re
-from WebService.demo.getRegionProvince import getProvinceCode
+from Projects.WebService.demo.getRegionProvince import getProvinceCode
 
 
 def getCityCode(prov_name, city_name):

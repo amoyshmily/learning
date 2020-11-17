@@ -1,5 +1,5 @@
 """
-A TestRunner for use with the Python unit testing framework. It generates a HTML report to show the result at a glance.
+A TestRunner for use with the python unit testing framework. It generates a HTML report to show the result at a glance.
 
 The simplest way to use this is to invoke its main method. E.g.
 
@@ -88,7 +88,7 @@ Version in 0.8.0
 * Workaround a IE 6 bug that it does not treat <script> block as CDATA.
 
 Version in 0.7.1
-* Back port to Python 2.3 (Frank Horowitz).
+* Back port to python 2.3 (Frank Horowitz).
 * Fix missing scroll bars in detail log (Podi).
 """
 

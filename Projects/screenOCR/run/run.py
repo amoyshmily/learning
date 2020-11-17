@@ -1,6 +1,6 @@
 
 import tkinter as tk
-from screenOCR.view.view import App
+from Projects.screenOCR.view.view import App
 
 
 if __name__ == '__main__':

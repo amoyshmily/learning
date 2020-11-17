@@ -1,10 +1,8 @@
 from tkinter import *
 
-import tkinter.messagebox as messagebox
-from tkinter import ttk
 import tkinter.font as tkFont
 
-from app.recognize import recognizeWords
+from app import recognizeWords
 from obj.Admin import Admin
 from obj.Screen import Screen
 import pyperclip

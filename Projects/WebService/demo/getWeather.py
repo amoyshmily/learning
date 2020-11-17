@@ -1,6 +1,5 @@
-import xml.dom.minidom as dom
 import requests
-from WebService.demo.getSupportCity import getCityCode
+from Projects.WebService.demo.getSupportCity import getCityCode
 
 def getCityWeatherInfo(prov_name, city_name):
 
