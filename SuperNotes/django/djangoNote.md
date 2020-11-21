@@ -854,12 +854,9 @@ class Sidebar(models.Model):
 
 > Comment App
 
-
-
 ```
 from django.db import models
 
-# Create your models here.
 from typeidea.blog.models import Post
 
 
@@ -883,4 +880,450 @@ class Comment(models.Model):
         verbose_name = verbose_name_plural = '评论'
 
 ```
+
+？？？？疑问：from typeidea.blog.models import Post这句问题
+
+这样在makemigrations时报错。当改成from blog.models import Post则可以makemigrations但是models代码报错。
+
+
+
+
+
+注册app
+
+
+
+> typeidea\typeidea\settings\base.py
+
+更新代码。注意app列表的先后顺序。
+
+```
+INSTALLED_APPS = [
+    'blog',
+    'config',
+    'comment',
+
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+```
+
+
+
+#### 建表
+
+Django默认内置的是SQLite3数据库。如果需要使用MySQL等其他数据库，可以进行相应的配置（具体使用方法，后续会详细说明）。
+
+在cmd中执行指令：`python manage.py makemigrations`
+
+```
+控制台输出：
+
+Migrations for 'blog':
+  blog\migrations\0001_initial.py
+    - Create model Category
+    - Create model Post
+    - Create model Tag
+    - Add field tag to post
+Migrations for 'comment':
+  comment\migrations\0001_initial.py
+    - Create model Comment
+Migrations for 'config':
+  config\migrations\0001_initial.py
+    - Create model Link
+    - Create model Sidebar
+
+```
+
+
+
+在cmd中执行指令：`python manage.py migrate`
+
+```
+Operations to perform:
+  Apply all migrations: admin, auth, blog, comment, config, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying blog.0001_initial... OK
+  Applying comment.0001_initial... OK
+  Applying config.0001_initial... OK
+  Applying sessions.0001_initial... OK
+
+```
+
+如果需要查看数据库，可以使用`python manage.py dbshell`指令进入SQLite3数据库的交互界面。
+
+
+
+
+
+#### ORM知识
+
+Object Relational Mapping对象关系映射
+
+
+
+##### 常用字段
+
+1、数值型
+
+| Django字段类         | 表字段类型 | 说明                                     |
+| -------------------- | ---------- | ---------------------------------------- |
+| AutoField            | int(11)    | 自增主键。                               |
+| BooleanField         | tinyint(1) | 布尔类型，一般用于记录状态标记。         |
+| DecimalField         | decimal    | 适用于需要高精度的场景，如支付金融相关。 |
+| IntegerField         | int(11)    | 类似AutoField，但是不自增                |
+| PositiveIntegerField | int(11)    | 类似IntegerField，只包含正整数           |
+| SmallIntegerField    | smallint   | 小整数                                   |
+
+
+
+2、字符型
+
+除TextField是longtext类型外，其他均属于varchar类型。
+
+| Django字段类型 | 表字段类型 | 说明                                                         |
+| -------------- | ---------- | ------------------------------------------------------------ |
+| charField      | varchar    | 基础的varchar类型                                            |
+| URLField       | varchar    | 继承自CharField，实现了对URL的特殊处理                       |
+| UUIDField      | char(32)   | 除PostgreSQL外，是固定长度，用来生成唯一id                   |
+| EmailField     | varchar    | 继承自CharField，实现了对Email的特殊处理                     |
+| FileField      | varchar    | 继承自CharField，实现了对文件的特殊处理，在admin部分展示时会自动生成一个上传文件的按钮。 |
+| TextField      | longtext   | 一般用来存放大量文本内容，比如新闻正文、博客正文。           |
+| ImageField     | varchar    | 继承自FileField，用来处理图片相关的数据                      |
+
+
+
+3、日期类型
+
+- DateField
+- TimeField
+- DateTimeField
+
+4、关系类型
+
+- ForeignKey
+- OneToOneField
+- ManyToManyField
+
+其中外键和一对一其实是一种，只是一对一在外键的字段上加了unique。多对多会创建一个中间表，来进行多对多的关联。
+
+
+
+
+
+##### 常用参数
+
+| 参数             | 说明                                                         |
+| ---------------- | ------------------------------------------------------------ |
+| null             | 用于设定在数据库层面是否允许为空。                           |
+| blank            | 针对业务层面该值是否允许为空。                               |
+| choices          | 配置后可以在admin页面上展示对应的下拉选项。                  |
+| db_column        | 指定Model中的某个字段对应数据库中的哪个字段。                |
+| db_index         | 索引配置。用于业务经常需要作为查询条件的字段。               |
+| default          | 默认值                                                       |
+| editable         | 是否可编辑，默认是True。当设成False后页面不会展示。          |
+| error_messages   | 字典格式，用来定义校验失败时的异常提示。key的可选项为null、blank、invalid、invalid_choice、unique和unique_for_date |
+| help_text        | 字段提示语，在页面对应字段下方将展示此提示。                 |
+| primary_key      | 主键。一个Model只允许设置一个字段为主键。                    |
+| unique           | 唯一约束。当需要配置唯一值时，设置成True。设置完成后无需设置db_index。 |
+| unique_for_date  | 针对date日期的联合约束，业务层面。用来限制一段时间内指定字段不能重复。 |
+| unique_for_month | 针对月份的联合约束。                                         |
+| unique_for_year  | 针对年份的联合约束。                                         |
+| verbose_name     | 字段对应展示的文案。                                         |
+| validators       | 自定义的校验逻辑，同form类似。                               |
+
+
+
+##### QuerySet
+
+###### 常用接口
+
+> 懒加载：
+>
+> QuerySet本质上是一个懒加载的对象，作用是帮我们更友好地同数据库打交道。
+
+
+
+> 链式调用：
+>
+> 执行对象的一个方法后返回的结果还是该对象，这样可以继续执行对象的其他方法。
+
+
+
+> N+1问题：
+>
+> 一般情况，由外键查询产生的N+1问题比较多，即一条查询请求返回N条数据，当我们操作数据时，又会产生额外的请求。所有的ORM框架都存在这样的问题。
+
+典型示例
+
+```
+posts = Post.objects.all()
+for post in posts:	# 产生数据库查询
+    print(post.owner)	# 产生额外的数据库查询，owner是外键
+```
+
+解决对策
+
+```
+# 针对一对多的关系
+posts = Post.objects.all().select_related('owner')
+for post in posts:
+    print(post.owner)
+```
+
+```
+# 针对多对多的关系
+posts = Post.objects.all().prefetch_related('tag')
+for post in posts:	# 产生了两条查询语句，分别查询post和tag
+    print(post.tag.all())
+```
+
+
+
+
+
+- 支持链式调用的接口
+
+| 接口     | 说明                                                         |
+| -------- | ------------------------------------------------------------ |
+| all      | 查询所有数据，相当于SELECT * FROM table_name...式的SQL       |
+| filter   | 根据条件过滤数据。常用的条件是字段等于、不等于、大于、小于，还有类似like用法 |
+| exclude  | 根据条件过滤数据，同filter逻辑相反                           |
+| reverse  | 把QuerySet的结果倒序排列                                     |
+| distinct | 对查询结果去重，相当于SELECT DISTINCE ...式的SQL             |
+| none     | 返回空的QuerySet                                             |
+
+- 不支持链式调用的接口
+
+| 接口          | 说明                                                         |
+| ------------- | ------------------------------------------------------------ |
+| get           | 进行条件查询。如果查不到结果，则直接返回对象实例；如果不存在，则抛出DoesNotExist异常。 |
+| create        | 用来直接创建一个Model对象。示例：post = Post.objects.create('title'='hello') |
+| get_or_create | 根据条件查找，如果没有查到则调用create接口                   |
+| bulk_create   | 批量创建记录，同create                                       |
+| count         | 统计返回的QuerySet有多少条记录。相当于SELECT COUNT(&) FROM table_name语句 |
+| latest        | 返回最新的一条记录，需要在Model中的Meta中定义 get_latest_by = 用来排序的字段 |
+| earliest      | 返回最早的一条记录，需要在Model中的Meta中定义 get_earliest_by = 用来排序的字段 |
+| first         | 返回当前QuerySet记录中的第一条                               |
+| last          | 返回当前QuerySet记录中的最后一条                             |
+| exists        | 判断QuerySet是否有数据，返回True或者False。                  |
+| in_bulk       | 批量查询，接收2个参数id_list和field_name，返回结果是字典。键是查询条件，值是实例对象。 |
+| update        | 根据条件批量更新记录。会触发Django的signal。                 |
+| delete        | 根据条件批量删除记录。会触发Django的signal。                 |
+| values        | 当明确知道只需要返回某个字段的值而不需要Model实例时使用。例如titles = Post.objects.filter(id=1).values('title')。返回的结果是包含字典的QuerySet，类似 QuerySet [{‘title’: 'hello'},] |
+| values_list   | 类似values，直接返回的是包含元祖的QuerySet。例如QuerySet [('标题',)]。如果只是一个字段，则可以使用.value_list('title', flat=True) |
+
+
+
+- 提高性能的接口
+
+| 接口             | 说明                                                         |
+| ---------------- | ------------------------------------------------------------ |
+| defer            | 把不需要展示的字段做延迟加载，当需要的时候才会自动去加载。例如posts = Post.objects.all().defer('content')。当不想加载某个过大的字段时（如text类型的字段）会使用defer。 |
+| only             | 与defer接口相反，只获取指定的字段                            |
+| select_related   | 用来解决外键产生的N+1问题的方案，针对一对多的关联关系。      |
+| prefetch_related | 用来解决外键产生的N+1问题的方案，针对多对多的关联关系。      |
+
+
+
+###### 查询接口参数
+
+| 字段        | 说明                                                         |
+| ----------- | ------------------------------------------------------------ |
+| contains    | 包含，用来进行相似查询，区分大小写。                         |
+| icontains   | 同contains，忽略大小写。                                     |
+| exact       | 精确匹配，区分大小写。                                       |
+| iexact      | 同exact，忽略大小写。                                        |
+| in          | 指定某个集合。                                               |
+| gt          | 大于某个值，是greater than的缩写。                           |
+| gte         | 大于等于某个值，是greater than or equal的缩写。              |
+| lt          | 小于某个值，是less than的缩写。                              |
+| lte         | 小于等于某个值，是less than or equal的缩写。                 |
+| startswith  | 以某个字符串开头，等同于 LIKE '关键词 %'，区分大小写。       |
+| istartswith | 同startswith，忽略大小写。                                   |
+| endswith    | 以某个字符串结束，等同于 LIKE '关键词 %'，区分大小写。       |
+| iendswith   | 同endswith，忽略大小写。                                     |
+| range       | 范围查询，多用于时间范围。例如Post.objects.filter(created_time__range=('2020-11-11', '2020-12-12'))的效果是： SELECT ... WHERE created_time BETWEEN '2020-11-11' AND '2020-12-12'; |
+
+
+
+###### 进阶查询
+
+> F
+
+F表达式用来执行数据库层面的计算，从而避免出现竞争状态。
+
+问题背景：
+
+```
+post = Post.objects.get(id=1)
+post.pv = post.pv + 1
+post.save()
+```
+
+上述代码，在多线程执行的时候会有问题，每个线程的post.pv都是一样，执行完加1和保存后，相当于只执行了一次加1，而不是多次。原因是数据拿到python中转了一圈才被存到数据库中。
+
+解决办法：
+
+```
+from django.db.models import F
+    post = Post.objects.get(id=1)
+    post.pv = F('pv') + 1
+    post.save()
+```
+
+这种方式产生的SQL语句：'UPDATE blog_post SET pv = pv +1 WHERE id=1;'，它在数据库层面执行了原子性操作。
+
+
+
+> Q
+
+实现OR条件查询
+
+```
+from django.db.models import Q
+posts = Post.objects.filter(Q(id=1) | Q(id=2))
+```
+
+实现AND条件查询
+
+```
+from django.db.models import Q
+posts = Post.objects.filter(Q(id=1) & Q(id=2))
+```
+
+
+
+> Count
+
+聚合查询
+
+假设需要得到某个分类下有多少篇文章，按文章维度统计，可以写成：
+
+```
+category = Category.objects.get(id=1)
+posts_count = category.post_set.count()
+```
+
+按分类的维度统计
+
+```
+from django.db.models import count
+categories = Category.objects.annotate(posts_count = Count('post'))
+print(categories[0].posts_count)
+```
+
+备注：QuerySet的annotate用来给QuerySet结果增加属性。这相当于给category动态增加了属性posts_count，而这个属性值来源于Count('post')。
+
+
+
+> Sum
+
+同Count类似，Sum是用来做合计。
+
+例如，统计目前所有文章加起来的访问量有多多少，可以写成：
+
+```
+from django.db.models import Sum
+Post.objects.aggregate(all_pv=Sum('pv'))
+# 输出结果类似： {'all_pv': 487}
+```
+
+备注：QuerySet的aggregate用来直接计算结果。
+
+
+
+> Avg
+>
+> Min
+>
+> Max
+
+
+
+目前Model层所提供的接口完全是Django内置的，还没有进行自定义开发。
+
+在操作数据库的便利性上，ORM提供了非常便利的接口，让我们不需要编写复杂的SQL语句就能够操作数据库。但同时需要意识到的是ORM的使用必定产生性能损耗。
+
+
+
+###### 彩蛋
+
+Django提供的原生SQL接口：raw。
+
+它除了可以解决QuerySet无法满足的查询的情况外，还可以提高执行效率。
+
+不过，我们要严格把控使用场景，因为过多地使用原生SQL会提高维护成本。
+
+示例：
+
+```
+Post.objects.raw('SELECT * FROM blog_post')
+```
+
+
+
+
+
+
+
+
+
+### 2.4 开发管理后台
+
+admin是Django的杀手锏。对于内容管理系统来说，当你有了数据库表，有了Model，就相当于自动拥有了一套管理后台，还包括权限验证。
+
+Django是一个重Model的框架。当Model定义好了字段类型，上层可以根据这些字段类型定义form中需要呈现以及编辑的字段类型，这样就形成了表单。有了表单之后，基本上就有了增删改的页面。而基于QuerySet这个数据集合一级它所提供的查询操作，就有了列表的数据以及列表页的操作。
+
+
+
+配置admin页面
+
+
+
+### 2.5 开发前端界面
+
+
+
+
+
+
+
+### 2.6 Bootstrap
+
+
+
+
+
+## 三、第三方插件
+
+
+
+
+
+### 四、API
+
+
+
+
+
+
+
+## 五、上线
 
