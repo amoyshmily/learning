@@ -1293,7 +1293,235 @@ Django是一个重Model的框架。当Model定义好了字段类型，上层可�
 
 
 
-配置admin页面
+创建超级管理员
+
+`python manage.py createsuperuser`
+
+cifer1024==sf.520198
+
+
+
+#### 配置admin页面
+
+
+
+**ModelAdmin**
+
+通过继承admin.ModelAdmin，就能实现对这个Model的增、删、改、查页面的配置。这里的ModelAdmin是很重要的一环，后面还会接触到ModelForm概念，这些都是跟Model紧耦合的，在Model上可以实现更多业务逻辑。
+
+
+
+##### 配置blog应用
+
+
+
+> typeidea\blog\admin.py
+
+```
+from django.contrib import admin
+from django.urls import reverse
+from django.utils.html import format_html
+
+from .models import Category, Tag
+
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'status', 'is_nav', 'post_count', 'created_time')  # 列表展示的字段
+    fields = ('name', 'status', 'is_nav')  # 新增表单的条目
+
+    # 重写ModelAdmin的save_model方法
+    def save_model(self, request, obj, form, change):
+        obj.owner = request.user
+        return super(CategoryAdmin, self).save_model(request, obj, form, change)
+
+    # 自定义函数：展示该分类有多少篇文章
+    def post_count(self, obj):
+        return obj.post_set.count()
+
+    post_count.short_description = '文章数量'
+
+
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
+    list_display = ('name', 'status', 'created_time')  # 列表展示的字段
+    fields = ('name', 'status')  # 新增表单的条目
+
+    # 重写ModelAdmin的save_model方法
+    def save_model(self, request, obj, form, change):
+        obj.owner = request.user
+        return super(TagAdmin, self).save_model(request, obj, form, change)
+
+
+class PostAdmin(admin.ModelAdmin):
+    list_display = ['title', 'category', 'status', 'created_time', 'operator']
+    list_display_links = []
+
+    list_filter = ['category']
+    search_fields = ['title', 'category__name']
+
+    actions_on_top = True
+    actions_on_bottom = True
+
+    # 编辑页面
+    save_on_top = True
+
+    fields = (
+        ('category', 'title'),
+        'desc',
+        'status',
+        'content',
+        'tag',
+    )
+
+    def operator(self, obj):
+        return format_html(
+            '<a href="{}">编辑</a>',
+            reverse('admin:blog_post_change', args=(obj.id,))
+        )
+
+    # 指示表头展示的文案
+    operator.short_description = '操作'
+
+    def save_model(self, request, obj, form, change):
+        obj.owner = request.user
+        return super(PostAdmin, self).save_model(request, obj, form, change)
+
+```
+
+备注1：
+
+​	重写ModelAdmin的save_model方法。这里的request就是当前请求，obj是当前要保存的对象，form是页面	提交过来的表单之后的对象，change用于标志本次保存的数据是新增的还是更新的。
+
+备注2：
+
+- list_display：用来配置列表页面展示哪些字段。
+
+- list_display_links：用来配置哪些字段可以作为链接。点击它们，可以进入编辑页面。
+
+- list_filter：配置页面过滤器，需要通过哪些字段来过滤列表页。
+
+- search_fields：配置搜索字段。
+
+- actions_on_top：动作相关的配置，是否展示在顶部。
+
+- actions_on_bottom：动作相关的配置，是否展示在底部。
+
+- save_on_top：控制保存、编辑、编辑并新建按钮是否在顶部展示。
+
+  详细文档：https://docs.djangoproject.com/en/1.11/ref/contrib/admin/#modeladmin-opotions
+
+
+
+细节优化
+
+>  优化前：
+>
+> 当添加分类操作成功后，表头部分会提示文案：“分类 "[Category object](http://localhost:8000/admin/blog/category/2/change/)" 已经添加成功。你可以在下面添加其它的分类”。
+
+这是因为我们没有给models中的类自定义`__str__`方法。可以为`typeidea\blog\models.py`的Category、Tag类，都添加如下方法。
+
+```
+def __str__(self):
+    return self.name
+```
+
+>  优化后：
+>
+> 新增分类操作成功后提示：“分类 "[测试](http://localhost:8000/admin/blog/category/3/change/)" 已经添加成功。你可以在下面添加其它的分类”。
+
+
+
+
+
+##### 配置comnent应用
+
+
+
+> typeidea\comment\admin.py
+
+```
+from django.contrib import admin
+
+from .models import Comment
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('target', 'nickname', 'content', 'website', 'created_time')
+```
+
+
+
+##### 配置config应用
+
+
+
+```
+from django.contrib import admin
+
+from .models import Link, SideBar
+
+
+@admin.register(Link)
+class LinkAdmin(admin.ModelAdmin):
+    list_display = ('title', 'href', 'status', 'weight', 'created_time')
+    fields = ('title', 'href', 'status', 'weight')
+
+    def save_model(self, request, obj, form, change):
+        obj.owner = request.user
+        return super(LinkAdmin, self).save_model(request, obj, form, change)
+
+
+@admin.register(SideBar)
+class SideBarAdmin(admin.ModelAdmin):
+    list_display = ('title', 'display_type', 'content', 'created_time')
+    fields = ('title', 'display_type', 'content')
+
+    def save_model(self, request, obj, form, change):
+        obj.owner = request.user
+        return super(SideBarAdmin, self).save_model(request, obj, form, change)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
