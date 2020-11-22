@@ -1301,7 +1301,7 @@ cifer1024==sf.520198
 
 
 
-#### 配置admin页面
+#### 2.4.1 配置admin页面
 
 
 
@@ -1322,7 +1322,7 @@ from django.contrib import admin
 from django.urls import reverse
 from django.utils.html import format_html
 
-from .models import Category, Tag
+from .models import Category, Tag, Post
 
 
 @admin.register(Category)
@@ -1353,36 +1353,43 @@ class TagAdmin(admin.ModelAdmin):
         return super(TagAdmin, self).save_model(request, obj, form, change)
 
 
+@admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ['title', 'category', 'status', 'created_time', 'operator']
+
+    # ------ 列表页面：结果列部分表
+    # 搜索框（在结果列表顶部，列表中的字段是表示支持检索的字段）
+    search_fields = ['title', 'category__name']
+    
+    # 查询结果列表展示
+    list_display = ['title', 'category', 'status', 'owner', 'created_time', 'operator']
     list_display_links = []
 
-    list_filter = ['category']
-    search_fields = ['title', 'category__name']
+	# 在结果列表末尾加入一列，列名叫“操作”
+    def operator(self, obj):
+        return format_html('<a href="{}">编辑</a>', reverse('admin:blog_post_change', args=(obj.id,)))
+    operator.short_description = '操作'
 
+    # 针对列表的操作（默认展示在列表上/下侧位置）
     actions_on_top = True
     actions_on_bottom = True
 
-    # 编辑页面
+    # ------ 列表页面：过滤器
+    # 页面过滤器（默认展示在右侧）
+    list_filter = ['category']
+
+    # ------ 新增编辑页面
+    # 顶部是否展示保存按钮（默认是有一个在表单底部）
     save_on_top = True
 
+    # 新增表单的内容
     fields = (
-        ('category', 'title'),
-        'desc',
-        'status',
+        ('title', 'category'),  # 嵌套元祖表示这几个字段在页面上处在同一排
+        ('desc', 'status'),
         'content',
         'tag',
     )
 
-    def operator(self, obj):
-        return format_html(
-            '<a href="{}">编辑</a>',
-            reverse('admin:blog_post_change', args=(obj.id,))
-        )
-
-    # 指示表头展示的文案
-    operator.short_description = '操作'
-
+    # 重写ModelAdmin的save_model方法
     def save_model(self, request, obj, form, change):
         obj.owner = request.user
         return super(PostAdmin, self).save_model(request, obj, form, change)
@@ -1419,7 +1426,7 @@ class PostAdmin(admin.ModelAdmin):
 >
 > 当添加分类操作成功后，表头部分会提示文案：“分类 "[Category object](http://localhost:8000/admin/blog/category/2/change/)" 已经添加成功。你可以在下面添加其它的分类”。
 
-这是因为我们没有给models中的类自定义`__str__`方法。可以为`typeidea\blog\models.py`的Category、Tag类，都添加如下方法。
+这是因为我们没有给models中的类自定义`__str__`方法。可以为`typeidea\blog\models.py`的Category、Tag和Post等所有Model类，都添加类似如下的方法。
 
 ```
 def __str__(self):
@@ -1455,7 +1462,7 @@ class CommentAdmin(admin.ModelAdmin):
 
 ##### 配置config应用
 
-
+> typeidea\config\admin.py
 
 ```
 from django.contrib import admin
@@ -1485,11 +1492,435 @@ class SideBarAdmin(admin.ModelAdmin):
 
 
 
+至此，已经得到了一个基本可用的博客管理系统。
+
+#### 2.4.2 订制admin
+
+对于数据管理或者内容管理来说，我们需要操作的页面基本上只有两种：一种是数据批量展示和操作的列表页，与ModelAdmin相关；一种是数据增加或者修改的新增/编辑页，与ModelForm相关。
 
 
 
+**（1）基于ModelAdmin**
+
+##### 定义列表页
+
+基于ModelAdmin的配置
+
+> 痛点：权限问题
+>
+> 文章页面，当前登录的用户是A，但是却可以看到B用户的文章；
+>
+> 过滤器中展示了非当前用户创建的分类
+
+**自定义过滤器**
+
+> typeidea\blog\admin.py
+
+```
+# 原代码
+list_filter = ['category']
+```
+以PostAdmin类为例：
+```
+    # 优化后
+    class CategoryOwnerFilter(admin.SimpleListFilter):
+        """
+        自定义过滤器只展示当前用户的分类
+        """
+        title = '分类过滤器'
+        parameter_name = 'owner_category'
+
+        def lookups(self, request, model_admin):
+            return Category.objects.filter(owner=request.user).values_list('id', 'name')
+
+        def queryset(self, request, queryset):
+            category_id = self.value()
+            if category_id:
+                return queryset.filter(category_id=self.value())
+            return queryset
+
+    list_filter = [CategoryOwnerFilter]
+```
+
+**自定义列表**
+
+需求：解决权限问题，让当前登录的用户在列表页只能看到自己建的文章。
+
+例如，在PostAdmin类中添加如下方法，可以修复文章列表的权限问题。
+
+> typeidea\blog\admin.py
+
+```
+# 控制用户只能查看自己权限内的文章
+def get_queryset(self, request):
+    qs = super(PostAdmin, self).get_queryset(request)
+    return qs.filter(owner=request.user)
+```
+
+完整代码：
+
+> typeidea\blog\admin.py
+
+```
+from django.contrib import admin
+from django.urls import reverse
+from django.utils.html import format_html
+
+from .models import Category, Tag, Post
 
 
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'status', 'is_nav', 'post_count', 'created_time')  # 列表展示的字段
+    fields = ('name', 'status', 'is_nav')  # 新增表单的条目
+
+    # 重写ModelAdmin的save_model方法
+    def save_model(self, request, obj, form, change):
+        obj.owner = request.user
+        return super(CategoryAdmin, self).save_model(request, obj, form, change)
+
+    # 自定义函数：展示该分类有多少篇文章
+    def post_count(self, obj):
+        return obj.post_set.count()
+
+    post_count.short_description = '文章数量'
+
+
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
+    list_display = ('name', 'status', 'created_time')  # 列表展示的字段
+    fields = ('name', 'status')  # 新增表单的条目
+
+    # 重写ModelAdmin的save_model方法
+    def save_model(self, request, obj, form, change):
+        obj.owner = request.user
+        return super(TagAdmin, self).save_model(request, obj, form, change)
+
+
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    # ------ 列表页面：过滤器
+    # 页面过滤器（默认展示在右侧）
+    class CategoryOwnerFilter(admin.SimpleListFilter):
+        """
+        自定义过滤器只展示当前用户的分类
+        """
+        title = '分类过滤器'
+        parameter_name = 'owner_category'
+
+        def lookups(self, request, model_admin):
+            return Category.objects.filter(owner=request.user).values_list('id', 'name')
+
+        def queryset(self, request, queryset):
+            category_id = self.value()
+            if category_id:
+                return queryset.filter(category_id=self.value())
+            return queryset
+
+    list_filter = [CategoryOwnerFilter]
+
+    # ------ 列表页面：结果列部分表
+    # 搜索框（在结果列表顶部，列表中的字段是表示支持检索的字段）
+    search_fields = ['title', 'category__name']
+
+    # 查询结果列表展示
+    list_display = ['title', 'category', 'status', 'owner', 'created_time', 'operator']
+    list_display_links = []
+
+    # 在结果列表末尾加入一列，列名叫“操作”
+    def operator(self, obj):
+        return format_html('<a href="{}">编辑</a>', reverse('admin:blog_post_change', args=(obj.id,)))
+
+    operator.short_description = '操作'
+
+    # 针对列表的操作（默认展示在列表上/下侧位置）
+    actions_on_top = True
+    actions_on_bottom = True
+
+    # ------ 新增编辑页面
+    # 顶部是否展示保存按钮（默认是有一个在表单底部）
+    save_on_top = True
+
+    # 新增表单的内容
+    fields = (
+        ('title', 'category'),  # 嵌套元祖表示这几个字段在页面上处在同一排
+        ('desc', 'status'),
+        'content',
+        'tag',
+    )
+
+    # 重写ModelAdmin的save_model方法
+    def save_model(self, request, obj, form, change):
+        obj.owner = request.user
+        return super(PostAdmin, self).save_model(request, obj, form, change)
+
+    # 控制用户只能查看自己权限内的文章
+    def get_queryset(self, request):
+        qs = super(PostAdmin, self).get_queryset(request)
+        return qs.filter(owner=request.user)
+```
+
+综上，关于数据过滤的部分，只需要找到数据源在哪里，也就是QuerySet最终在哪里生成，然后对其进行一定的过滤即可实现效果。
+
+
+
+##### 定义编辑页面
+
+在新增/编辑页面中可以被订制的元素：
+
+- 按钮：位置
+- 输入框：样式
+- 字段：顺序/是否可录/必填
+
+按钮：在编辑页面中，最主要的是保存的功能按钮。Django默认提供了3个操作保存的按钮，分别是“保存”、“保存并增加另一个”和“保存并继续编辑”。
+
+`save_on_top`控制是否在表单页面顶部展示3个保存按钮。
+
+```
+save_on_top = True	# 顶部也展示保存按钮
+```
+
+字段：可以通过`fields`来控制是否展示，以及展示的顺序和组合方式。通过`exclude`可以指定哪些字段是不展示的。字段列表中的嵌套元祖则表示这几个字段在页面上处在同一行。
+
+> typeidea\blog\admin.py
+
+```
+exclude = ('owner',)
+
+fields = (
+        ('title', 'category'),  
+        ('desc', 'status'),
+        'content',
+        'tag',
+    )
+```
+
+也可以使用`fieldsets`来控制编辑页面的整体布局。注意，`fields`和`fieldsets`不能同时存在。
+
+格式：
+
+```
+fieldsets = (
+	(名称, {内容key, 内容value}),
+	(名称, {内容key, 内容value}),
+)
+```
+
+内容key的允许值有：description，fields和classes。其中，description是配置文本描述信息，fields是控制展示哪些字段，以及字段的排序和组合。classes是配置对应版块加CSS属性，Django默认支持的是`collapse`和`wide`，也可以自定义样式。
+
+示例：
+
+> typeidea\blog\admin.py
+
+```
+fieldsets = (
+        ('文章基础配置', {
+            'description': '这里是文章基础配置描述',
+            'fields': (
+                ('title', 'category'),
+                'status',
+            ),
+        }),
+        ('内容', {
+           'fields': (
+               'desc',
+               'content',
+           ),
+        }),
+        ('额外信息', {
+            'classes': ('collapse',),
+            'fields': ('tag', ),
+        })
+    )
+```
+
+关于编辑页的配置，还有针对多对多字段展示配置`filter_horizontal`和`filter_vertical`，用来控制多对多字段的展示效果。后续我们会通过其他插件来实现这种功能。
+
+> typeidea\blog\admin.py
+
+```
+filter_horizontal = ('tag',)
+filter_vertical = ('tag',)
+```
+
+![1606060812635](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1606060812635.png)
+
+##### 定义静态资源
+
+可以通过自定义Media类来添加CSS样式和JS脚本。
+
+> typeidea\blog\admin.py
+
+```
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
+    list_display = ('name', 'status', 'created_time')  # 列表展示的字段
+    fields = ('name', 'status')  # 新增表单的条目
+
+    # 重写ModelAdmin的save_model方法
+    def save_model(self, request, obj, form, change):
+        obj.owner = request.user
+        return super(TagAdmin, self).save_model(request, obj, form, change)
+    
+    class Media:
+        css = {
+            'all': ("https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css", ),
+        }
+        js = ('https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.js', )
+```
+
+
+
+**（2）基于ModelForm**
+
+
+
+##### 自定义Form
+
+需求：将文章的新增/编辑页面中的“摘要”的输入框，由input变成TextArea控件。
+
+步骤1：在blog目录中创建`adminforms.py`文件。
+
+> typeidea\blog\adminforms.py
+
+```
+from django import forms
+
+
+class PostAdminForm(forms.ModelForm):
+    desc = forms.CharField(widget=forms.Textarea, label='摘要', required=False)
+
+```
+步骤2：在`PostAdmin`中添加代码。
+> typeidea\blog\admin.py
+
+```
+from .adminforms import PostAdminForm
+......
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    form = PostAdminForm
+    ......
+```
+
+
+
+##### 混搭From
+
+需求：在“分类”的编辑页面中，要能同时直接编辑“文章”（纳尼，还有这种操作？？？黑人问号脸）。
+
+步骤1：新增一个`PostInline`类
+
+> typeidea\blog\admin.py
+
+```
+class PostInline(admin.TabularInline):
+    fields = ('title', 'desc')
+    extra = 1	# 控制额外多挂几个
+    model = Post
+```
+
+步骤2：在`CategoryAdmin`类中添加代码
+
+```
+inlines = [PostInline, ]
+```
+
+
+
+页面魔性效果
+
+![1606063929959](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1606063929959.png)
+
+总之，对于需要在一个编辑页面内完成2个关联模型的编辑时，使用`inline admin`方式非常合适。
+
+
+
+#### 2.4.3 订制site
+
+一个url对应的时一个site，例如`url(r'^admin/', admin.site.urls)`。
+
+大部分情况下，一个site对应一个站点就够用了。也可以通过订制site来实现一个系统对外提供多套admin后台逻辑。
+
+需求：用户模块的管理，跟文章和分类等数据库的管理分开。
+
+步骤1：创建`custom_site.py`文件
+
+> typeidea\typeidea\custom_site.py
+
+```
+from django.contrib.admin import AdminSite
+
+
+class CustomSite(AdminSite):
+    site_header = 'Typeidea'
+    site_title = 'Typeidea管理后台'
+    index_title = '首页'
+
+
+custom_site = CustomSite(name='cus_admin')
+```
+
+步骤2：修改所有app（blog/config/comment）的注册参数
+
+```
+from typeidea.custom_site import custom_site
+
+# 修改前
+@admin.register(Category)
+
+# 修改后
+@admin.register(Category, site=custom_site)
+
+同理还有：
+@admin.register(Tag, site=custom_site)
+@admin.register(Post, site=custom_site)
+@admin.register(Link, site=custom_site)
+@admin.register(SideBar, site=custom_site)
+@admin.register(Comment, site=custom_site)
+```
+
+
+
+对于PostAdmin，还要修改`operator`的对应代码。
+
+```
+# 修改前
+def operator(self, obj):
+    return format_html('<a href="{}">编辑</a>', reverse('admin:blog_post_change', args=(obj.id,)))
+
+# 修改后
+    def operator(self, obj):
+        return format_html('<a href="{}">编辑</a>', reverse('cus_admin:blog_post_change', args=(obj.id,)))
+```
+
+
+
+步骤3：修改项目的路由配置
+
+> typeidea\typeidea\urls.py
+
+```
+from django.conf.urls import url
+from django.contrib import admin
+
+from .custom_site import custom_site
+
+urlpatterns = [
+    url(r'^super_admin/', admin.site.urls),
+    url(r'^admin/', custom_site.urls),
+]
+```
+
+至此，我们就拥有了两套管理后台。一套用来管理用户，另一套用来管理业务。它们都是基于一套逻辑的用户系统，只是我们在url地址上进行了划分。
+
+
+
+![1606065924666](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1606065924666.png)
+
+![1606065903200](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1606065903200.png)
+
+#### 2.4.4 权限和SSO登录
 
 
 
