@@ -823,7 +823,7 @@ class Link(models.Model):
         verbose_name = verbose_name_plural = '友链'
 
 
-class Sidebar(models.Model):
+class SideBar(models.Model):
     STATUS_SHOW = 1
     STATUS_HIDE = 0
     STATUS_ITEMS = (
@@ -935,7 +935,7 @@ Migrations for 'comment':
 Migrations for 'config':
   config\migrations\0001_initial.py
     - Create model Link
-    - Create model Sidebar
+    - Create model SideBar
 
 ```
 
@@ -1920,43 +1920,346 @@ urlpatterns = [
 
 ![1606065903200](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1606065903200.png)
 
-#### 2.4.4 权限和SSO登录
+完整的PostAdmin代码
+
+> typeidea\blog\admin.py
+
+```
+from django.contrib import admin
+from django.urls import reverse
+from django.utils.html import format_html
+
+from typeidea.custom_site import custom_site
+from .adminforms import PostAdminForm
+from .models import Category, Tag, Post
+
+
+class PostInline(admin.TabularInline):
+    fields = ('title', 'desc')
+    extra = 1
+    model = Post
+
+
+@admin.register(Category, site=custom_site)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'status', 'is_nav', 'post_count', 'created_time')  # 列表展示的字段
+    fields = ('name', 'status', 'is_nav')  # 新增表单的条目
+
+    # 重写ModelAdmin的save_model方法
+    def save_model(self, request, obj, form, change):
+        obj.owner = request.user
+        return super(CategoryAdmin, self).save_model(request, obj, form, change)
+
+    # 自定义函数：展示该分类有多少篇文章
+    def post_count(self, obj):
+        return obj.post_set.count()
+
+    post_count.short_description = '文章数量'
+
+
+@admin.register(Tag, site=custom_site)
+class TagAdmin(admin.ModelAdmin):
+    list_display = ('name', 'status', 'created_time')  # 列表展示的字段
+    fields = ('name', 'status')  # 新增表单的条目
+
+    # 重写ModelAdmin的save_model方法
+    def save_model(self, request, obj, form, change):
+        obj.owner = request.user
+        return super(TagAdmin, self).save_model(request, obj, form, change)
+
+    class Media:
+        css = {
+            'all': ("https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css",),
+        }
+        js = ('https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.js',)
+
+
+@admin.register(Post, site=custom_site)
+class PostAdmin(admin.ModelAdmin):
+    # form = PostAdminForm
+
+    # ------ 列表页面：过滤器
+    # 页面过滤器（默认展示在右侧）
+    class CategoryOwnerFilter(admin.SimpleListFilter):
+        """
+        自定义过滤器只展示当前用户的分类
+        """
+        title = '分类过滤器'
+        parameter_name = 'owner_category'
+
+        def lookups(self, request, model_admin):
+            return Category.objects.filter(owner=request.user).values_list('id', 'name')
+
+        def queryset(self, request, queryset):
+            category_id = self.value()
+            if category_id:
+                return queryset.filter(category_id=self.value())
+            return queryset
+
+    list_filter = [CategoryOwnerFilter]
+
+    # ------ 列表页面：结果列部分表
+    # 搜索框（在结果列表顶部，列表中的字段是表示支持检索的字段）
+    search_fields = ['title', 'category__name']
+
+    # 查询结果列表展示
+    list_display = ['title', 'category', 'status', 'owner', 'created_time', 'operator']
+    list_display_links = []
+
+    # 在结果列表末尾加入一列，列名叫“操作”
+    def operator(self, obj):
+        return format_html('<a href="{}">编辑</a>', reverse('admin:blog_post_change', args=(obj.id,)))
+
+    operator.short_description = '操作'
+
+    # 针对列表的操作（默认展示在列表上/下侧位置）
+    actions_on_top = True
+    actions_on_bottom = True
+
+    # ------ 新增编辑页面
+    # 顶部是否展示保存按钮（默认是有一个在表单底部）
+    save_on_top = True
+
+    # 新增表单的内容
+    fields = (
+        ('title', 'category'),  # 嵌套元祖表示这几个字段在页面上处在同一排
+        ('desc', 'status'),
+        'content',
+        'tag',
+    )
+
+    filter_horizontal = ('tag',)  # 控制多对多字段的展示效果
+
+    # 重写ModelAdmin的save_model方法
+    def save_model(self, request, obj, form, change):
+        obj.owner = request.user
+        return super(PostAdmin, self).save_model(request, obj, form, change)
+
+    # 控制用户只能查看自己权限内的文章
+    def get_queryset(self, request):
+        qs = super(PostAdmin, self).get_queryset(request)
+        return qs.filter(owner=request.user)
+
+```
 
 
 
+#### 2.4.4 订制ModelAdmin
+
+尽量避免冗余代码，降低后期维护成本。
+
+抽象出一个`BaseOwnerAdmin`，为所有app服务。一是重写`save`方法，设置对象的`owner`；二是重写`get_queryset`方法，限定用户只能查看自己权限内的数据。
 
 
 
+> typeidea\typeidea\BaseOwnerAdmin.py
+
+```
+from django.contrib import admin
+
+
+class BaseOwnerAdmin(admin.ModelAdmin):
+    exclude = ('owner',)
+
+    def get_queryset(self, request):
+        qs = super(BaseOwnerAdmin, self).get_queryset(request)
+        return qs.filter(owner=request.user)
+
+    def save_model(self, request, obj, form, change):
+        obj.owner = request.user
+        return super(BaseOwnerAdmin, self).save_model(request, obj, form, change)
+```
+
+然后更新`blog`应用的`admin`代码
+
+> typeidea\blog\admin.py
+
+```
+from django.contrib import admin
+from django.urls import reverse
+from django.utils.html import format_html
+from typeidea.custom_site import custom_site
+from typeidea.BaseOwnerAdmin import BaseOwnerAdmin
+from .models import Category, Tag, Post
+
+
+class CategoryOwnerFilter(admin.SimpleListFilter):
+    title = '分类过滤器'
+    parameter_name = 'owner_category'
+
+    def lookups(self, request, model_admin):
+        return Category.objects.filter(owner=request.user).values_list('id', 'name')
+
+    def queryset(self, request, queryset):
+        category_id = self.value()
+        if category_id:
+            return queryset.filter(category_id=self.value())
+        return queryset
+
+
+@admin.register(Category, site=custom_site)
+class CategoryAdmin(BaseOwnerAdmin):
+    list_display = ('name', 'status', 'is_nav', 'post_count', 'created_time')  # 列表展示的字段
+    fields = ('name', 'status', 'is_nav')  # 新增表单的条目
+
+    # 自定义函数：展示该分类有多少篇文章
+    def post_count(self, obj):
+        return obj.post_set.count()
+
+    post_count.short_description = '文章数量'
+
+
+@admin.register(Tag, site=custom_site)
+class TagAdmin(BaseOwnerAdmin):
+    list_display = ('name', 'status', 'created_time')  # 列表展示的字段
+    fields = ('name', 'status')  # 新增表单的条目
+
+    # 重写ModelAdmin的save_model方法
+    def save_model(self, request, obj, form, change):
+        obj.owner = request.user
+        return super(TagAdmin, self).save_model(request, obj, form, change)
+
+    class Media:
+        css = {
+            'all': ("https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css",),
+        }
+        js = ('https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.js',)
+
+
+@admin.register(Post, site=custom_site)
+class PostAdmin(BaseOwnerAdmin):
+    # ------ 列表页面
+    list_display = ['title', 'category', 'status', 'owner', 'created_time', 'operator']
+    list_display_links = []
+
+    # 在结果列表末尾追加一列字段，列名叫“操作”
+    def operator(self, obj):
+        return format_html('<a href="{}">编辑</a>', reverse('cus_admin:blog_post_change', args=(obj.id,)))
+
+    operator.short_description = '操作'
+
+    actions_on_top = True  # 动作按钮
+    actions_on_bottom = True  # 动作按钮
+
+    search_fields = ['title', 'category__name']  # 搜索框（列表元素是可支持检索的字段）
+    list_filter = [CategoryOwnerFilter]  # 过滤器
+
+    # ------ 新增编辑页面
+    save_on_top = True      # 保存按钮三连
+
+    # 新增表单的内容
+    fields = (
+        ('title', 'category'),  # 嵌套元祖表示这几个字段在页面上处在同一排
+        ('desc', 'status'),
+        'content',
+        'tag',
+    )
+
+    filter_horizontal = ('tag',)    # 横排展示多对多字段
+
+```
+
+> typeidea\config\admin.py
+
+```
+from django.contrib import admin
+from typeidea.custom_site import custom_site
+from typeidea.BaseOwnerAdmin import BaseOwnerAdmin
+from .models import Link, SideBar
+
+
+@admin.register(Link, site=custom_site)
+class LinkAdmin(BaseOwnerAdmin):
+    list_display = ('title', 'href', 'status', 'weight', 'created_time')
+    fields = ('title', 'href', 'status', 'weight')
+
+
+@admin.register(SideBar, site=custom_site)
+class SideBarAdmin(BaseOwnerAdmin):
+    list_display = ('title', 'display_type', 'content', 'created_time')
+    fields = ('title', 'display_type', 'content')
+```
 
 
 
+#### 2.4.5 记录操作日志
+
+LogEntry也是后台开发中经常用到的模块，它在admin后台是默认开启的。
+
+日志记录的功能ModelAdmin本身就有，当我们新增一个实体对象（Post,Category,Tag等）时，它就会帮我们记录一条变更记录。当我们修改一条记录时，它又会帮我们调用LogEntry来创建一条操作日志。
+
+ModelAdmin内部提供了两个方法，分别是`log_addition`和`log_change`，可以在`django/admin/contrib/options.py`文件中查阅具体代码。
+
+支持的参数：
+
+| 参数            | 说明                                        |
+| --------------- | ------------------------------------------- |
+| user_id         | 当前用户id                                  |
+| content_type_id | 要保存内容的类型                            |
+| object_id       | 记录变更示例的id                            |
+| object_repr     | 实例的展示名称，即`__str__`方法所返回的内容 |
+| action_flag     | 操作标记                                    |
+| change_message  | 记录的消息                                  |
+
+查询某个对象的变更
+
+```
+from django.contrib.admin.models import LogEntry, CHANGE
+from django.contrib.admin.options import get_content_type_for_model
+
+post = Post.objects.get(id=1)
+log_entries = LogEntry.objects.filter(
+	content_type_id = get_content_type_for_mode(post).pk,
+	object_id = post.id,
+)
+```
 
 
 
+在admin页面上查看操作日志
+
+> typeidea\blog\admin.py
+
+```
+......
+
+from django.contrib.admin.models import LogEntry
 
 
+@admin.register(LogEntry)
+class LogEntryAdmin(admin.ModelAdmin):
+    list_display = ['object_repr', 'object_id', 'action_flag', 'user', 'change_message']
+```
 
+备注：按理这部分代码放在`typeidea\typeidea\admin.py`中会更合适，此处只做体验。页面会被注册到超级管理员的后台页面中，访问地址是`http://localhost:8000/super_admin/`
 
+![1606148823435](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1606148823435.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+![1606148846547](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1606148846547.png)
 
 
 
 
 
 ### 2.5 开发前端界面
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
