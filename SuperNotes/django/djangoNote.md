@@ -2245,23 +2245,203 @@ class LogEntryAdmin(admin.ModelAdmin):
 
 
 
+function view
+
+class-based view
 
 
 
+开发GUI时，首先要整理出需要多少种URL，即存在多少种页面，然后再来编写View的代码。
+
+接着，需要分析页面上需要呈现的数据，不同的数据意味着要用到不同的模型或者字段。
 
 
 
+#### 分析URL和页面数据
+
+- 博客首页：https://www.cifer.com
+- 博客详情页：https://www.cifer.com/post/<post_id>.html
+- 分类列表页：https://www.cifer.com/category/<category_id>/
+- 标签列表页：https://www.cifer.com/tag/<tag_id>/
+- 友链展示页：https://www.cifer.com/links/
+
+View的逻辑可以分为两大类：一是根据不同的查询条件展示列表页；二是展示博客详情页。由于友链展示是独立的逻辑，所以View一共只需要3个。
+
+- 列表页View：根据不同查询条件分别展示博客首页、分类列表和标签列表页。
+- 文章页View：展示博客详情页。
+- 友链页View：展示所有友情链接。
 
 
 
+#### 编写URL代码
+
+```
+from django.conf.urls import url
+from django.contrib import admin
+
+from .custom_site import custom_site
+from .custom_site import custom_site
+from blog.views import post_list, post_detail
+from config.views import links
+
+
+urlpatterns = [
+    url(r'^$', post_list),
+    url(r'^category/(?P<category_id>\d+)/$', post_list),
+    url(r'^tag/(?P<tag_id>\d+)/$', post_list),
+    url(r'post/(?P<post_id>\d+).html$', post_detail),
+    url(r'^links/$', links),
+    url(r'^super_admin/', admin.site.urls),
+    url(r'^admin/', custom_site.urls),
+]
+```
+
+这里定义了三个View：post_list、post_detail和links。
 
 
 
+#### 编写View函数
+
+##### 简单映射
+
+> typeidea\blog\views.py
+
+```
+from django.http import HttpResponse
+
+
+def post_list(request, category_id=None, tag_id=None):
+    content = 'post_list category_id={category_id}, tag_id={tag_id}'.format(
+        category_id=category_id,
+        tag_id=tag_id
+    )
+
+    return HttpResponse(content)
+
+
+def post_detail(request, post_id=None):
+    return HttpResponse('detail')
+```
 
 
 
+> typeidea\config\views.py
+
+```
+from django.http import HttpResponse
 
 
+def links(request):
+    return HttpResponse('links')
+```
+
+启动服务，并依次访问下面的地址，观察页面效果。
+
+`python manage.py runserver`
+
+- http://localhost:8000/
+- http://localhost:8000/category/1/
+- http://localhost:8000/tag/1/
+- http://localhost:8000/post/1.html
+- http://localhost:8000/links/
+
+
+
+上面只是简单实现了从URL到View的数据映射。接下来将增加对模板的戏份。
+
+##### 引入模板
+
+
+
+修改视图函数
+
+> typeidea\blog\views.py
+
+```
+from django.shortcuts import render
+
+
+def post_list(request, category_id=None, tag_id=None):
+    return render(request, 'blog/list.html', context={'name': 'post_list'})
+
+
+def post_detail(request, post_id=None):
+    return render(request, 'blog/detail.html', context={'name': 'post_detail'})
+```
+
+
+
+render函数用法
+
+```
+render(request, template_name, context=None, content_type=None, status=None, using=None)
+```
+
+- request：封装了HTTP请求的request对象。
+- template_name：模板名称，支持路径。
+- context：字典格式的数据，会被传递到模板中。
+- content_type：页面编码类型，默认值是 text/html。
+- status：状态码，默认值是200。
+- using：使用哪种模板引擎解析。可以再settings中配置，默认使用Django自带的模板。
+
+
+
+##### 配置模板
+
+在日常开发中，创建模板的方式有2种：一种是在各自app中创建自己的模板；另一种是在工程的同名app中。
+
+我们考虑到后期可能需要配置多个模板，所以采用第二种方式，一起放在`typeidea\typeidea`中。
+
+在`typeidea\typeidea`中创建目录：templates，然后在`typeidea\typeidea\templates`中创建blog和config目录。
+
+在`typeidea\typeidea\templates\blog`中新建list.html和detail.html两个文件。
+
+> typeidea\typeidea\templates\blog\list.html
+
+```
+<h1>list</h1>
+{{ name }}
+```
+
+
+
+> typeidea\typeidea\templates\blog\detail.html
+
+```
+<h1>detail</h1>
+{{ name }}
+```
+
+
+
+将typeidea这个app进行注册。
+
+> typeidea\typeidea\settings\base.py
+
+```
+......
+INSTALLED_APPS = [
+    'typeidea',
+    'blog',
+    'config',
+    'comment',
+
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+......
+```
+
+此时，运行服务，然后访问`http://localhost:8000/`查看页面效果。如下：
+
+```
+list
+post_list
+```
 
 
 
