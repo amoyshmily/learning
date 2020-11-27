@@ -2445,6 +2445,551 @@ post_list
 
 
 
+##### 编写View代码
+
+post_list的逻辑：使用Model从数据库中批量拿去数据，然后把标题和摘要展示到页面上。
+
+post_detail逻辑：类似post_list，只不过只展示一条数据。
+
+> typeidea\blog\views.py
+
+  ```
+from django.shortcuts import render
+
+from blog.models import Tag, Post
+
+
+def post_list(request, category_id=None, tag_id=None):
+
+    # Tag和Post是多对多的关系，因此需要先获取tag对象再通过tag来获取对应的文章列表。
+    if tag_id:
+        try:
+            tag = Tag.objects.get(id=tag_id)
+        except Tag.DoesNotExist:
+            post_list = []
+        else:
+            post_list = tag.post_set.filter(status=Post.STATUS_NORMAL)
+    else:
+        post_list = Post.objects.filter(status=Post.STATUS_NORMAL)
+        if category_id:
+            post_list = post_list.filter(category_id=category_id)
+    return render(request, 'blog/list.html', context={'post_list': post_list})
+
+
+def post_detail(request, post_id=None):
+    
+    try:
+        post = Post.objects.get(id=post_id)
+    except Post.DoesNotExist:
+        post = None
+
+    return render(request, 'blog/detail.html', context={'post': post})
+  ```
+
+##### 配置模板
+
+> typeidea\typeidea\templates\blog\list.html
+
+```
+<ul>
+    {%  for post in post_list %}
+    <li>
+        <a href="/post/{{ post.id }}.html">{{ post.title }}</a>
+        <div>
+            <span>作者：{{ post.owner.username }}</span>
+            <span>分类：{{ post.category.name }}</span>
+        </div>
+        <p>{{ post.desc }}</p>
+    </li>
+    {% endfor %}
+</ul>
+```
+
+> typeidea\typeidea\templates\blog\detail.html
+
+```
+{% if post %}
+<h1>{{ post.title }}</h1>
+<div>
+    <span>分类：{{ post.category.name }}</span>
+    <span>作者：{{ post.owner.username }}</span>
+</div>
+<hr/>
+<p>
+    {{ post.content }}
+</p>
+{% endif %}
+```
+
+
+
+运行服务后，访问下列地址，观察页面展示效果。
+
+- http://localhost:8000
+- http://localhost:8000/post/1.html
+
+
+
+![1606401947639](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1606401947639.png)
+
+![1606401930444](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1606401930444.png)
+
+
+
+##### 配置页面通用数据
+
+需求：
+
+博客首页、分类列表页和标签列表页目前都是一样，需要进行区分。
+
+HTML结构不完整，需要根据H5标准来组织页面。
+
+> typeidea\typeidea\templates\blog\list.html
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的博客</title>
+</head>
+<body>
+
+    {% if context.tag %}
+    标签页：{{ context.tag.name }}
+    {% endif %}
+
+    {% if context.category %}
+    分类页：{{ context.category.name }}
+    {% endif %}
+
+    <ul>
+        {%  for post in context.post_list %}
+        <li>
+            <a href="/post/{{ post.id }}.html">{{ post.title }}</a>
+            <div>
+                <span>作者：{{ post.owner.username }}</span>
+                <span>分类：{{ post.category.name }}</span>
+            </div>
+            <p>{{ context.post.desc }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
+```
+
+
+
+##### 重构post_list视图函数
+
+之前我们在一个函数中处理了过多的业务，所以出现了很多条件分支，导致代码有点复杂。
+
+重构思路
+
+1、把复杂部分抽取成单独的函数。其实对于主函数post_list来说，只需要通过tag_id拿到文章列表和tag对象列表就行，因此可以把这个逻辑抽出去作为独立的函数。分类的处理也同理。
+
+2、从根源上来讲，造成post_list函数复杂的原因是，我们把多个URL的处理逻辑都放在了一个函数中。
+
+针对思路1的实践
+
+抽取两个函数来分别处理标签和分类。将其定义到Model层。
+
+> typeidea\blog\models.py
+>
+> 在Post中追加静态方法get_by_tag。
+
+```
+....
+@staticmethod
+    def get_by_tag(tag_id):
+        try:
+            tag = Tag.objects.get(id=tag_id)
+        except Tag.DoesNotExist:
+            tag = None
+            post_list = None
+        else:
+            post_list = tag.post_set.filter(status=Post.STATUS_NORMAL).select_related('owner', 'category')
+
+        return post_list, tag
+
+    @staticmethod
+    def get_by_category(category_id):
+        try:
+            category = Category.objects.get(id=category_id)
+        except Category.DoesNotExist:
+            category = None
+            post_list = None
+        else:
+            post_list = category.post_set.filter(status=Post.STATUS_NORMAL).select_related('owner', 'category')
+
+        return post_list, category
+
+    @classmethod
+    def latest_posts(cls):
+        queryset = cls.objects.filter(status=cls.STATUS_NORMAL)
+        return queryset
+```
+
+优化后的view函数代码（十分清爽）
+
+> typeidea\blog\views.py
+
+```
+from django.shortcuts import render
+
+from blog.models import Post
+
+
+def post_list(request, category_id=None, tag_id=None):
+    tag = None
+    category = None
+
+    # Tag和Post是多对多的关系，因此需要先获取tag对象再通过tag来获取对应的文章列表。
+    if tag_id:
+        post_list, tag = Post.get_by_tag(tag_id)
+    elif category_id:
+        post_list, category = Post.get_by_category(category_id)
+    else:
+        post_list = Post.latest_posts()
+
+    context = {
+        'category': category,
+        'tag': tag,
+        'post_list': post_list
+    }
+    return render(request, 'blog/list.html', context={'context': context})
+
+
+def post_detail(request, post_id=None):
+
+    try:
+        post = Post.objects.get(id=post_id)
+    except Post.DoesNotExist:
+        post = None
+
+    return render(request, 'blog/detail.html', context={'post': post})
+```
+
+
+
+##### 分类信息
+
+需求：把导航信息展示在页面上。我们把分类作为一个导航来展示给用户。
+
+给Category类添加类方法（普通青年）
+
+> typeidea\blog\models.py
+
+```
+@classmethod
+def get_navs(cls):
+    """
+    读取所有的分类，区分是否为导航
+    :return:
+    """
+    categories = cls.objects.filter(status=cls.STATUS_NORMAL)
+    nav_categories = categories.filter(is_nav=True)
+    normal_categories = categories.filter(is_nave=False)
+    return {'navs': nav_categories, 'categories': normal_categories}
+```
+
+问题点：返回的是nav_categories和normal_categories两个QuerySet对象，他们会被用在其他地方，在使用时，它们会分别产生自己的查询语句，对于系统就是两次I/O操作。
+
+改进重构（文艺青年）
+
+> typeidea\blog\models.py 的Category类
+
+```
+@classmethod
+def get_navs(cls):
+    """
+    读取所有的分类，区分是否为导航
+    :return:
+    """
+    categories = cls.objects.filter(status=cls.STATUS_NORMAL)
+    nav_categories = []
+    normal_categories = []
+    for category in categories:
+    	if category.is_nav:
+    		nav_categories.append(category)
+    	else:
+    		normal_categories.append(category)
+    return {'navs': nav_categories, 'categories': normal_categories}
+```
+
+这样，只需要一次数据库查询，即可拿到所有数据，然后在内存中进行数据处理。
+
+接下来，更新view的视图函数代码。
+
+> typeidea\blog\views.py
+
+```
+from django.shortcuts import render
+
+from blog.models import Post, Category
+
+
+def post_list(request, category_id=None, tag_id=None):
+    tag = None
+    category = None
+
+    # Tag和Post是多对多的关系，因此需要先获取tag对象再通过tag来获取对应的文章列表。
+    if tag_id:
+        post_list, tag = Post.get_by_tag(tag_id)
+    elif category_id:
+        post_list, category = Post.get_by_category(category_id)
+    else:
+        post_list = Post.latest_posts()
+
+    context = {
+        'category': category,
+        'tag': tag,
+        'post_list': post_list
+    }
+    context.update(Category.get_navs())
+    return render(request, 'blog/list.html', context={'context': context})
+
+
+def post_detail(request, post_id=None):
+
+    try:
+        post = Post.objects.get(id=post_id)
+    except Post.DoesNotExist:
+        post = None
+
+    context = {
+        'post': post
+    }
+    context.update(Category.get_navs())
+    return render(request, 'blog/detail.html', context=context)
+```
+
+我们已经把分类的数据塞到模板重量，接下来需要在模板中展示这些信息了。
+
+> typeidea\typeidea\templates\blog\list.html
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的博客</title>
+</head>
+<body>
+
+    <div>
+        <p>顶部分类</p>
+        {% for category in context.navs %}
+        <a href="/category/{{ category.id }}">{{ category.name }}</a>
+        {% endfor %}
+    </div>
+
+    {% if context.tag %}
+    标签页：{{ context.tag.name }}
+    {% endif %}
+
+    {% if context.category %}
+    分类页：{{ context.category.name }}
+    {% endif %}
+
+    <ul>
+        {%  for post in context.post_list %}
+        <li>
+            <a href="/post/{{ post.id }}.html">{{ post.title }}</a>
+            <div>
+                <span>作者：{{ post.owner.username }}</span>
+                <span>分类：{{ post.category.name }}</span>
+            </div>
+            <p>{{ context.post.desc }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    <hr/>
+    <div>
+        <p>底部分类</p>
+        {% for category in context.categories %}
+        <a href="/category/{{ category.id }}">{{ category.name }}</a>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
+```
+
+备注：目前在页面上的URL地址还是硬编码，后续我们会通过reverse方式来解耦。
+
+
+
+![1606489389332](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1606489389332.png)
+
+
+
+#### 侧边栏
+
+我们需要新增一个视图函数来获取侧边栏的数据，以便他们在post_list和post_detail中都能够使用。
+
+##### 雏形
+
+
+
+> typeidea\config\models.py 的SideBar类
+
+```
+@classmethod
+def get_all(cls):
+	return cls.objects.filter(status=cls.STATUS_SHOW)
+```
+
+修改视图函数view的代码
+
+> typeidea\blog\views.py 的post_list
+
+```
+    context = {
+        'category': category,
+        'tag': tag,
+        'post_list': post_list,
+        'sidebars': SideBar.get_all()
+    }
+```
+
+> typeidea\blog\views.py 的post_detail
+
+```
+    context = {
+        'post': post,
+        'sidebars': SideBar.get_all()
+    }
+```
+
+修改模板template代码
+
+> typeidea\typeidea\templates\blog\list.html
+>
+> typeidea\typeidea\templates\blog\detail.html
+
+```
+<body>
+......
+	<div>
+        <p>侧边栏展示</p>
+        {% for sidebar in context.sidebars %}
+            <h4>{{ sidebar.title }}</h4>
+            {{ sidebar.content }}
+        {% endfor %}
+    </div>
+</body>
+```
+
+
+
+到目前为止，detail和list两个模板文件的完整代码是：
+
+> typeidea\typeidea\templates\blog\list.html
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的博客</title>
+</head>
+<body>
+
+    <div>
+        <p>顶部分类</p>
+        {% for category in context.navs %}
+        <a href="/category/{{ category.id }}">{{ category.name }}</a>
+        {% endfor %}
+    </div>
+
+    {% if context.tag %}
+    标签页：{{ context.tag.name }}
+    {% endif %}
+
+    {% if context.category %}
+    分类页：{{ context.category.name }}
+    {% endif %}
+
+    <ul>
+        {%  for post in context.post_list %}
+        <li>
+            <a href="/post/{{ post.id }}.html">{{ post.title }}</a>
+            <div>
+                <span>作者：{{ post.owner.username }}</span>
+                <span>分类：{{ post.category.name }}</span>
+            </div>
+            <p>{{ context.post.desc }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    <hr/>
+    <div>
+        <p>底部分类</p>
+        {% for category in context.categories %}
+        <a href="/category/{{ category.id }}">{{ category.name }}</a>
+        {% endfor %}
+    </div>
+
+    <!--  侧边栏  -->
+    <div>
+        <p>侧边栏展示</p>
+        {% for sidebar in context.sidebars %}
+            <h4>{{ sidebar.title }}</h4>
+            {{ sidebar.content }}
+        {% endfor %}
+    </div>
+</body>
+</html>
+```
+
+> typeidea\typeidea\templates\blog\detail.html
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博客详情</title>
+</head>
+<body>
+
+    {% if post %}
+    <h1>{{ post.title }}</h1>
+    <div>
+        <span>分类：{{ post.category.name }}</span>
+        <span>作者：{{ post.owner.username }}</span>
+    </div>
+    <hr/>
+    <p>
+        {{ post.content }}
+    </p>
+    {% endif %}
+
+    <!--  侧边栏  -->
+    <div>
+        <p>侧边栏展示</p>
+        {% for sidebar in context.sidebars %}
+            <h4>{{ sidebar.title }}</h4>
+            {{ sidebar.content }}
+        {% endfor %}
+    </div>
+</body>
+</html>
+```
+
+
+
+到此为止，我们已经把通用数据都放到页面上了。目前还有两个瑕疵：一个是样式很丑陋，另一个是现在的侧边栏只能展示类型为HTML的内容，无法展示之前设计的最新文章、最热文章等数据。
+
+
+
+##### 侧边栏封装
+
+
+
 
 
 ### 2.6 Bootstrap
