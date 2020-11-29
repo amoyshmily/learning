@@ -2988,6 +2988,975 @@ def get_all(cls):
 
 ##### 侧边栏封装
 
+把复杂的侧边栏逻辑封装起来，在模板中只需要使用sidebar.conent即可；另一个是调整Post模型，以满足我们获取最热文章的逻辑。
+
+调整Post模型
+
+- 增加2个字段，分别是pv和uv，用来统计每篇文章的访问量。
+
+- 增加hot_posts类方法。
+
+> typeidea\blog\models.py
+
+```
+pv = models.PositiveIntegerField(default=1)
+uv = models.PositiveIntegerField(default=1)
+```
+
+```
+    @classmethod
+    def host_posts(cls):
+        return cls.objects.filter(status=cls.STATUS_NORMAL).order_by('-pv')
+```
+
+然后执行数据迁移。在cmd中先后执行如下指令：
+
+`python manage.py makemigrations`
+
+`python manange.py migrate`
+
+
+
+封装SideBar
+
+在上一节中，我们在模板中使用了sidebar.content来展示数据。对于类型是HTML的数据，可以直接展示。但是对于其他类型的数据，就会有问题。
+
+由于SideBar对应不同类型的数据源，一般有两种方式可以处理。一种是把数据获取的逻辑放在Model层，直接从Model层渲染数据到模板上，然后拿到渲染好的HTML数据放到上一节写的SideBar部分。还有一种是在模板中抽取SideBar为独立的block，不同的数据源需要在不同的页面对应的view层来获取。
+
+这里我们采用第一种方案，吧数据的获取封装到Model层。这样做的好处是有更好的通用性，同时能避免View层的逻辑过多。
+
+原SideBar模型代码
+
+> typeidea\config\models.py 的 SideBar
+
+```
+class SideBar(models.Model):
+    STATUS_SHOW = 1
+    STATUS_HIDE = 0
+    STATUS_ITEMS = (
+        (STATUS_SHOW, '展示'),
+        (STATUS_HIDE, '隐藏'),
+    )
+    SIDE_TYPE = (
+        (1, 'HTML'),
+        (2, '最新文章'),
+        (3, '最热文章'),
+        (4, '最近评论'),
+    )
+
+    title = models.CharField(max_length=50, verbose_name='标题')
+    display_type = models.PositiveIntegerField(default=1, choices=SIDE_TYPE, verbose_name='展示类型')
+    content = models.CharField(max_length=500, blank=True, verbose_name='内容',
+                               help_text='如果设置的不是HTML类型，可为空')
+    status = models.PositiveIntegerField(default=STATUS_SHOW, choices=STATUS_ITEMS, verbose_name='状态')
+    owner = models.ForeignKey(User, verbose_name='作者')
+    created_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+
+    class Meta:
+        verbose_name = verbose_name_plural = '侧边栏'
+
+    def __str__(self):
+        return self.title
+
+    @classmethod
+    def get_all(cls):
+        return cls.objects.filter(status=cls.STATUS_SHOW)
+```
+
+调整后modes完整代码
+
+> typeidea\comment\models.py
+
+```
+from django.contrib.auth.models import User
+from django.db import models
+from django.template.loader import render_to_string
+
+
+class Link(models.Model):
+    STATUS_NORMAL = 1
+    STATUS_DELETE = 0
+    STATUS_ITEMS = (
+        (STATUS_NORMAL, '正常'),
+        (STATUS_DELETE, '删除'),
+    )
+
+    title = models.CharField(max_length=50, verbose_name='标题')
+    href = models.URLField(verbose_name='链接')  # 默认长度200
+    status = models.PositiveIntegerField(default=STATUS_NORMAL, choices=STATUS_ITEMS, verbose_name='状态')
+    weight = models.PositiveIntegerField(default=1, choices=zip(range(1, 6), range(1, 6)), verbose_name='权重',
+                                         help_text='权重高展示顺序靠前')
+    owner = models.ForeignKey(User, verbose_name='作者')
+    created_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+
+    class Meta:
+        verbose_name = verbose_name_plural = '友链'
+
+    def __str__(self):
+        return self.title
+
+
+class SideBar(models.Model):
+    STATUS_SHOW = 1
+    STATUS_HIDE = 0
+    STATUS_ITEMS = (
+        (STATUS_SHOW, '展示'),
+        (STATUS_HIDE, '隐藏'),
+    )
+    DISPLAY_HTML = 1
+    DISPLAY_LATEST = 2
+    DISPLAY_HOT = 3
+    DISPLAY_COMMENT = 4
+    SIDE_TYPE = (
+        (DISPLAY_HTML, 'HTML'),
+        (DISPLAY_LATEST, '最新文章'),
+        (DISPLAY_HOT, '最热文章'),
+        (DISPLAY_COMMENT, '最近评论'),
+    )
+
+    title = models.CharField(max_length=50, verbose_name='标题')
+    display_type = models.PositiveIntegerField(default=1, choices=SIDE_TYPE, verbose_name='展示类型')
+    content = models.CharField(max_length=500, blank=True, verbose_name='内容',
+                               help_text='如果设置的不是HTML类型，可为空')
+    status = models.PositiveIntegerField(default=STATUS_SHOW, choices=STATUS_ITEMS, verbose_name='状态')
+    owner = models.ForeignKey(User, verbose_name='作者')
+    created_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+
+    class Meta:
+        verbose_name = verbose_name_plural = '侧边栏'
+
+    def __str__(self):
+        return self.title
+
+    @classmethod
+    def get_all(cls):
+        return cls.objects.filter(status=cls.STATUS_SHOW)
+
+    def content_html(self):
+        """ 直接渲染模板 """
+        from blog.models import Post
+        from comment.models import Comment
+
+        result = ''
+        if self.display_type == self.DISPLAY_HTML:
+            result = self.content
+        elif self.display_type == self.DISPLAY_LATEST:
+            context = {'posts': Post.latest_posts()}
+            result = render_to_string('config/blocks/sidebar_posts.html', context)
+        elif self.display_type == self.DISPLAY_HOT:
+            context = {'posts': Post.host_posts()}
+            result = render_to_string('config/blocks/sidebar_posts.html', context)
+        elif self.display_type == self.DISPLAY_COMMENT:
+            context = {'comments': Comment.objects.filter(status=Comment.STATUS_NORMAL)}
+            result = render_to_string('config/blocks/sidebar_comments.html', context)
+        return result
+```
+
+
+
+新建sidebar_posts.html和sidebar_comments.html两个模板
+
+> typeidea\typeidea\templates\config\sidebar_posts.html
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sidebar_posts</title>
+</head>
+<body>
+    <ul>
+        {% for post in posts %}
+        <li><a href="/post/{{ post.id }}.html">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
+```
+
+> typeidea\typeidea\templates\config\sidebar_comments.html
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sidebar_comments</title>
+</head>
+<body>
+    <ul>
+        {% for comment in comments %}
+        <li><a href="/post/{{ comment.target_id }}.html">{{ comment.target.title }}</a>
+            {{ comment.nickname }} : {{ comment.content }}
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
+```
+
+
+
+##### 模板继承
+
+1、抽象出基础模板。对于通用的数据，可以通过基类的方式实现。
+
+2、解决模板中的硬编码问题。
+
+新建base.html文件，定义2个block：block title和block main，方便重写字模板。
+
+> typeidea\typeidea\templates\blog\base.html
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}}首页{% endblock %}- 博客系统</title>
+</head>
+<body>
+    <div>
+        <p>顶部分类</p>
+        {% for category in context.categories %}
+        <a href="/category/{{ category.id}}/">{{ category.name }}</a>
+        {% endfor %}
+    </div>
+    <hr/>
+    {% block main %}
+    {% endblock %}
+    <hr/>
+
+    <div>
+        <p>底部分类</p>
+        {% for sidebar in context.sidebars %}
+        <h4>{{ sidebar.title }}</h4>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
+```
+
+更新后的list.html文件
+
+> typeidea\typeidea\templates\blog\list.html
+
+```
+{% extends "./base.html" %}
+
+{% block title %}
+    {% if tag %}
+    标签页： {{ tag.name }}
+    {% elif category %}
+    分类页：{{ category.name }}
+    {% endif %}
+{% endblock %}
+
+{% block main%}
+<ul>
+    {% for post in context.post_list %}
+    <li>
+        <a href="{% url 'post-detail' post.id %}">{{ post.title }}</a>
+        <div>
+            <span>作者：{{ post.owner.username }}</span>
+            <span>分类：{{ post.category.name }}</span>
+        </div>
+        <p>{{ post.desc }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+```
+
+更新后的detail代码
+
+> typeidea\typeidea\templates\blog\detail.html
+
+```
+{% extends "./base.html" %}
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block main %}
+    {% if post %}
+    <h1>{{ post.title }}</h1>
+    <div>
+        <span>分类：{{ post.category.name }}</span>
+        <span>作者：{{ post.owner.username }}</span>
+    </div>
+    <hr/>
+    <p>{{ post.content }}</p>
+    {% endif %}
+
+{% endblock %}
+```
+
+
+
+
+
+
+
+##### 解耦硬编码
+
+通过定义更加语义化的变量来取代毫无意义的数字（Magic Number），降低代码维护时的心智负担。
+
+例如
+
+```
+<a href="/post/{{ post.id }}.html">{{ post.title }}</a>
+```
+
+修改urls代码
+
+> typeidea\typeidea\urls.py
+
+修改前
+
+```
+urlpatterns = [
+    url(r'^$', post_list),
+    url(r'^category/(?P<category_id>\d+)/$', post_list),
+    url(r'^tag/(?P<tag_id>\d+)/$', post_list),
+    url(r'post/(?P<post_id>\d+).html$', post_detail),
+    url(r'^links/$', links),
+    url(r'^super_admin/', admin.site.urls),
+    url(r'^admin/', custom_site.urls),
+]
+```
+
+修改后
+
+```
+urlpatterns = [
+    url(r'^$', post_list, name='index'),
+    url(r'^category/(?P<category_id>\d+)/$', post_list, name='category-list'),
+    url(r'^tag/(?P<tag_id>\d+)/$', post_list, name='tag-list'),
+    url(r'post/(?P<post_id>\d+).html$', post_detail, name='post-detail'),
+    url(r'^links/$', links, name='links'),
+    url(r'^super_admin/', admin.site.urls, name='super-admin'),
+    url(r'^admin/', custom_site.urls, name='admin'),
+]
+```
+
+更新list.html文件代码
+
+修改前`<a href="/post/{{ post.id }}.html">{{ post.title }}</a>`
+
+修改后`<a href="{% url 'post-detail' post.id %}">{{ post.title }}</a>`
+
+如果定义的URL中有多个参数，那么在模板中使用时也要对应传多个参数，例如`{% url 'name' arg1 arg2%}`；如果定义的是关键字参数，则写成`{% url 'name' arg1=value1 arg2=value2 %}`
+
+![1606647768382](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1606647768382.png)
+
+
+
+#### 升级到 class-based view
+
+什么时候使用函数还是封装一个类呢？简单来说，只要代码的逻辑被重复使用，同时有需要共享的数据，就可以考虑封装出一个类，充分享用类提供的继承和复用的好处。
+
+> View就是一个能够接受请求并且返回响应的可调用对象。它不仅仅是一个函数。同时Django提供了一些类作为View的示例。这样就允许我们结构化View并且通过继承和混入（mixin）的方式来复用代码。
+
+- View：基础的View，它实现了基于HTTP方法的分发逻辑，比如GET请求会调用对应的get方法,POST请求会调用对应的post方法。
+- TemplateView：继承自View，可以直接用来返回指定的模板。它实现了get方法，可以传递变量到模板中进行数据展示。
+- DetailView：继承自View，实现了get方法，并且可以绑定一个模板，用来获取单个实例的数据。
+- ListView：继承自View，实现了get方法，可以通过绑定模板来批量获取数据。
+
+我们的View无论是函数形式，还是类形式，都是用来处理HTTP请求的。对于同一个URL需要处理多种请求的情况下，class-based view会更适合些，可以避免编写很多逻辑分支。
+
+
+
+下面，针对blog的两个视图函数：post_list和post_detail进行改造作为示例。
+
+
+
+##### 演示改造post_detail函数
+
+关于DetailView的属性和接口
+
+- model属性：指定当前View要使用的Model。
+- querySet属性：跟model一样，二选一。设定基础的数据集。model的设定没有过滤功能，可以通过querySet = Post.objects.filter(status=Post.STATUS_NORMAL)进行过滤。
+- template_name属性：模板名称。
+- get_queryset接口：用来获取数据。
+- get_context_data接口：获取渲染到模板中的所有上下文。如果有新增数据需要传递到模板中，可以重新该方法来完成。
+
+
+
+
+
+**修改视图**
+
+> typeidea\blog\views.py
+
+修改前
+
+```
+from django.shortcuts import render
+from blog.models import Post, Category
+from config.models import SideBar
+
+
+def post_list(request, category_id=None, tag_id=None):
+    tag = None
+    category = None
+
+    # Tag和Post是多对多的关系，因此需要先获取tag对象再通过tag来获取对应的文章列表。
+    if tag_id:
+        post_list, tag = Post.get_by_tag(tag_id)
+    elif category_id:
+        post_list, category = Post.get_by_category(category_id)
+    else:
+        post_list = Post.latest_posts()
+
+    context = {
+        'category': category,
+        'tag': tag,
+        'post_list': post_list,
+        'sidebars': SideBar.get_all()
+    }
+    context.update(Category.get_navs())
+    return render(request, 'blog/list.html', context={'context': context})
+
+
+def post_detail(request, post_id=None):
+
+    try:
+        post = Post.objects.get(id=post_id)
+    except Post.DoesNotExist:
+        post = None
+
+    context = {
+        'post': post,
+        'sidebars': SideBar.get_all()
+    }
+    context.update(Category.get_navs())
+    return render(request, 'blog/detail.html', context=context)
+```
+
+修改后
+
+```
+class PostDetailView(DetailView):
+    model = Post
+    template_name = 'blog/detail.html'
+```
+
+完整代码：
+
+```
+from django.shortcuts import render
+from django.views.generic import DetailView
+from blog.models import Post, Category
+from config.models import SideBar
+
+
+def post_list(request, category_id=None, tag_id=None):
+    tag = None
+    category = None
+
+    # Tag和Post是多对多的关系，因此需要先获取tag对象再通过tag来获取对应的文章列表。
+    if tag_id:
+        post_list, tag = Post.get_by_tag(tag_id)
+    elif category_id:
+        post_list, category = Post.get_by_category(category_id)
+    else:
+        post_list = Post.latest_posts()
+
+    context = {
+        'category': category,
+        'tag': tag,
+        'post_list': post_list,
+        'sidebars': SideBar.get_all()
+    }
+    context.update(Category.get_navs())
+    return render(request, 'blog/list.html', context={'context': context})
+
+
+class PostDetailView(DetailView):
+    model = Post
+    template_name = 'blog/detail.html'
+```
+
+
+
+**修改模板**
+
+> typeidea\typeidea\templates\blog\detail.html
+
+修改前
+
+```
+{% extends "./base.html" %}
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block main %}
+    {% if post %}
+    <h1>{{ post.title }}</h1>
+    <div>
+        <span>分类：{{ post.category.name }}</span>
+        <span>作者：{{ post.owner.username }}</span>
+    </div>
+    <hr/>
+    <p>{{ post.content }}</p>
+    {% endif %}
+
+{% endblock %}
+```
+
+修改后
+
+```
+{% if post %}
+    <h1>{{ post.title }}</h1>
+    <div>
+        <span>分类：{{ post.category.name }}</span>
+        <span>作者：{{ post.owner.username }}</span>
+    </div>
+    <hr/>
+    <p>{{ post.content }}</p>
+{% endif %}
+```
+
+这里去掉了公共部分的数据，因为在DetailView里只需要处理与当前Model相关的数据。这个Model就是我们指定给你的`model = Post`属性。
+
+
+
+**修改路由**
+
+> typeidea\typeidea\urls.py
+
+修改前：`url(r'post/(?P<post_id>\d+).html$', post_detail, name='post-detail'),`
+
+修改后：`url(r'post/(?P<pk>\d+).html$', PostDetailView.as_view(), name='post-detail'),`
+
+完整代码
+
+```
+from django.conf.urls import url
+from django.contrib import admin
+
+from .custom_site import custom_site
+from .custom_site import custom_site
+from blog.views import post_list, post_detail
+from config.views import links
+
+
+urlpatterns = [
+    url(r'^$', post_list),
+    url(r'^category/(?P<category_id>\d+)/$', post_list),
+    url(r'^tag/(?P<tag_id>\d+)/$', post_list),
+    url(r'post/(?P<pk>\d+).html$', PostDetailView.as_view(), name='post-detail'),
+    url(r'^links/$', links),
+    url(r'^super_admin/', admin.site.urls),
+    url(r'^admin/', custom_site.urls),
+]
+```
+
+
+
+
+
+##### 演示改造post_list函数
+
+ListView与DetailView类似，差别在于DetailView只获取一条数据，而ListView获取多条数据。由于是列表数据，数据量过大，就没法一次都返回，因此它还需要完成分页功能。
+
+
+
+**修改视图**
+
+> typeidea\blog\views.py
+
+修改前
+
+```
+def post_list(request, category_id=None, tag_id=None):
+    tag = None
+    category = None
+
+    # Tag和Post是多对多的关系，因此需要先获取tag对象再通过tag来获取对应的文章列表。
+    if tag_id:
+        post_list, tag = Post.get_by_tag(tag_id)
+    elif category_id:
+        post_list, category = Post.get_by_category(category_id)
+    else:
+        post_list = Post.latest_posts()
+
+    context = {
+        'category': category,
+        'tag': tag,
+        'post_list': post_list,
+        'sidebars': SideBar.get_all()
+    }
+    context.update(Category.get_navs())
+    return render(request, 'blog/list.html', context={'context': context})
+```
+
+修改后
+
+```
+from django.views.generic import ListView
+
+
+class PostListView(ListView):
+    queryset = Post.latest_posts()
+    paginate_by = 1
+    context_object_name = 'post_list'
+    template_name = 'blog/list.html'
+```
+
+修改模板修改
+
+> typeidea\typeidea\templates\blog\list.html
+
+修改前
+
+```
+{% extends "./base.html" %}
+
+{% block title %}
+    {% if tag %}
+    标签页： {{ tag.name }}
+    {% elif category %}
+    分类页：{{ category.name }}
+    {% endif %}
+{% endblock %}
+
+{% block main%}
+<ul>
+    {% for post in context.post_list %}
+    <li>
+        <a href="{ url 'post-detail' post.id %}">{{ post.title }}</a>
+        <div>
+            <span>作者：{{ post.owner.username }}</span>
+            <span>分类：{{ post.category.name }}</span>
+        </div>
+        <p>{{ post.desc }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+```
+
+修改后
+
+```
+{% block main %}
+<ul>
+    {% for post in post_list %}
+    <li>
+        <a href="{ url 'post-detail' post.id %}">{{ post.title }}</a>
+        <div>
+            <span>作者：{{ post.owner.username }}</span>
+            <span>分类：{{ post.category.name }}</span>
+        </div>
+        <p>{{ post.desc }}</p>
+    </li>
+    {% endfor %}
+
+
+</ul>
+
+<div>
+{% if page_obj %}
+    {% if page_obj.has_previous %}
+    <a href="?page={{ page_obj.previous_page_number }}">上一页</a>
+    {% endif %}
+
+    <span>Page {{ page_obj.number }} of {{ paginator.num_pages }}</span>
+
+    {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}">下一页</a>
+    {% endif %}
+{% endif %}
+
+</div>
+
+
+{% endblock %}
+```
+
+
+
+**修改路由**
+
+> typeidea\typeidea\urls.py
+
+修改前：`post_list`
+
+修改后：`PostListView.as_view()`
+
+完整代码
+
+```
+from django.conf.urls import url
+from django.contrib import admin
+
+from .custom_site import custom_site
+from config.views import links
+
+from blog.views import PostDetailView, PostListView
+
+urlpatterns = [
+    url(r'^$', PostListView.as_view(), name='index'),
+    url(r'^category/(?P<category_id>\d+)/$', PostListView.as_view(), name='category-list'),
+    url(r'^tag/(?P<tag_id>\d+)/$', PostListView.as_view(), name='tag-list'),
+    url(r'post/(?P<pk>\d+).html$', PostDetailView.as_view(), name='post-detail'),
+    url(r'^links/$', links, name='links'),
+    url(r'^super_admin/', admin.site.urls, name='super-admin'),
+    url(r'^admin/', custom_site.urls, name='admin'),
+]
+```
+
+
+
+
+
+##### 真枪实弹升级
+
+首页
+
+> typeidea\blog\views.py
+
+```
+from django.shortcuts import get_object_or_404
+from django.views.generic import DetailView, ListView
+from blog.models import Post, Category, Tag
+from config.models import SideBar
+
+
+class CommonViewMixin:
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context.update({'sidebars': SideBar.get_all()})
+        context.update(Category.get_navs())
+        return context
+
+
+class IndexView(CommonViewMixin, ListView):
+    queryset = Post.latest_posts()
+    paginate_by = 5
+    context_object_name = 'post_list'
+    template_name = 'blog/list.html'
+
+
+class CategoryView(IndexView):
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        category_id = self.kwargs.get('category_id')
+        category = get_object_or_404(Category, pk=category_id)
+        context.update({'category': category})
+
+        return context
+
+
+class TagView(IndexView):
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        tag_id = self.kwargs.get('tag_id')
+        tag = get_object_or_404(Tag, pk=tag_id)
+        context.update({'tag': tag})
+
+        return context
+
+    def get_queryset(self):
+        """ 重写queryset，根据标签过滤"""
+        queryset = super().get_queryset()
+        tag_id = self.kwargs.get('tag_id')
+
+        return queryset.filter(tag__id=tag_id)
+```
+
+- get_object_or_404：获取一个对象的实例。如果获取得到，就返回对象实例；如果不存在，直接抛出404错误。
+- self.kwargs中的数据是从我们的URL路由的定义中拿到的。
+
+至此，首页、分类列表页和标签列表页的View代码都写好了。
+
+
+
+**详情页**
+
+> typeidea\blog\views.py
+
+```
+class PostDetailView(CommonViewMixin, DetailView):
+    queryset = Post.latest_posts()
+    template_name = 'blog/detail.html'
+    context_object_name = 'post'
+    pk_url_kwarg = 'post_id'
+```
+
+
+
+完整代码：
+
+> typeidea\blog\views.py
+
+```
+from django.shortcuts import get_object_or_404
+from django.views.generic import DetailView, ListView
+from blog.models import Post, Category, Tag
+from config.models import SideBar
+
+
+class CommonViewMixin:
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context.update({'sidebars': SideBar.get_all()})
+        context.update(Category.get_navs())
+        return context
+
+
+class IndexView(CommonViewMixin, ListView):
+    queryset = Post.latest_posts()
+    paginate_by = 5
+    context_object_name = 'post_list'
+    template_name = 'blog/list.html'
+
+
+class CategoryView(IndexView):
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        category_id = self.kwargs.get('category_id')
+        category = get_object_or_404(Category, pk=category_id)
+        context.update({'category': category})
+
+        return context
+
+
+class TagView(IndexView):
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        tag_id = self.kwargs.get('tag_id')
+        tag = get_object_or_404(Tag, pk=tag_id)
+        context.update({'tag': tag})
+
+        return context
+
+    def get_queryset(self):
+        """ 重写queryset，根据标签过滤"""
+        queryset = super().get_queryset()
+        tag_id = self.kwargs.get('tag_id')
+
+        return queryset.filter(tag__id=tag_id)
+
+
+class PostDetailView(CommonViewMixin, DetailView):
+    queryset = Post.latest_posts()
+    template_name = 'blog/detail.html'
+    context_object_name = 'post'
+    pk_url_kwarg = 'post_id'
+```
+
+
+
+**修改路由URL**
+
+把之前的func_view替换成 class-based view.as_view()即可。
+
+> typeidea\typeidea\urls.pyurl 'post-detail'
+
+```
+from django.conf.urls import url
+from django.contrib import admin
+from .custom_site import custom_site
+from config.views import links
+
+from blog.views import (IndexView, CategoryView, TagView, PostDetailView)
+
+urlpatterns = [
+    url(r'^$', IndexView.as_view(), name='index'),
+    url(r'^category/(?P<category_id>\d+)/$', CategoryView.as_view(), name='category-list'),
+    url(r'^tag/(?P<tag_id>\d+)/$', TagView.as_view(), name='tag-list'),
+    url(r'post/(?P<post_id>\d+).html$', PostDetailView.as_view(), name='post-detail'),
+    url(r'^links/$', links, name='links'),
+    url(r'^super_admin/', admin.site.urls, name='super-admin'),
+    url(r'^admin/', custom_site.urls, name='admin'),
+]
+
+```
+
+
+
+更新模板
+
+> typeidea\typeidea\templates\blog\list.html
+
+```
+{% extends "./base.html" %}
+
+{% block title %}
+    {% if tag %}
+    标签列表页：{{ tag.name }}
+    {% elif category %}
+    分类列表页：{{ category.name }}
+    {% else %}
+    首页
+    {% endif %}
+{% endblock %}
+
+{% block main %}
+<ul>
+    {% for post in post_list %}
+    <li>
+        <a href="{% url 'post-detail' post.id %}">{{ post.title }}</a>
+        <div>
+            <span>作者：{{ post.owner.username }}</span>
+            <span>分类：{{ post.category.name }}</span>
+        </div>
+        <p>{{ post.desc }}</p>
+    </li>
+    {% endfor %}
+
+
+</ul>
+
+<div>
+{% if page_obj %}
+    {% if page_obj.has_previous %}
+    <a href="?page={{ page_obj.previous_page_number }}">上一页</a>
+    {% endif %}
+
+    <span>Page {{ page_obj.number }} of {{ paginator.num_pages }}</span>
+
+    {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}">下一页</a>
+    {% endif %}
+{% endif %}
+</div>
+{% endblock %}
+```
+
+
+
+##### 类视图处理流程
+
+class-based view对外暴露的接口其实就是as_view()，它其实只做了一件事，就是返回一个闭包，这个闭包会在Django解析完请求后调用。
+
+as_view的逻辑是：
+
+- 给class视图类赋值：request、args和kwargs
+- 根据HTTP方法分发请求：HTTP GET请求会调用class.get方法，POST请求会调用class.post方法。
+
+请求到达之后的完整逻辑（以ListView，GET请求为例）：
+
+- 请求到达后，调用dispatch进行分发
+- 调用get方法
+  - 调用get_queryset方法，拿到数据源
+  - 调用get_context_data方法，拿到需要渲染的数据。
+    - 首先调用get_paginate_by拿到每页数据。
+    - 接着调用get_context_object_name拿到渲染到模板的这个queryset名称。
+    - 然后调用paginate_queryset进行分页处理。
+    - 最后将拿到的数据转成dict字典并返回。
+  - 调用render_to_response渲染数据到页面中
+    - 调用get_template_names拿到模板名称
+    - 把request、context、template_name传递到模板中。
+
+
+
+到此为止，关于View的代码已编写完成。理解View的处理逻辑，有助于我们在编写View层代码时更加合理地组织代码。
+
 
 
 
