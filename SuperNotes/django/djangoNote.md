@@ -208,7 +208,7 @@ def index(request):
 
 
 
-修改路由
+修改路由urls.py
 
 > student_sys\urls.py
 
@@ -545,7 +545,7 @@ MIDDLEWARE = [
 
 ## 二、博客实战
 
-
+超管：cifer1024/sf.123456
 
 ### 2.1 创建目录
 
@@ -1402,19 +1402,27 @@ class PostAdmin(admin.ModelAdmin):
 
 备注2：
 
-- list_display：用来配置列表页面展示哪些字段。
+- list_display：用来配置列表页面展示哪些字段， 数据类型是元组。
 
-- list_display_links：用来配置哪些字段可以作为链接。点击它们，可以进入编辑页面。
+- list_display_links：用来配置哪些字段可以作为跳转链接。点击它们，可以进入编辑页面。
 
 - list_filter：配置页面过滤器，需要通过哪些字段来过滤列表页。
 
-- search_fields：配置搜索字段。
+- list_per_page = 10：列表展示页面，每个分页最多展示10条数据。
+
+- list_editable = False：表字段值可以被编辑的集合。
+
+- search_fields = ()：配置搜索字段，表字段值可以被当做搜索条件。
 
 - actions_on_top：动作相关的配置，是否展示在顶部。
 
 - actions_on_bottom：动作相关的配置，是否展示在底部。
 
 - save_on_top：控制保存、编辑、编辑并新建按钮是否在顶部展示。
+
+- save_as：False
+
+- save_as_continue: True
 
   详细文档：https://docs.djangoproject.com/en/1.11/ref/contrib/admin/#modeladmin-opotions
 
