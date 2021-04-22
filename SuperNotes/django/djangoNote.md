@@ -133,7 +133,7 @@ INSTALLED_APPS = [
 
 `python manage.py createsuperuser`
 
-amoy==sf.123456
+cifer1024==sf.123456
 
 
 
@@ -3973,6 +3973,803 @@ as_view的逻辑是：
 
 
 
+> Bootstrap中文文档：http://v3.bootcss.com/
+>
+> Bootstrap官方文档：http://getbootstrap.com/
+>
+> Bootstrap国内CDN镜像：http://www.bootcdn.cn/bootstrap/
+
+
+
+#### 介绍
+
+- 页面脚手架：样式重置、浏览器兼容、栅格系统和简单布局
+- 基础CSS：代码高亮、排版、表单、表格
+- 组件：提供了很多常用的组件，例如tab、pill、导航、弹窗、顶部栏和card
+- JS插件：动态功能，例如下拉菜单、模态窗口
+
+使用bootstrap设计布局更像是在搭积木。
+
+
+
+#### 容器和栅格系统
+
+容器：定义元素时增加container的class，例如`div class="container"</div>`
+
+栅格系统：将页面等分为12列，这样可以通过我们需要展示的内容占多少列来确定其宽度。
+
+
+
+示例
+
+![1619017434330](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1619017434330.png)
+
+
+
+demo.html
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>typeidea</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.css">
+
+    <style>
+        .post {
+        margin-bottom: 5px
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container head">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">首页</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Python</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Django实战</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Flask</a>
+                    </li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" aria-placeholder="Search" aria-label="search">
+                    <button class="btn btn-outline-success" type="submit">搜索</button>
+                </form>
+
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <h1 class="display-4">Typeidea</h1>
+            <p class="lead">基于Django的博客系统</p>
+        </div>
+
+    </div>
+
+    <div class="container main">
+        <div class="row">
+            <div class="col-9 post-list">
+
+                <div class="card post">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#">这里是标题</a></h5>
+                        <span class="card-link">作者:<a href="#">胡阳</a></span>
+                        <span class="card-link">分类：<a href="#">Python</a></span>
+                        <span class="card-link">标签：
+                            <a href="#">Python</a>
+                            <a href="#">Django</a>
+                            <a href="#">经验</a>
+                        </span>
+                        <p class="card-text">Some quick example text to build on the card title
+                        and make up the bulk of the card's content. <a href="#">完整内容</a></p>
+                    </div>
+                </div>
+
+                <div class="card post">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#">这里是标题</a></h5>
+                        <span class="card-link">作者:<a href="#">amoy</a></span>
+                        <span class="card-link">分类：<a href="#">Python</a></span>
+                        <span class="card-link">标签：
+                            <a href="#">Python</a>
+                            <a href="#">Django</a>
+                            <a href="#">经验</a>
+                        </span>
+                        <p class="card-text">Some quick example text to build on the card title
+                        and make up the bulk of the card's content. <a href="#">完整内容</a></p>
+                    </div>
+                </div>
+
+                <div class="card post">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#">这里是标题</a></h5>
+                        <span class="card-link">作者:<a href="#">amoy</a></span>
+                        <span class="card-link">分类：<a href="#">Python</a></span>
+                        <span class="card-link">标签：
+                            <a href="#">Python</a>
+                            <a href="#">Django</a>
+                            <a href="#">经验</a>
+                        </span>
+                        <p class="card-text">Some quick example text to build on the card title
+                        and make up the bulk of the card's content. <a href="#">完整内容</a></p>
+                    </div>
+                </div>
+
+                <a href="?page={{ page_obj.previous_page_number }}">上一页</a> Page 1 of 1.
+                <a href="?page={{ page_obj.next_page_number }}">下一页</a>
+
+            </div>
+            <div class="col-3">
+                <div class="card sidebar">
+                    <div class="card-body">
+                        <h4 class="card-title">关于博主</h4>
+                        <p>
+                            网名：cifer， 多年的Python 工程师
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <hr/>
+            <nav class="nav category">
+                <a href="#" class="nav-link">读书</a>
+                <a href="#" class="nav-link">产品</a>
+                <a href="#" class="nav-link">工作经历</a>
+            </nav>
+        </div>
+        <div class="container power">
+            <span class="text-muted">Power by Amoy</span>
+        </div>
+    </footer>
+
+</body>
+</html>
+```
+
+
+
+- container
+
+  提供容器，所有的其他元素需要在此容器中。
+
+- navbar
+
+  导航栏组件，用来配置导航信息。里面包含很多组件，比如navbar-brand,navbar-nav和dropdown等。
+
+- jumbotron
+
+  超大屏幕。使用大块的内容来展示重要的信息，比如博客标题和介绍。
+
+- row和col-?
+
+  排版行和列。对应的列还有col-sm-1表示small column ，col-md-?表示middle column。
+
+- card：卡片组件，以卡片的方式来组织内容的展示。
+
+
+
+
+
+#### 项目优化
+
+##### 增加themes目录
+
+
+
+原目录
+
+```
+├─docs
+└─typeidea
+    ├─blog
+    ├─comment
+    ├─config
+    └─typeidea
+        ├─settings
+        ├─templates
+        │  ├─blog
+        │  └─config
+        └─themes
+            └─default
+```
+
+
+
+调整后
+
+```
+│  CHANGELOG.md
+│  LICENCE
+│  README.md
+│  requirements.txt
+│
+├─docs
+│      api文档.txt
+│      需求文档.txt
+│
+└─typeidea
+    │  db.sqlite3
+    │  manage.py
+    │  __init__.py
+    │
+    ├─blog
+    │  │  admin.py
+    │  │  adminforms.py
+    │  │  apps.py
+    │  │  models.py
+    │  │  tests.py
+    │  │  views.py
+    │  │  __init__.py
+    │
+    ├─comment
+    │  │  admin.py
+    │  │  apps.py
+    │  │  models.py
+    │  │  tests.py
+    │  │  views.py
+    │  │  __init__.py
+    │
+    ├─config
+    │  │  admin.py
+    │  │  apps.py
+    │  │  models.py
+    │  │  tests.py
+    │  │  views.py
+    │  │  __init__.py
+    │
+    └─typeidea
+        │  BaseOwnerAdmin.py
+        │  custom_site.py
+        │  db.sqlite3
+        │  urls.py
+        │  wsgi.py
+        │  __init__.py
+        │
+        ├─settings
+        │  │  base.py
+        │  │  develop.py
+        │  │  __init__.py
+        │
+        └─themes
+            └─default
+                └─templates
+                    ├─blog
+                    │      base.html
+                    │      demo.html
+                    │      detail.html
+                    │      list.html
+                    │
+                    └─config
+                        │  sidebar_comments.html
+                        │  sidebar_posts.html
+                        │
+                        └─blocks
+
+```
+
+
+
+##### 修改settings
+
+>  typeidea\settings\base.py
+>
+> 原代码
+
+```
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+```
+
+修改后
+
+```
+
+THEME = 'default'
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'theme', THEME, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+```
+
+如果后期需要构建新的主题，只需要修改`THEME = 'default'即可`。
+
+
+
+##### 创建主题目录bootstrap
+
+在`typeidea\themes\default`同级创建`bootstrap`目录，并且，将default所有内容拷贝一份至`bootstrap`目录。
+
+```
+└─themes
+    ├─bootstrap
+    │  └─templates
+    │      ├─blog
+    │      └─config
+    │          └─blocks
+    └─default
+        └─templates
+            ├─blog
+            └─config
+                └─blocks
+```
+
+
+
+修改模板
+
+typeidea\themes\bootstrap\templates\blog\base.html
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}}首页{% endblock %}- 博客系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.css">
+
+    <style>
+        .post {
+        margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div div="container-head">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a href="/" class="navbar-brand" >首页</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    {% for cate in naves %}
+                    <li class="nav-item">
+                        <a href="{% url 'category-list' cate.id%}" class="nav-link">{{ cate.name }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0" action="GET">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">搜索</button>
+                </form>
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <h1 class="display-4">Typeidea</h1>
+            <p class="lead">基于Django的博客系统</p>
+        </div>
+    </div>
+
+    <div class="container-main">
+        <div class="row">
+            <div class="col-9 post-list">
+                {% block main %}
+                {% endblock %}
+            </div>
+
+            <div class="col-3">
+                {% block sidebar %}
+                    {% for sidebar in sidebars %}
+                    <div class="card sidebar">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ sidebar.title }}</h4>
+                            <p>
+                                {{ sidebar.content_html }}
+                            </p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        {% block footer %}
+        <div class="container">
+            <hr>
+            <nav class="nav category">
+                {% for cate in categories %}
+                <a href="{% url 'category-list' cate.id %}" class="nav-link">
+                    {{ cate.name }}
+                </a>
+                {% endfor %}
+            </nav>
+        </div>
+
+        <div class="container power">
+            <span class="text-muted">Power by Typeidea</span>
+        </div>
+        {% endblock %}
+    </footer>
+
+</body>
+</html>
+```
+
+
+
+typeidea\typeidea\themes\bootstrap\templates\blog\list.html
+
+```
+{% extends "./base.html" %}
+
+{% block title %}
+    {% if tag %}
+    标签列表页：{{ tag.name }}
+    {% elif category %}
+    分类列表页：{{ category.name }}
+    {% else %}
+    首页
+    {% endif %}
+{% endblock %}
+
+{% block main %}
+    {% for post in post_list %}
+    <div class="card post">
+        <div class="card-body">
+            <h5 class="card-title">
+                <a href="{% url 'post-detail' post.id%}">{{ post.title }}</a>
+            </h5>
+            <span class="card-link">作者：<a href="#">{{ post.owner.username }}</a></span>
+            <span class="card-link">标签：
+                {% for tag in post.tag.all %}
+                <a href="{% url 'tag-list' tag.id% }}">{{ tag.name }}</a>
+                {% endfor %}
+            </span>
+            <p class="card-text">{{ post.desc }}<a href="{% url 'post-detail' post.id %}">完整内容</a></p>
+        </div>
+    </div>
+    {% endfor %}
+
+    {% if page_obj %}
+    {% if page_obj.has_previous %}
+    <a href="?page={{ page_obj.previous_page_number }}">上一页</a>
+    {% endif %}
+        Page {{ page_obj.number }} of {{ paginator.num_page }}.
+    {% if page.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}">下一页</a>
+    {% endif %}
+    {% endif %}
+{% endblock %}
+
+```
+
+使用bootstrap主题前
+
+![1619025475022](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1619025475022.png)
+
+使用bootstrap主题后
+
+![1619025420375](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1619025420375.png)
+
+
+
+
+
+### 2.7 完成博客系统
+
+
+
+已完成的页面
+
+- 首页
+- 分类列表页
+- 标签列表页
+- 博文详情页
+
+新需求：
+
+- 搜索结果页
+- 作者列表页
+- 侧边栏的热门文章
+- 文章访问统计
+- 友情链接页面
+- 评论模块
+
+
+
+#### 首页搜索功能
+
+
+
+**增加视图类SearchView**
+
+typeidea\blog\views.py
+
+```
+class SearchView(IndexView):
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data()
+        context.update({
+            'keyword': self.request.GET.get('keyword', '')
+        })
+        return context
+
+    def get_queryset(self):
+        query_set = super().get_queryset()
+        keyword = self.request.GET.get('keyword')
+        if not keyword:
+            return query_set
+        return query_set.filter(Q(title__icontains=keyword) | Q(desc__icontains=keyword))
+```
+
+通过Q表达式实现了类似的SQL语句：`SELECT * FROM post WHERE title ILKIE '%<keyword>%' OR title ILIE '%<keyword>%'`。
+
+
+
+**配置URL**
+
+typeidea\typeidea\urls.py
+
+```
+url(r'^search/$', SearchView.as_view(), name='search'),
+```
+
+
+
+**修改模板代码**
+
+typeidea\typeidea\themes\bootstrap\templates\blog\base.html
+
+修改前
+
+```
+<form class="form-inline my-2 my-lg-0" action="GET">
+	<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	<button class="btn btn-outline-success" type="submit">搜索</button>
+</form>
+```
+
+修改后
+
+```
+<form class="form-inline my-2 my-lg-0" action="/search/" method="GET">
+	<input class="form-control mr-sm-2" type="search" name="keyword" placeholder="Search"
+aria-label="Search" value="{{ keyword }}">
+	<button class="btn btn-outline-success" type="submit">搜索</button>
+</form>
+```
+
+
+
+
+
+搜索前
+
+![1619101902086](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1619101902086.png)
+
+搜索后
+
+![1619101940530](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1619101940530.png)
+
+
+
+#### 作者页面
+
+**编写视图类**
+
+typeidea\blog\views.py
+
+```
+class AuthorView(IndexView):
+    def get_queryset(self):
+        query_set = super().get_queryset()
+        author_id = self.kwargs.get('owner_id')
+        return query_set.filter(owner_id=author_id)
+```
+
+注册路由
+
+```
+url(r'^author/(?P<owner_id>\d+)/$', AuthorView.as_view(), name='author'),
+```
+
+
+
+查看效果
+
+> 地址：http://localhost:8000/author/1/
+
+
+
+
+
+实现：文章列表页点击作者，跳转至作者页面
+
+typeidea\typeidea\themes\bootstrap\templates\blog\list.html
+
+
+
+修改前
+
+```
+<span class="card-link">作者：<a href="#">{{ post.owner.username }}</a></span>
+```
+
+修改后：
+
+```
+<span class="card-link">作者：<a href="{% url 'author' post.owner.id %}">{{ post.owner.username }}</a></span>
+```
+
+
+
+#### 友链
+
+前面已经把model写好了，这里只需要把数据拿出来展示即可。需要继承ListView即可，但要基于同一套模板，因此共用的数据还是需要的，所以也要同时继承CommonViewMixin。
+
+
+
+typeidea\config\views.py
+
+```
+from django.views.generic import ListView
+
+from blog.views import CommonViewMixin
+from config.models import Link
+
+
+class LinkListView(CommonViewMixin, ListView):
+    queryset = Link.objects.filter(status=Link.STATUS_NORMAL)
+    template_name = 'config/links.html'
+    context_object_name = 'link_list'
+```
+
+
+
+注册路由
+
+typeidea\typeidea\urls.py
+
+```
+url(r'^links/$', LinkListView.as_view(), name='links'),
+```
+
+
+
+编写模板
+
+typeidea\typeidea\themes\bootstrap\templates\config\links.html
+
+```
+{% extends "blog/base.html" %}
+{% block title %}友情链接{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">名称</th>
+            <th scope="col">网址</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for link in links %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ link.title }}</td>
+            <td><a href="{{ link.href }}">{{ link.href }}</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+
+</table>
+
+{% endblock %}
+```
+
+
+
+> 查看效果：http://localhost:8000/links/
+
+![1619108410033](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1619108410033.png)
+
+
+
+
+
+#### 实现评论模块
+
+之前完成admin后台是给系统输入数据的，这些数据是内部数据。首页、作者页、友链这些都是输出展示数据。评论则是提供给用户的输入入口，能让用户把数据输入到系统中。
+
+网站评论的实现方式：
+
+- JavaScript异步提交数据（不刷新页面，适合大型网站）
+- 当页提交
+- 单独页面提交（掌握）
+
+
+
+重要概念：**通用外键**
+
+
+
+**准备工作**
+
+将comment模型的target字段的类型改为CharField。
+
+typeidea\comment\models.py
+
+
+
+修改前
+
+```
+target = models.ForeignKey(Post, verbose_name='评论目标')
+```
+
+修改后
+
+```
+target = models.CharField(max_length=100, verbose_name='评论目标')
+```
+
+执行迁移
+
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
+
+
+**实现评论**
+
+需要在文章页面下方添加一个的form。
+
+
+
+
+
+
+
 
 
 ## 三、第三方插件
@@ -3981,7 +4778,9 @@ as_view的逻辑是：
 
 
 
-### 四、API
+
+
+## 四、API
 
 
 
